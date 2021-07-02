@@ -44,3 +44,110 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer; }
+
+header {
+  width: 100%;
+  position: fixed;
+  padding: 30px 0;
+  background-color: transparent;
+  text-align: center; }
+  header .logo {
+    display: inline-block;
+    position: absolute;
+    left: 20%;
+    font-size: 1.3rem;
+    font-weight: 700;
+    transform: translateY(7px); }
+  header nav {
+    display: inline-block; }
+    header nav .gnb .main-menu {
+      display: inline-block;
+      padding: 10px 20px; }
+      header nav .gnb .main-menu:nth-child(2):hover ~ .sub-menu {
+        display: block;
+        background-color: #fff; }
+      header nav .gnb .main-menu a {
+        padding: 10px 0;
+        font-size: 12px;
+        letter-spacing: .05rem; }
+        header nav .gnb .main-menu a:hover {
+          border-bottom: 1px solid #fd7e14; }
+    header nav .gnb .active {
+      border-bottom: 1px solid #fd7e14; }
+    header nav .sub-menu {
+      width: 200px;
+      display: none;
+      position: relative;
+      background-color: #fff;
+      color: #6c757d;
+      cursor: pointer;
+      transform: translateX(70px); }
+      header nav .sub-menu:hover {
+        display: block; }
+      header nav .sub-menu ul {
+        padding: 20px 0; }
+        header nav .sub-menu ul li {
+          padding: 10px 20px;
+          font-size: 14px;
+          text-align: start;
+          position: relative; }
+          header nav .sub-menu ul li i {
+            position: absolute;
+            right: 20px; }
+          header nav .sub-menu ul li:hover {
+            background-color: #f8f9fa;
+            color: #343a40; }
+          header nav .sub-menu ul li:nth-child(1):hover ~ .secondary-sub-menu {
+            display: inline-block;
+            background-color: #fff; }
+      header nav .sub-menu .secondary-sub-menu {
+        position: absolute;
+        display: none;
+        width: 200px;
+        top: 0;
+        right: -240px;
+        color: #6c757d; }
+        header nav .sub-menu .secondary-sub-menu:hover {
+          display: inline-block;
+          background-color: #fff; }
+        header nav .sub-menu .secondary-sub-menu:hover ~ .sub-menu {
+          display: block; }
+        header nav .sub-menu .secondary-sub-menu ul {
+          padding: 20px 0; }
+          header nav .sub-menu .secondary-sub-menu ul li {
+            padding: 10px 20px;
+            font-size: 14px;
+            text-align: start; }
+            header nav .sub-menu .secondary-sub-menu ul li:hover {
+              background-color: #f8f9fa;
+              color: #343a40; }
+  header .icon-section {
+    display: inline-block;
+    position: absolute;
+    right: 20%;
+    transform: translateY(5px); }
+    header .icon-section li {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      margin: 0 auto;
+      border-radius: 25px;
+      background-color: #fff;
+      color: #394f4b; }
+    header .icon-section .search-icon {
+      margin: 0 20px 0 0;
+      font-size: 12px; }
+      header .icon-section .search-icon i {
+        margin: 10px auto; }
+    header .icon-section .sns-icon {
+      font-size: 14px; }
+      header .icon-section .sns-icon i {
+        margin: 8px auto; }
+
+body {
+  font-family: "Roboto", sans-serif; }

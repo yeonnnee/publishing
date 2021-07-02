@@ -11,49 +11,68 @@
 <body>
   <!-------------- header ----------->
   <header>
-    <a href="./index.html">LuxuryHotel</a>
+    <div class="logo">
+      <a href="./index.html">LuxuryHotel</a>
+    </div>
     <nav>
-      <ul>
-        <li>
+      <ul class="gnb">
+        <!-- <li class="logo">
+          <a href="./index.html">LuxuryHotel</a>
+        </li> -->
+        <li class="main-menu">
           <a href="./index.html">HOME</a>
         </li>
-        <li>
-          <a href="./room.html">ROOM</a> 
+        <li class="main-menu">
+          <a href="./room.html">ROOM</a>
         </li>
-        <li>
-          <a href="./amenities.html">AMENITIES</a>
+        <li class="main-menu">
+          <a href="./amenities.html" class="active">AMENITIES</a>
         </li>
-        <li>
+        <li class=" main-menu">
           <a href="./gallery.html">GALLERY</a>
         </li>
-        <li>
+        <li class="main-menu">
           <a href="./about.html">ABOUT US</a>
         </li>
-        <li>
-          <a href="./contact.html">CONTACT</a>
+        <li class="main-menu">
+          <a href="./contact.html"">CONTACT</a>
+        </li>
+        <!-- 하위 메뉴 -->
+        <li class=" sub-menu">
+            <ul>
+              <li>
+                King Bedroom
+                <i class="fas fa-angle-right"></i>
+              </li>
+              <li>Queen & Double Bedroom</li>
+              <li>Le Voila Suite</li>
+              <li class="secondary-sub-menu">
+                <ul>
+                  <li>King Bedroom </li>
+                  <li>Queen & Double Bedroom</li>
+                  <li>Le Voila Suite</li>
+                </ul>
+              </li>
+            </ul>
+
         </li>
       </ul>
-      <div>
-        <ul>
-          <li>King Bedroom </li>
-          <li>Queen & Double Bedroom</li>
-          <li>Le Voila Suite</li>
-        </ul>
-        <ul>
-          <li>King Bedroom </li>
-          <li>Queen & Double Bedroom</li>
-          <li>Le Voila Suite</li>
-        </ul>
-      </div>
+
     </nav>
-    <div class="icon-section">
-      <div class="search-icon"></div>
-      <div>
-        <div class="facebook sns"></div>
-        <div class="twitter sns"></div>
-        <div class="instagram sns"></div>
-      </div>
-    </div>
+    <ul class="icon-section">
+      <li class="search-icon ">
+        <i class="fas fa-search"></i>
+      </li>
+      <li class="sns-icon ">
+        <i class="fab fa-facebook-f"></i>
+      </li>
+      <li class="sns-icon ">
+        <i class="fab fa-twitter"></i>
+      </li>
+      <li class="sns-icon ">
+        <i class="fab fa-instagram"></i>
+      </li>
+    </ul>
   </header>
   <!-------------- Contents -------->
   <main class="amenities">
@@ -65,7 +84,7 @@
     <!------------------ Amenities --------------------->
     <section>
       <h3>Hotel Amenities</h3>
-      <hr/>
+      <hr />
       <div>
         <div class="card">
           <div>
@@ -73,7 +92,8 @@
           </div>
           <div>Free Self-Parking</div>
           <p>
-            A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.
+            A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range
+            from a modest-quality.
           </p>
           <button>READ MORE</button>
         </div>
@@ -83,7 +103,8 @@
           </div>
           <div>High speed Internet access</div>
           <p>
-            A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.
+            A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range
+            from a modest-quality.
           </p>
           <button>READ MORE</button>
         </div>
@@ -93,7 +114,8 @@
           </div>
           <div>complimentary WiFi in public areas</div>
           <p>
-            A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.
+            A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range
+            from a modest-quality.
           </p>
           <button>READ MORE</button>
         </div>
@@ -103,7 +125,8 @@
           </div>
           <div>Elevators</div>
           <p>
-            A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.
+            A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range
+            from a modest-quality.
           </p>
           <button>READ MORE</button>
         </div>
@@ -114,7 +137,8 @@
           <div>Meeting rooms</div>
           <div>Free Self-Parking</div>
           <p>
-            A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.
+            A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range
+            from a modest-quality.
           </p>
           <button>READ MORE</button>
         </div>
@@ -125,7 +149,8 @@
           <div>Laundry and Valet service</div>
           <div>Free Self-Parking</div>
           <p>
-            A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.
+            A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range
+            from a modest-quality.
           </p>
           <button>READ MORE</button>
         </div>
@@ -143,7 +168,8 @@
     <div>
       <div>Abotu Us</div>
       <p>
-        A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality.
+        A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from
+        a modest-quality.
       </p>
       <button>READ MORE</button>
     </div>
@@ -154,7 +180,7 @@
           <a href="./index.html">HOME</a>
         </li>
         <li>
-          <a href="./room.html">ROOM</a> 
+          <a href="./room.html">ROOM</a>
         </li>
         <li>
           <a href="./amenities.html">AMENITIES</a>

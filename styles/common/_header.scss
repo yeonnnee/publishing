@@ -1,0 +1,165 @@
+header {
+  width: 100%;
+  position: fixed;
+  padding: 30px 0;
+  background-color: transparent;
+  text-align: center;
+
+  .logo {
+    display: inline-block;
+    position: absolute;
+    left: 20%;
+    font-size: 1.3rem;
+    font-weight: 700;
+    transform: translateY(7px);
+  }
+
+  nav {
+    display: inline-block;
+
+    .gnb {
+      .main-menu {
+        display: inline-block;
+        padding: 10px 20px;
+
+        &:nth-child(2):hover ~ .sub-menu {
+          display: block;
+          background-color: $white;
+        }
+
+        a {
+          padding: 10px 0;
+          font-size: 12px;
+          letter-spacing: .05rem;
+
+          &:hover {
+            border-bottom: 1px solid $orange;
+          }
+        }
+      }
+
+      .active {
+        border-bottom: 1px solid $orange;
+      }
+      // .logo {
+      //   display: inline-block;
+      //   transform: translateY(2px);
+       
+      //   a{
+      //     font-size: 1.3rem;
+      //     font-weight: 700;
+      //     padding: 0;
+      //     border-bottom: none;
+      //     margin: 2px 0 0 0;
+      //   }
+      // }
+    }
+
+    .sub-menu {
+      width: 200px;
+      display: none;
+      position: relative;
+      background-color: $white;
+      color: $gray;
+      cursor: pointer;
+      transform: translateX(70px);
+
+      &:hover {
+        display: block;
+      }
+
+      ul {
+        padding: 20px 0;
+
+        li {
+          padding: 10px 20px;
+          font-size: 14px;
+          text-align: start;
+          position: relative;
+
+          i {
+            position: absolute;
+            right: 20px;
+          }
+     
+          &:hover {
+            background-color: $light;
+            color: $gray-dark;
+          }
+
+          &:nth-child(1):hover ~ .secondary-sub-menu {
+           display: inline-block;
+           background-color: $white;
+          }
+        } 
+      }
+
+      .secondary-sub-menu {
+        position: absolute;
+        display: none;
+        width: 200px;
+        top: 0;
+        right: -240px;
+        color: $gray;
+
+        &:hover {
+          display: inline-block;
+          background-color: $white;
+        }
+
+        &:hover ~ .sub-menu {
+          display: block;
+        }
+
+        ul {
+          padding: 20px 0;
+
+          li {
+            padding:10px 20px;
+            font-size: 14px;
+            text-align: start;
+       
+            &:hover {
+              background-color: $light;
+              color: $gray-dark;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .icon-section {
+    display: inline-block;
+    position: absolute;
+    right: 20%;
+    transform: translateY(5px);
+
+    li {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      margin: 0 auto;
+      border-radius: 25px;
+      background-color: $white;
+      color:#394f4b;
+    }
+
+    .search-icon {
+      margin: 0 20px 0 0;
+      font-size: 12px;
+
+      i {
+        margin: 10px auto;
+      }
+    }
+    
+    .sns-icon {
+      font-size: 14px;
+
+      i {
+        margin: 8px auto;
+      }
+    }
+  }
+}
