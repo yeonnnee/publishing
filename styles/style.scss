@@ -1,1 +1,14 @@
+// common
+@import './common/footer';
+@import './common/header';
+@import './common/color';
+
+// pages
 @import './reset';
+@import './main';
+@import './about';
+@import './amenities';
+@import './contact';
+@import './gallery';
+@import './room';
+@import './search';
