@@ -240,47 +240,47 @@ header {
       font-family: "Cormorant Garamond", serif; }
     .home .featured-rooms .section-title hr {
       width: 49px; }
-  .home .featured-rooms .room-info {
+  .home .featured-rooms .room-info-section {
     width: 100vw;
     margin: 40px 0 0;
     position: relative; }
-    .home .featured-rooms .room-info div {
+    .home .featured-rooms .room-info-section div {
       display: inline-block; }
-    .home .featured-rooms .room-info .first-img {
+    .home .featured-rooms .room-info-section .first-img {
       width: 493px;
       height: 736px;
       position: relative;
       transform: translateX(42%) translateY(-100px);
       z-index: 2; }
-      .home .featured-rooms .room-info .first-img img {
+      .home .featured-rooms .room-info-section .first-img img {
         width: 493px;
         height: 736px; }
-    .home .featured-rooms .room-info .sec-img {
+    .home .featured-rooms .room-info-section .sec-img {
       width: 674px;
       height: 775px;
       margin: 50px 0 0;
       transform: translateX(-65px);
       position: relative;
       z-index: 1; }
-      .home .featured-rooms .room-info .sec-img img {
+      .home .featured-rooms .room-info-section .sec-img img {
         width: 674px;
         height: 775px; }
-    .home .featured-rooms .room-info .room-desc {
+    .home .featured-rooms .room-info-section .room-desc {
       width: 23%;
       position: absolute;
       top: 15%; }
-      .home .featured-rooms .room-info .room-desc h2 {
+      .home .featured-rooms .room-info-section .room-desc h2 {
         font-size: 4rem;
         line-height: 1.3;
         font-weight: 700;
         font-family: "Cormorant Garamond", serif; }
-      .home .featured-rooms .room-info .room-desc p {
+      .home .featured-rooms .room-info-section .room-desc p {
         margin: 30px 0 0;
         color: rgba(0, 0, 0, 0.5);
         line-height: 1.7;
         font-family: "Roboto", sans-serif;
         font-weight: 300; }
-      .home .featured-rooms .room-info .room-desc button {
+      .home .featured-rooms .room-info-section .room-desc button {
         margin: 18px 0 0;
         font-size: 11px;
         letter-spacing: .2rem;
@@ -291,7 +291,7 @@ header {
         background-color: transparent;
         cursor: pointer;
         font-family: "Roboto", sans-serif; }
-        .home .featured-rooms .room-info .room-desc button:hover {
+        .home .featured-rooms .room-info-section .room-desc button:hover {
           border-bottom: 1px solid #000; }
   .home .featured-rooms .sec-room {
     margin: 160px 0 0; }
@@ -316,11 +316,79 @@ header {
       height: 354px;
       position: absolute;
       top: 308px;
-      right: 11%;
+      right: 218px;
       z-index: 2; }
       .home .featured-rooms .sec-room .fourth-img img {
         width: 577px;
         height: 354px; }
+  .home .amenities-section {
+    margin: 280px 0 0; }
+    .home .amenities-section img {
+      width: 50px;
+      height: 50px;
+      margin: 0 0 20px; }
+    .home .amenities-section .section-title {
+      margin: 100px 0 0;
+      text-align: center;
+      transform: translateX(-9px); }
+      .home .amenities-section .section-title h3 {
+        padding: 16px 20px;
+        font-size: 3rem;
+        font-weight: 700;
+        font-family: "Cormorant Garamond", serif; }
+      .home .amenities-section .section-title hr {
+        width: 49px; }
+    .home .amenities-section .card-list {
+      width: 80%;
+      margin: 70px 10% 0;
+      text-align: center; }
+      .home .amenities-section .card-list .card {
+        width: 257px;
+        height: 313px;
+        display: inline-block;
+        border: 1px solid #ececec;
+        padding: 40px 40px 60px;
+        margin: 0 50px 20px 0;
+        text-align: center; }
+        .home .amenities-section .card-list .card:nth-child(3) {
+          transform: translateY(22px); }
+          .home .amenities-section .card-list .card:nth-child(3):hover {
+            transform: translateY(18px); }
+        .home .amenities-section .card-list .card:nth-child(6) {
+          transform: translateY(30px); }
+          .home .amenities-section .card-list .card:nth-child(6):hover {
+            transform: translateY(27px); }
+        .home .amenities-section .card-list .card:hover {
+          border: 1px solid #000;
+          transform: translateY(-3px);
+          transition: transform 0.2s linear;
+          box-shadow: 0 5px 10px -5px #dad9d9; }
+        .home .amenities-section .card-list .card div {
+          font-family: "Cormorant Garamond", serif;
+          font-size: 20px;
+          font-weight: 700;
+          margin: 0 0 0.5rem;
+          line-height: 1.2; }
+        .home .amenities-section .card-list .card p {
+          margin: 0 0 0.5rem;
+          font-family: "Roboto", sans-serif;
+          color: #707070;
+          font-weight: 300;
+          line-height: 1.7; }
+        .home .amenities-section .card-list .card button {
+          margin: 18px 0 0;
+          font-size: 11px;
+          letter-spacing: .2rem;
+          padding: 10px 0;
+          font-weight: 700;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          cursor: pointer;
+          font-family: "Roboto", sans-serif;
+          border-bottom: 1px solid #000; }
+          .home .amenities-section .card-list .card button:hover {
+            border: none; }
 
 body {
   font-family: "Roboto", sans-serif;
