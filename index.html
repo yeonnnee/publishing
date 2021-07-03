@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LuxuryHotel</title>
   <link rel="stylesheet" href="./public/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500i,700|Roboto:300,400,500,700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -15,16 +18,14 @@
     <div class="logo">
       <a href="./index.html">LuxuryHotel</a>
     </div>
+    <!--------------- gnb ---------->
     <nav>
       <ul class="gnb">
-        <!-- <li class="logo">
-          <a href="./index.html">LuxuryHotel</a>
-        </li> -->
         <li class="main-menu">
           <a href="./index.html" class="active">HOME</a>
         </li>
         <li class="main-menu">
-          <a href="./room.html">ROOM</a>
+          <a href="./room.html">ROOMS</a>
         </li>
         <li class="main-menu">
           <a href="./amenities.html">AMENITIES</a>
@@ -58,8 +59,8 @@
 
         </li>
       </ul>
-
     </nav>
+    <!-------------- sns ------------>
     <ul class="icon-section">
       <li class="search-icon ">
         <i class="fas fa-search"></i>
@@ -77,38 +78,58 @@
   </header>
   <!-------------- Contents -------->
   <main class="home">
-    <section>
-      <div class="slider">
-        <div>
-          <button></button>
-          <button></button>
-        </div>
-        <div class="slide">
-          <h1>LuxuryHotel by</h1>
-          <h1>Untree.co</h1>
-          <p>
-            Another free awesome templates for Hotels and any kind of website by
-          </p>
-          <span>Untree.co.</span>
-          <span>See our</span>
-          <span>license page</span>
-          <span>for more usage details</span>
-        </div>
-        <div class="slide">
-          <h1>Enjoy Your Stay</h1>
-        </div>
-        <div class="slide">
-          <h1>Away form the Hustle and</h1>
-          <h1>Bustle of City Life</h1>
-        </div>
+    <section class="slider">
+      <!-- 화살표 버튼 -->
+      <div class="arrow-btn">
+        <span class="arrow-btn__left">
+          <i class="fas fa-angle-left"></i>
+        </span>
+        <span class="arrow-btn__right">
+          <i class="fas fa-angle-right"></i>
+        </span>
       </div>
-      <div>
-        <input type="radio">
-        <input type="radio">
-        <input type="radio">
+      <div class="slides">
+        <!-- contents-->
+        <div class="slide slide-1 active">
+          <div class="slide-content">
+            <div>
+              <h1>LuxuryHotel by</h1>
+              <h1>Untree.co</h1>
+              <p>
+                Another free awesome templates for Hotels and any kind of website by
+              </p>
+              <span class="bold">Untree.co.</span>
+              <span>See our</span>
+              <span class="bold">license page</span>
+              <span>for more usage details</span>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="slide slide-2">
+          <div class="slide-content">
+            <h1>Enjoy Your Stay</h1>
+          </div>
+        </div>
+        <div class="slide slide-3">
+          <div class="slide-content">
+            <h1>Away form the Hustle and</h1>
+            <h1>Bustle of City Life</h1>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="slide-control-btn">
+        <div class="slide-btn slide1 selected"></div>
+        <div class="slide-btn slide2 "></div>
+        <div class="slide-btn slide3 "></div>
       </div>
     </section>
-    <article>
+
+    <!-- <div>
       <h3>Featured Rooms</h3>
       <hr />
       <section>
@@ -148,7 +169,7 @@
           </div>
         </div>
       </section>
-    </article>
+    </div>
     <section>
       <h3>Hotel Amenities</h3>
       <hr />
@@ -262,71 +283,77 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
+
+  </main>
+  <!-------------- footer ----------->
+  <footer>
     <section>
       <span>If you have any special requests, please feel free to call us.</span>
       <span>+12.345.678.9012</span>
     </section>
-  </main>
-  <!-------------- footer ----------->
-  <footer>
-    <div>
-      <div>Abotu Us</div>
-      <p>
-        A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from
-        a modest-quality.
-      </p>
-      <button>READ MORE</button>
-    </div>
-    <div>
-      <div>Navigation</div>
-      <ul>
-        <li>
-          <a href="./index.html">HOME</a>
-        </li>
-        <li>
-          <a href="./room.html">ROOM</a>
-        </li>
-        <li>
-          <a href="./amenities.html">AMENITIES</a>
-        </li>
-        <li>
-          <a href="./gallery.html">GALLERY</a>
-        </li>
-        <li>
-          <a href="./about.html">ABOUT US</a>
-        </li>
-        <li>
-          <a href="./contact.html">CONTACT</a>
-        </li>
-      </ul>
-    </div>
-    <div>
-      <section>
+
+    <section>
+      <div>
+        <div>Abotu Us</div>
+        <p>
+          A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range
+          from
+          a modest-quality.
+        </p>
+        <button>READ MORE</button>
+      </div>
+      <div>
+        <div>Navigation</div>
+        <ul>
+          <li>
+            <a href="./index.html">HOME</a>
+          </li>
+          <li>
+            <a href="./room.html">ROOM</a>
+          </li>
+          <li>
+            <a href="./amenities.html">AMENITIES</a>
+          </li>
+          <li>
+            <a href="./gallery.html">GALLERY</a>
+          </li>
+          <li>
+            <a href="./about.html">ABOUT US</a>
+          </li>
+          <li>
+            <a href="./contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div>
         <div>Address</div>
         <address>
           <div>273 South Riverview Rd.</div>
           <div>New York, NY 10011</div>
         </address>
-      </section>
-      <section>
+      </div>
+      <div>
         <div>Telephone</div>
         <ul>
           <li>+1 234 5678 910</li>
           <li>+2 234 5678 910</li>
         </ul>
-      </section>
-    </div>
-    <div>
+      </div>
+    </section>
+    <section>
       <div>Join our newsletter</div>
       <p>Be the first to know our latest updates and news!</p>
       <div>
         <input type="text" placeholder="Enter your email">
         <button>Subscribe</button>
       </div>
-    </div>
+    </section>
     <!-------------------- Copyright -------------->
-    <div>
+    <section>
       <div>
         Copyright ©2021 Untree.co. All Rights Reserved. Design by
         <span>Untree.co</span>
@@ -337,7 +364,7 @@
         <div></div>
         <div></div>
       </div>
-    </div>
+    </section>
   </footer>
   <script src="https://kit.fontawesome.com/03bf801d52.js" crossorigin="anonymous"></script>
 </body>

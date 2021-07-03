@@ -55,7 +55,9 @@ header {
   position: fixed;
   padding: 30px 0;
   background-color: transparent;
-  text-align: center; }
+  color: #fff;
+  text-align: center;
+  z-index: 1; }
   header .logo {
     display: inline-block;
     position: absolute;
@@ -76,9 +78,9 @@ header {
         font-size: 12px;
         letter-spacing: .05rem; }
         header nav .gnb .main-menu a:hover {
-          border-bottom: 1px solid #fd7e14; }
+          border-bottom: 1px solid #fff; }
     header nav .gnb .active {
-      border-bottom: 1px solid #fd7e14; }
+      border-bottom: 1px solid #fff; }
     header nav .sub-menu {
       width: 200px;
       display: none;
@@ -137,8 +139,11 @@ header {
       display: inline-block;
       margin: 0 auto;
       border-radius: 25px;
-      background-color: #fff;
-      color: #394f4b; }
+      background-color: #ebe9e9;
+      color: #394f4b;
+      cursor: pointer; }
+      header .icon-section li:hover {
+        background-color: #fff; }
     header .icon-section .search-icon {
       margin: 0 20px 0 0;
       font-size: 12px; }
@@ -149,5 +154,72 @@ header {
       header .icon-section .sns-icon i {
         margin: 8px auto; }
 
+.home {
+  width: 100vw;
+  height: 100vh; }
+  .home .slider .slide-control-btn {
+    position: absolute;
+    bottom: 58px;
+    left: 49%; }
+    .home .slider .slide-control-btn div {
+      width: 8px;
+      height: 8px;
+      display: inline-block;
+      margin: 0 5px 0 0;
+      border-radius: 4px;
+      background-color: #dbdada; }
+    .home .slider .slide-control-btn .selected {
+      background-color: #fff; }
+  .home .slider .arrow-btn__left {
+    position: absolute;
+    top: 48.5%;
+    left: 30px;
+    font-size: 23px;
+    color: #fff; }
+  .home .slider .arrow-btn__right {
+    position: absolute;
+    top: 48.5%;
+    right: 30px;
+    font-size: 23px;
+    color: #fff; }
+  .home .slider .slides .slide {
+    display: none; }
+    .home .slider .slides .slide-content {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.295); }
+      .home .slider .slides .slide-content div {
+        position: absolute;
+        top: 34.7%;
+        left: 31.9%;
+        color: #fff;
+        text-align: center; }
+        .home .slider .slides .slide-content div h1 {
+          font-family: "Cormorant Garamond", serif;
+          font-weight: 900;
+          font-size: 80px;
+          line-height: 1.2; }
+        .home .slider .slides .slide-content div p, .home .slider .slides .slide-content div span {
+          margin: 7px 0 0 0;
+          font-size: 22px;
+          font-weight: 300;
+          line-height: 1.7; }
+        .home .slider .slides .slide-content div .bold {
+          font-weight: bold; }
+  .home .slider .slides .slide-1 {
+    background: url(../img/room_2_b.jpg) no-repeat center center fixed;
+    background-size: cover; }
+  .home .slider .slides .slide-2 {
+    background: url(../img/room_2_b.jpg) no-repeat center center fixed;
+    background-size: cover; }
+  .home .slider .slides .slide-3 {
+    background: url(../img/room_1_a.jpg) no-repeat center center fixed;
+    background-size: cover; }
+  .home .slider .slides .active {
+    width: 100vw;
+    height: 100vh;
+    display: block; }
+
 body {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden; }
