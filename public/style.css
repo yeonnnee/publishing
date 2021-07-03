@@ -303,133 +303,292 @@ header {
       header .icon-section .sns-icon i {
         margin: 8px auto; }
 
-.home {
+.home .slider .arrow-btn__left {
+  position: absolute;
+  top: 48.5%;
+  left: 30px;
+  font-size: 23px;
+  color: #fff; }
+
+.home .slider .arrow-btn__right {
+  position: absolute;
+  top: 48.5%;
+  right: 30px;
+  font-size: 23px;
+  color: #fff; }
+
+.home .slider .slides .slide {
+  display: none; }
+  .home .slider .slides .slide-content {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.295);
+    color: #fff; }
+    .home .slider .slides .slide-content h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 900;
+      font-size: 80px;
+      line-height: 1.2; }
+    .home .slider .slides .slide-content .first-slide-content {
+      position: absolute;
+      top: 34.7%;
+      left: 31.9%;
+      text-align: center; }
+      .home .slider .slides .slide-content .first-slide-content p, .home .slider .slides .slide-content .first-slide-content span {
+        margin: 7px 0 0 0;
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 1.7; }
+      .home .slider .slides .slide-content .first-slide-content .bold {
+        font-weight: bold; }
+    .home .slider .slides .slide-content .second-slide-content h1 {
+      position: absolute;
+      top: 44.5%;
+      left: 37.3%; }
+    .home .slider .slides .slide-content .last-slide-content {
+      position: absolute;
+      top: 39.4%;
+      left: 28%;
+      text-align: center; }
+
+.home .slider .slides .slide-1 {
+  background: url(../img/room_2_b.jpg) no-repeat center center;
+  background-size: cover; }
+
+.home .slider .slides .slide-2 {
+  background: url(../img/slider_1.jpg) no-repeat center center;
+  background-size: cover; }
+
+.home .slider .slides .slide-3 {
+  background: url(../img/room_1_a.jpg) no-repeat center center;
+  background-size: cover; }
+
+.home .slider .slides .active {
   width: 100vw;
-  height: 100vh; }
-  .home .slider .arrow-btn__left {
+  height: 100vh;
+  display: block; }
+
+.home .slider .slide-control-btn {
+  position: absolute;
+  bottom: 58px;
+  left: 49%;
+  cursor: pointer; }
+  .home .slider .slide-control-btn div {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    margin: 0 4px 0 0;
+    border-radius: 4px;
+    background-color: #dbdada; }
+  .home .slider .slide-control-btn .selected {
+    background-color: #fff; }
+
+.home .featured-rooms .section-title {
+  margin: 100px 0 0;
+  text-align: center;
+  transform: translateX(-9px); }
+  .home .featured-rooms .section-title h3 {
+    padding: 16px 20px;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: "Cormorant Garamond", serif; }
+  .home .featured-rooms .section-title hr {
+    width: 49px; }
+
+.home .featured-rooms .room-info-section {
+  width: 100vw;
+  margin: 40px 0 0;
+  position: relative; }
+  .home .featured-rooms .room-info-section div {
+    display: inline-block; }
+  .home .featured-rooms .room-info-section .first-img {
+    width: 493px;
+    height: 736px;
+    position: relative;
+    transform: translateX(42%) translateY(-100px);
+    z-index: 2; }
+    .home .featured-rooms .room-info-section .first-img img {
+      width: 493px;
+      height: 736px; }
+  .home .featured-rooms .room-info-section .sec-img {
+    width: 674px;
+    height: 775px;
+    margin: 50px 0 0;
+    transform: translateX(-65px);
+    position: relative;
+    z-index: 1; }
+    .home .featured-rooms .room-info-section .sec-img img {
+      width: 674px;
+      height: 775px; }
+  .home .featured-rooms .room-info-section .room-desc {
+    width: 23%;
     position: absolute;
-    top: 48.5%;
-    left: 30px;
-    font-size: 23px;
-    color: #fff; }
-  .home .slider .arrow-btn__right {
+    top: 15%; }
+    .home .featured-rooms .room-info-section .room-desc h2 {
+      font-size: 4rem;
+      line-height: 1.3;
+      font-weight: 700;
+      font-family: "Cormorant Garamond", serif; }
+    .home .featured-rooms .room-info-section .room-desc p {
+      margin: 30px 0 0;
+      color: rgba(0, 0, 0, 0.5);
+      line-height: 1.7;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300; }
+    .home .featured-rooms .room-info-section .room-desc button {
+      margin: 18px 0 0;
+      font-size: 11px;
+      letter-spacing: .2rem;
+      padding: 10px 0;
+      font-weight: 700;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      cursor: pointer;
+      font-family: "Roboto", sans-serif; }
+      .home .featured-rooms .room-info-section .room-desc button:hover {
+        border-bottom: 1px solid #000; }
+
+.home .featured-rooms .sec-room {
+  margin: 160px 0 0; }
+  .home .featured-rooms .sec-room .room-desc {
+    width: 20%;
+    left: 232px;
+    top: 102px; }
+    .home .featured-rooms .sec-room .room-desc p {
+      width: 96.5%; }
+  .home .featured-rooms .sec-room .third-img {
+    width: 787px;
+    height: 1005px;
+    margin: 0 0 0 50%;
+    position: relative;
+    z-index: 1;
+    transform: translateX(33%); }
+    .home .featured-rooms .sec-room .third-img img {
+      width: 787px;
+      height: 1005px; }
+  .home .featured-rooms .sec-room .fourth-img {
+    width: 577px;
+    height: 354px;
     position: absolute;
-    top: 48.5%;
-    right: 30px;
-    font-size: 23px;
-    color: #fff; }
-  .home .slider .slides .slide {
-    display: none; }
-    .home .slider .slides .slide-content {
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.295);
-      color: #fff; }
-      .home .slider .slides .slide-content h1 {
-        font-family: "Cormorant Garamond", serif;
-        font-weight: 900;
-        font-size: 80px;
-        line-height: 1.2; }
-      .home .slider .slides .slide-content .first-slide-content {
-        position: absolute;
-        top: 34.7%;
-        left: 31.9%;
-        text-align: center; }
-        .home .slider .slides .slide-content .first-slide-content p, .home .slider .slides .slide-content .first-slide-content span {
-          margin: 7px 0 0 0;
-          font-size: 22px;
-          font-weight: 300;
-          line-height: 1.7; }
-        .home .slider .slides .slide-content .first-slide-content .bold {
-          font-weight: bold; }
-      .home .slider .slides .slide-content .second-slide-content h1 {
-        position: absolute;
-        top: 44.5%;
-        left: 37.3%; }
-      .home .slider .slides .slide-content .last-slide-content {
-        position: absolute;
-        top: 39.4%;
-        left: 28%;
-        text-align: center; }
-  .home .slider .slides .slide-1 {
-    background: url(../img/room_2_b.jpg) no-repeat center center;
-    background-size: cover; }
-  .home .slider .slides .slide-2 {
-    background: url(../img/slider_1.jpg) no-repeat center center;
-    background-size: cover; }
-  .home .slider .slides .slide-3 {
-    background: url(../img/room_1_a.jpg) no-repeat center center;
-    background-size: cover; }
-  .home .slider .slides .active {
-    width: 100vw;
-    height: 100vh;
-    display: block; }
-  .home .slider .slide-control-btn {
-    position: absolute;
-    bottom: 58px;
-    left: 49%;
-    cursor: pointer; }
-    .home .slider .slide-control-btn div {
-      width: 8px;
-      height: 8px;
-      display: inline-block;
-      margin: 0 4px 0 0;
-      border-radius: 4px;
-      background-color: #dbdada; }
-    .home .slider .slide-control-btn .selected {
-      background-color: #fff; }
-  .home .featured-rooms .section-title {
+    top: 308px;
+    right: 218px;
+    z-index: 2; }
+    .home .featured-rooms .sec-room .fourth-img img {
+      width: 577px;
+      height: 354px; }
+
+.home .amenities-section {
+  margin: 280px 0 0; }
+  .home .amenities-section img {
+    width: 50px;
+    height: 50px;
+    margin: 0 0 20px; }
+  .home .amenities-section .section-title {
     margin: 100px 0 0;
     text-align: center;
     transform: translateX(-9px); }
-    .home .featured-rooms .section-title h3 {
+    .home .amenities-section .section-title h3 {
       padding: 16px 20px;
       font-size: 3rem;
       font-weight: 700;
       font-family: "Cormorant Garamond", serif; }
-    .home .featured-rooms .section-title hr {
+    .home .amenities-section .section-title hr {
       width: 49px; }
-  .home .featured-rooms .room-info-section {
-    width: 100vw;
-    margin: 40px 0 0;
-    position: relative; }
-    .home .featured-rooms .room-info-section div {
-      display: inline-block; }
-    .home .featured-rooms .room-info-section .first-img {
-      width: 493px;
-      height: 736px;
-      position: relative;
-      transform: translateX(42%) translateY(-100px);
-      z-index: 2; }
-      .home .featured-rooms .room-info-section .first-img img {
-        width: 493px;
-        height: 736px; }
-    .home .featured-rooms .room-info-section .sec-img {
-      width: 674px;
-      height: 775px;
-      margin: 50px 0 0;
-      transform: translateX(-65px);
-      position: relative;
-      z-index: 1; }
-      .home .featured-rooms .room-info-section .sec-img img {
-        width: 674px;
-        height: 775px; }
-    .home .featured-rooms .room-info-section .room-desc {
-      width: 23%;
-      position: absolute;
-      top: 15%; }
-      .home .featured-rooms .room-info-section .room-desc h2 {
-        font-size: 4rem;
-        line-height: 1.3;
+  .home .amenities-section .card-list {
+    width: 80%;
+    margin: 70px 10% 0;
+    text-align: center; }
+    .home .amenities-section .card-list .card {
+      width: 257px;
+      height: 313px;
+      display: inline-block;
+      border: 1px solid #ececec;
+      padding: 40px 40px 60px;
+      margin: 0 50px 20px 0;
+      text-align: center; }
+      .home .amenities-section .card-list .card:nth-child(3) {
+        transform: translateY(22px); }
+        .home .amenities-section .card-list .card:nth-child(3):hover {
+          transform: translateY(18px); }
+      .home .amenities-section .card-list .card:nth-child(6) {
+        transform: translateY(30px); }
+        .home .amenities-section .card-list .card:nth-child(6):hover {
+          transform: translateY(27px); }
+      .home .amenities-section .card-list .card:hover {
+        border: 1px solid #000;
+        transform: translateY(-3px);
+        transition: transform 0.2s linear;
+        box-shadow: 0 5px 10px -5px #dad9d9; }
+      .home .amenities-section .card-list .card div {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
         font-weight: 700;
-        font-family: "Cormorant Garamond", serif; }
-      .home .featured-rooms .room-info-section .room-desc p {
-        margin: 30px 0 0;
-        color: rgba(0, 0, 0, 0.5);
-        line-height: 1.7;
+        margin: 0 0 0.5rem;
+        line-height: 1.2; }
+      .home .amenities-section .card-list .card p {
+        margin: 0 0 0.5rem;
         font-family: "Roboto", sans-serif;
-        font-weight: 300; }
-      .home .featured-rooms .room-info-section .room-desc button {
+        color: #707070;
+        font-weight: 300;
+        line-height: 1.7; }
+      .home .amenities-section .card-list .card button {
+        margin: 18px 0 0;
+        font-size: 11px;
+        letter-spacing: .2rem;
+        padding: 10px 0;
+        font-weight: 700;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-family: "Roboto", sans-serif;
+        border-bottom: 1px solid #000; }
+        .home .amenities-section .card-list .card button:hover {
+          border: none; }
+
+.home .news-section {
+  width: 100%;
+  margin: 270px 0 0; }
+  .home .news-section ul {
+    width: 80%;
+    height: 500px;
+    margin: 70px 20%; }
+    .home .news-section ul li {
+      width: 353px;
+      height: 486px;
+      display: inline-block;
+      margin: 0 30px 0 0;
+      text-align: left;
+      cursor: pointer; }
+      .home .news-section ul li img {
+        width: 353px;
+        height: 235px; }
+      .home .news-section ul li h4 {
+        font-size: 20px;
+        font-weight: 700;
+        font-family: "Cormorant Garamond", serif;
+        line-height: 1.2;
+        margin: 30px 0 10px;
+        font-weight: 700; }
+      .home .news-section ul li .date {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.7;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.3); }
+      .home .news-section ul li .name {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.7;
+        font-size: 14px;
+        color: #fd7e14; }
+      .home .news-section ul li p {
+        margin: 15px 0 0;
+        font-weight: 300;
+        font-family: "Roboto", sans-serif;
+        line-height: 1.7;
+        font-size: 1rem;
+        color: #707070; }
+      .home .news-section ul li button {
         margin: 18px 0 0;
         font-size: 11px;
         letter-spacing: .2rem;
@@ -440,174 +599,26 @@ header {
         background-color: transparent;
         cursor: pointer;
         font-family: "Roboto", sans-serif; }
-        .home .featured-rooms .room-info-section .room-desc button:hover {
+        .home .news-section ul li button:hover {
           border-bottom: 1px solid #000; }
-  .home .featured-rooms .sec-room {
-    margin: 160px 0 0; }
-    .home .featured-rooms .sec-room .room-desc {
-      width: 20%;
-      left: 232px;
-      top: 102px; }
-      .home .featured-rooms .sec-room .room-desc p {
-        width: 96.5%; }
-    .home .featured-rooms .sec-room .third-img {
-      width: 787px;
-      height: 1005px;
-      margin: 0 0 0 50%;
+    .home .news-section ul .section-title {
       position: relative;
-      z-index: 1;
-      transform: translateX(33%); }
-      .home .featured-rooms .sec-room .third-img img {
-        width: 787px;
-        height: 1005px; }
-    .home .featured-rooms .sec-room .fourth-img {
-      width: 577px;
-      height: 354px;
-      position: absolute;
-      top: 308px;
-      right: 218px;
-      z-index: 2; }
-      .home .featured-rooms .sec-room .fourth-img img {
-        width: 577px;
-        height: 354px; }
-  .home .amenities-section {
-    margin: 280px 0 0; }
-    .home .amenities-section img {
-      width: 50px;
-      height: 50px;
-      margin: 0 0 20px; }
-    .home .amenities-section .section-title {
-      margin: 100px 0 0;
-      text-align: center;
-      transform: translateX(-9px); }
-      .home .amenities-section .section-title h3 {
-        padding: 16px 20px;
+      transform: translateY(-220px); }
+      .home .news-section ul .section-title h3 {
+        padding: 0 0 20px;
         font-size: 3rem;
         font-weight: 700;
         font-family: "Cormorant Garamond", serif; }
-      .home .amenities-section .section-title hr {
-        width: 49px; }
-    .home .amenities-section .card-list {
-      width: 80%;
-      margin: 70px 10% 0;
-      text-align: center; }
-      .home .amenities-section .card-list .card {
-        width: 257px;
-        height: 313px;
-        display: inline-block;
-        border: 1px solid #ececec;
-        padding: 40px 40px 60px;
-        margin: 0 50px 20px 0;
-        text-align: center; }
-        .home .amenities-section .card-list .card:nth-child(3) {
-          transform: translateY(22px); }
-          .home .amenities-section .card-list .card:nth-child(3):hover {
-            transform: translateY(18px); }
-        .home .amenities-section .card-list .card:nth-child(6) {
-          transform: translateY(30px); }
-          .home .amenities-section .card-list .card:nth-child(6):hover {
-            transform: translateY(27px); }
-        .home .amenities-section .card-list .card:hover {
-          border: 1px solid #000;
-          transform: translateY(-3px);
-          transition: transform 0.2s linear;
-          box-shadow: 0 5px 10px -5px #dad9d9; }
-        .home .amenities-section .card-list .card div {
-          font-family: "Cormorant Garamond", serif;
-          font-size: 20px;
-          font-weight: 700;
-          margin: 0 0 0.5rem;
-          line-height: 1.2; }
-        .home .amenities-section .card-list .card p {
-          margin: 0 0 0.5rem;
-          font-family: "Roboto", sans-serif;
-          color: #707070;
-          font-weight: 300;
-          line-height: 1.7; }
-        .home .amenities-section .card-list .card button {
-          margin: 18px 0 0;
-          font-size: 11px;
-          letter-spacing: .2rem;
-          padding: 10px 0;
-          font-weight: 700;
-          border: none;
-          outline: none;
-          background-color: transparent;
-          cursor: pointer;
-          font-family: "Roboto", sans-serif;
-          border-bottom: 1px solid #000; }
-          .home .amenities-section .card-list .card button:hover {
-            border: none; }
-  .home .news-section {
-    width: 100%;
-    margin: 270px 0 0; }
-    .home .news-section ul {
-      width: 80%;
-      height: 500px;
-      margin: 70px 20%; }
-      .home .news-section ul li {
-        width: 353px;
-        height: 486px;
-        display: inline-block;
-        margin: 0 30px 0 0;
-        text-align: left;
-        cursor: pointer; }
-        .home .news-section ul li img {
-          width: 353px;
-          height: 235px; }
-        .home .news-section ul li h4 {
-          font-size: 20px;
-          font-weight: 700;
-          font-family: "Cormorant Garamond", serif;
-          line-height: 1.2;
-          margin: 30px 0 10px;
-          font-weight: 700; }
-        .home .news-section ul li .date {
-          font-family: "Roboto", sans-serif;
-          line-height: 1.7;
-          font-size: 14px;
-          color: rgba(0, 0, 0, 0.3); }
-        .home .news-section ul li .name {
-          font-family: "Roboto", sans-serif;
-          line-height: 1.7;
-          font-size: 14px;
-          color: #fd7e14; }
-        .home .news-section ul li p {
-          margin: 15px 0 0;
-          font-weight: 300;
-          font-family: "Roboto", sans-serif;
-          line-height: 1.7;
-          font-size: 1rem;
-          color: #707070; }
-        .home .news-section ul li button {
-          margin: 18px 0 0;
-          font-size: 11px;
-          letter-spacing: .2rem;
-          padding: 10px 0;
-          font-weight: 700;
-          border: none;
-          outline: none;
-          background-color: transparent;
-          cursor: pointer;
-          font-family: "Roboto", sans-serif; }
-          .home .news-section ul li button:hover {
-            border-bottom: 1px solid #000; }
-      .home .news-section ul .section-title {
-        position: relative;
-        transform: translateY(-220px); }
-        .home .news-section ul .section-title h3 {
-          padding: 0 0 20px;
-          font-size: 3rem;
-          font-weight: 700;
-          font-family: "Cormorant Garamond", serif; }
-        .home .news-section ul .section-title hr {
-          width: 50px;
-          position: absolute;
-          left: 0; }
-        .home .news-section ul .section-title .event-desc {
-          padding: 10px 0;
-          width: 80%; }
+      .home .news-section ul .section-title hr {
+        width: 50px;
+        position: absolute;
+        left: 0; }
+      .home .news-section ul .section-title .event-desc {
+        padding: 10px 0;
+        width: 80%; }
 
 body {
+  width: 100vw;
+  height: 100vh;
   font-family: "Roboto", sans-serif;
   overflow-x: hidden; }
