@@ -50,6 +50,155 @@ a {
   color: inherit;
   cursor: pointer; }
 
+footer {
+  height: 100%;
+  height: 90%;
+  position: relative; }
+  footer section {
+    width: 100%; }
+  footer .footer-message {
+    background: #e6e6e6;
+    padding: 7rem 0;
+    text-align: center;
+    font-size: 2rem;
+    color: #000;
+    font-family: "Cormorant Garamond", serif; }
+    footer .footer-message div {
+      display: inline-block;
+      width: 200px;
+      height: 18px;
+      background-color: #ff896b;
+      position: relative;
+      top: 10px; }
+      footer .footer-message div:after {
+        content: "+12.345.678.9012";
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top: -20px;
+        left: 0; }
+  footer .menu-list {
+    width: 80%;
+    margin: 70px 20% 0;
+    position: relative; }
+    footer .menu-list p, footer .menu-list a, footer .menu-list .text {
+      font-weight: 300;
+      font-family: "Roboto", sans-serif;
+      line-height: 1.7;
+      font-size: 15px;
+      color: #707070; }
+    footer .menu-list p {
+      width: 84%; }
+    footer .menu-list .category {
+      font-size: 20px;
+      margin: 20px 0;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 500;
+      line-height: 1.2; }
+    footer .menu-list .about, footer .menu-list .fnb, footer .menu-list .contact {
+      height: 273px;
+      margin: 0 40px 0 0;
+      display: inline-block;
+      position: absolute;
+      top: 0; }
+    footer .menu-list .about {
+      width: 364px; }
+      footer .menu-list .about button {
+        margin: 18px 0 0;
+        font-size: 11px;
+        letter-spacing: .2rem;
+        padding: 10px 0;
+        font-weight: 700;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-family: "Roboto", sans-serif; }
+        footer .menu-list .about button:hover {
+          border-bottom: 1px solid #000; }
+    footer .menu-list .fnb {
+      width: 150px;
+      left: 400px; }
+      footer .menu-list .fnb ul li {
+        margin: 0 0 10px; }
+        footer .menu-list .fnb ul li a {
+          font-size: 14px; }
+          footer .menu-list .fnb ul li a:hover {
+            color: #000;
+            transition: all 0.3s linear; }
+    footer .menu-list .contact {
+      width: 580px;
+      left: 600px; }
+      footer .menu-list .contact .contact-info .address, footer .menu-list .contact .contact-info .tel {
+        display: inline-block; }
+      footer .menu-list .contact .contact-info .address {
+        margin: 0 120px 0 0; }
+      footer .menu-list .contact .subscribe {
+        margin: 30px 0 0; }
+        footer .menu-list .contact .subscribe .category {
+          margin: 0; }
+        footer .menu-list .contact .subscribe .form {
+          margin: 20px 0; }
+          footer .menu-list .contact .subscribe .form input {
+            width: 380px;
+            border: 1px solid #ccc;
+            padding: 0.70rem 0.75rem;
+            margin: 0 0.5rem 0 0;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            font-family: inherit; }
+            footer .menu-list .contact .subscribe .form input::placeholder {
+              font-style: italic;
+              color: #ccc; }
+            footer .menu-list .contact .subscribe .form input:focus {
+              outline: none;
+              border: 1px solid #000;
+              transition: all 0.2s linear; }
+          footer .menu-list .contact .subscribe .form button {
+            height: 47px;
+            width: 123px;
+            background-color: #000;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            outline: none;
+            border: none;
+            cursor: pointer; }
+  footer .copyright .copyright-text {
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    left: 21%;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #707070;
+    line-height: 1.7; }
+    footer .copyright .copyright-text span {
+      color: #fd7e14; }
+  footer .copyright .sns {
+    display: inline-block;
+    position: absolute;
+    bottom: 10%;
+    right: 21%; }
+    footer .copyright .sns li {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      font-size: 15px;
+      cursor: pointer; }
+      footer .copyright .sns li i {
+        margin: 13px auto; }
+      footer .copyright .sns li:hover {
+        background-color: #ff896b;
+        transition: all 0.3s linear; }
+
 header {
   width: 100%;
   position: fixed;
@@ -389,6 +538,75 @@ header {
           border-bottom: 1px solid #000; }
           .home .amenities-section .card-list .card button:hover {
             border: none; }
+  .home .news-section {
+    width: 100%;
+    margin: 270px 0 0; }
+    .home .news-section ul {
+      width: 80%;
+      height: 500px;
+      margin: 70px 20%; }
+      .home .news-section ul li {
+        width: 353px;
+        height: 486px;
+        display: inline-block;
+        margin: 0 30px 0 0;
+        text-align: left;
+        cursor: pointer; }
+        .home .news-section ul li img {
+          width: 353px;
+          height: 235px; }
+        .home .news-section ul li h4 {
+          font-size: 20px;
+          font-weight: 700;
+          font-family: "Cormorant Garamond", serif;
+          line-height: 1.2;
+          margin: 30px 0 10px;
+          font-weight: 700; }
+        .home .news-section ul li .date {
+          font-family: "Roboto", sans-serif;
+          line-height: 1.7;
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.3); }
+        .home .news-section ul li .name {
+          font-family: "Roboto", sans-serif;
+          line-height: 1.7;
+          font-size: 14px;
+          color: #fd7e14; }
+        .home .news-section ul li p {
+          margin: 15px 0 0;
+          font-weight: 300;
+          font-family: "Roboto", sans-serif;
+          line-height: 1.7;
+          font-size: 1rem;
+          color: #707070; }
+        .home .news-section ul li button {
+          margin: 18px 0 0;
+          font-size: 11px;
+          letter-spacing: .2rem;
+          padding: 10px 0;
+          font-weight: 700;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          cursor: pointer;
+          font-family: "Roboto", sans-serif; }
+          .home .news-section ul li button:hover {
+            border-bottom: 1px solid #000; }
+      .home .news-section ul .section-title {
+        position: relative;
+        transform: translateY(-220px); }
+        .home .news-section ul .section-title h3 {
+          padding: 0 0 20px;
+          font-size: 3rem;
+          font-weight: 700;
+          font-family: "Cormorant Garamond", serif; }
+        .home .news-section ul .section-title hr {
+          width: 50px;
+          position: absolute;
+          left: 0; }
+        .home .news-section ul .section-title .event-desc {
+          padding: 10px 0;
+          width: 80%; }
 
 body {
   font-family: "Roboto", sans-serif;

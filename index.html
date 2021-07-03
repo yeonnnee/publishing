@@ -261,58 +261,68 @@
     </section>
 
     <!---------------- NEWS & EVETNS ------------------->
-    <section>
-      <div>
-        <h3>News & Events</h3>
-        <hr />
-        <p>
-          A hotel is an establishment that provides paid lodging on a short-term basis.
-        </p>
-        <button>ALL POSTS</button>
-      </div>
-      <div>
-        <div>
-          <div>
-            <img src="./img_1.jpg" />
-          </div>
-          <div>
-            <h4>How algorithms shape our world</h4>
-            <span>December 20, 2019 by</span>
-            <span>Joefrey Mahusay</span>
+    <section class="news-section">
+      <ul>
+        <li class="section-title">
+
+          <h3>News & Events</h3>
+          <hr />
+          <div class="event-desc">
             <p>
               A hotel is an establishment that provides paid lodging on a short-term basis.
             </p>
-            <button>READ MORE</button>
+            <button>ALL POSTS</button>
           </div>
-        </div>
-        <div>
+
+
+        </li>
+
+        <li>
           <div>
             <img src="./img/img_1.jpg" />
           </div>
           <div>
             <h4>How algorithms shape our world</h4>
-            <span>December 20, 2019 by</span>
-            <span>Joefrey Mahusay</span>
+            <span class="date">December 20, 2019 • by</span>
+            <span class="name">Joefrey Mahusay</span>
             <p>
               A hotel is an establishment that provides paid lodging on a short-term basis.
             </p>
             <button>READ MORE</button>
           </div>
-        </div>
-      </div>
+        </li>
+
+        <li>
+          <div>
+            <img src="./img/img_3.jpg" />
+          </div>
+          <div>
+            <h4>How algorithms shape our world</h4>
+            <span class="date">December 20, 2019 • by</span>
+            <span class="name">Joefrey Mahusay</span>
+            <p>
+              A hotel is an establishment that provides paid lodging on a short-term basis.
+            </p>
+            <button>READ MORE</button>
+          </div>
+        </li>
+
+      </ul>
+
     </section>
 
   </main>
   <!-------------- footer ----------->
   <footer>
-    <section>
+    <section class="footer-message">
       <span>If you have any special requests, please feel free to call us.</span>
-      <span>+12.345.678.9012</span>
+      <div></div>
     </section>
 
-    <section>
-      <div>
-        <div>Abotu Us</div>
+    <section class="menu-list">
+      <!-- about us -->
+      <div class="about">
+        <div class="category">About Us</div>
         <p>
           A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range
           from
@@ -320,14 +330,15 @@
         </p>
         <button>READ MORE</button>
       </div>
-      <div>
-        <div>Navigation</div>
+      <!-- fnb -->
+      <div class="fnb">
+        <div class="category">Navigation</div>
         <ul>
           <li>
             <a href="./index.html">HOME</a>
           </li>
           <li>
-            <a href="./room.html">ROOM</a>
+            <a href="./room.html">ROOMS</a>
           </li>
           <li>
             <a href="./amenities.html">AMENITIES</a>
@@ -343,45 +354,62 @@
           </li>
         </ul>
       </div>
+      <!-- contact -->
+      <div class="contact">
+        <div class="contact-info">
+          <div class="address">
+            <div class="category">Address</div>
+            <div>
+              <div class="text">273 South Riverview Rd.</div>
+              <div class="text">New York, NY 10011</div>
+            </div>
+          </div>
+          <div class="tel">
+            <div class="category">Telephone</div>
+            <ul>
+              <li class="text">+1 234 5678 910</li>
+              <li class="text">+2 234 5678 910</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="subscribe">
+          <div class="category">Join our newsletter</div>
+          <p>Be the first to know our latest updates and news!</p>
+          <div class="form">
+            <input type="text" placeholder="Enter your email">
+            <button>Subscribe</button>
+          </div>
+        </div>
+
+      </div>
+
     </section>
 
-    <section>
-      <div>
-        <div>Address</div>
-        <address>
-          <div>273 South Riverview Rd.</div>
-          <div>New York, NY 10011</div>
-        </address>
-      </div>
-      <div>
-        <div>Telephone</div>
-        <ul>
-          <li>+1 234 5678 910</li>
-          <li>+2 234 5678 910</li>
-        </ul>
-      </div>
-    </section>
-    <section>
-      <div>Join our newsletter</div>
-      <p>Be the first to know our latest updates and news!</p>
-      <div>
-        <input type="text" placeholder="Enter your email">
-        <button>Subscribe</button>
-      </div>
-    </section>
+
     <!-------------------- Copyright -------------->
-    <section>
-      <div>
+    <div class="copyright">
+      <div class="copyright-text">
         Copyright ©2021 Untree.co. All Rights Reserved. Design by
         <span>Untree.co</span>
       </div>
-      <div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </section>
+
+      <ul class="sns">
+        <li>
+          <i class="fab fa-facebook-f"></i>
+        </li>
+        <li>
+          <i class="fab fa-twitter"></i>
+        </li>
+        <li>
+          <i class="fab fa-instagram"></i>
+        </li>
+        <li class="owl-icon ">
+          <i class="fab fa-tripadvisor"></i>
+        </li>
+      </ul>
+    </div>
+
   </footer>
   <script src="https://kit.fontawesome.com/03bf801d52.js" crossorigin="anonymous"></script>
 </body>
