@@ -57,7 +57,7 @@ header {
   background-color: transparent;
   color: #fff;
   text-align: center;
-  z-index: 1; }
+  z-index: 999; }
   header .logo {
     display: inline-block;
     position: absolute;
@@ -157,19 +157,6 @@ header {
 .home {
   width: 100vw;
   height: 100vh; }
-  .home .slider .slide-control-btn {
-    position: absolute;
-    bottom: 58px;
-    left: 49%; }
-    .home .slider .slide-control-btn div {
-      width: 8px;
-      height: 8px;
-      display: inline-block;
-      margin: 0 5px 0 0;
-      border-radius: 4px;
-      background-color: #dbdada; }
-    .home .slider .slide-control-btn .selected {
-      background-color: #fff; }
   .home .slider .arrow-btn__left {
     position: absolute;
     top: 48.5%;
@@ -187,38 +174,153 @@ header {
     .home .slider .slides .slide-content {
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.295); }
-      .home .slider .slides .slide-content div {
+      background-color: rgba(0, 0, 0, 0.295);
+      color: #fff; }
+      .home .slider .slides .slide-content h1 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 900;
+        font-size: 80px;
+        line-height: 1.2; }
+      .home .slider .slides .slide-content .first-slide-content {
         position: absolute;
         top: 34.7%;
         left: 31.9%;
-        color: #fff;
         text-align: center; }
-        .home .slider .slides .slide-content div h1 {
-          font-family: "Cormorant Garamond", serif;
-          font-weight: 900;
-          font-size: 80px;
-          line-height: 1.2; }
-        .home .slider .slides .slide-content div p, .home .slider .slides .slide-content div span {
+        .home .slider .slides .slide-content .first-slide-content p, .home .slider .slides .slide-content .first-slide-content span {
           margin: 7px 0 0 0;
           font-size: 22px;
           font-weight: 300;
           line-height: 1.7; }
-        .home .slider .slides .slide-content div .bold {
+        .home .slider .slides .slide-content .first-slide-content .bold {
           font-weight: bold; }
+      .home .slider .slides .slide-content .second-slide-content h1 {
+        position: absolute;
+        top: 44.5%;
+        left: 37.3%; }
+      .home .slider .slides .slide-content .last-slide-content {
+        position: absolute;
+        top: 39.4%;
+        left: 28%;
+        text-align: center; }
   .home .slider .slides .slide-1 {
-    background: url(../img/room_2_b.jpg) no-repeat center center fixed;
+    background: url(../img/room_2_b.jpg) no-repeat center center;
     background-size: cover; }
   .home .slider .slides .slide-2 {
-    background: url(../img/room_2_b.jpg) no-repeat center center fixed;
+    background: url(../img/slider_1.jpg) no-repeat center center;
     background-size: cover; }
   .home .slider .slides .slide-3 {
-    background: url(../img/room_1_a.jpg) no-repeat center center fixed;
+    background: url(../img/room_1_a.jpg) no-repeat center center;
     background-size: cover; }
   .home .slider .slides .active {
     width: 100vw;
     height: 100vh;
     display: block; }
+  .home .slider .slide-control-btn {
+    position: absolute;
+    bottom: 58px;
+    left: 49%;
+    cursor: pointer; }
+    .home .slider .slide-control-btn div {
+      width: 8px;
+      height: 8px;
+      display: inline-block;
+      margin: 0 4px 0 0;
+      border-radius: 4px;
+      background-color: #dbdada; }
+    .home .slider .slide-control-btn .selected {
+      background-color: #fff; }
+  .home .featured-rooms .section-title {
+    margin: 100px 0 0;
+    text-align: center;
+    transform: translateX(-9px); }
+    .home .featured-rooms .section-title h3 {
+      padding: 16px 20px;
+      font-size: 3rem;
+      font-weight: 700;
+      font-family: "Cormorant Garamond", serif; }
+    .home .featured-rooms .section-title hr {
+      width: 49px; }
+  .home .featured-rooms .room-info {
+    width: 100vw;
+    margin: 40px 0 0;
+    position: relative; }
+    .home .featured-rooms .room-info div {
+      display: inline-block; }
+    .home .featured-rooms .room-info .first-img {
+      width: 493px;
+      height: 736px;
+      position: relative;
+      transform: translateX(42%) translateY(-100px);
+      z-index: 2; }
+      .home .featured-rooms .room-info .first-img img {
+        width: 493px;
+        height: 736px; }
+    .home .featured-rooms .room-info .sec-img {
+      width: 674px;
+      height: 775px;
+      margin: 50px 0 0;
+      transform: translateX(-65px);
+      position: relative;
+      z-index: 1; }
+      .home .featured-rooms .room-info .sec-img img {
+        width: 674px;
+        height: 775px; }
+    .home .featured-rooms .room-info .room-desc {
+      width: 23%;
+      position: absolute;
+      top: 15%; }
+      .home .featured-rooms .room-info .room-desc h2 {
+        font-size: 4rem;
+        line-height: 1.3;
+        font-weight: 700;
+        font-family: "Cormorant Garamond", serif; }
+      .home .featured-rooms .room-info .room-desc p {
+        margin: 30px 0 0;
+        color: rgba(0, 0, 0, 0.5);
+        line-height: 1.7;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300; }
+      .home .featured-rooms .room-info .room-desc button {
+        margin: 18px 0 0;
+        font-size: 11px;
+        letter-spacing: .2rem;
+        padding: 10px 0;
+        font-weight: 700;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-family: "Roboto", sans-serif; }
+        .home .featured-rooms .room-info .room-desc button:hover {
+          border-bottom: 1px solid #000; }
+  .home .featured-rooms .sec-room {
+    margin: 160px 0 0; }
+    .home .featured-rooms .sec-room .room-desc {
+      width: 20%;
+      left: 232px;
+      top: 102px; }
+      .home .featured-rooms .sec-room .room-desc p {
+        width: 96.5%; }
+    .home .featured-rooms .sec-room .third-img {
+      width: 787px;
+      height: 1005px;
+      margin: 0 0 0 50%;
+      position: relative;
+      z-index: 1;
+      transform: translateX(33%); }
+      .home .featured-rooms .sec-room .third-img img {
+        width: 787px;
+        height: 1005px; }
+    .home .featured-rooms .sec-room .fourth-img {
+      width: 577px;
+      height: 354px;
+      position: absolute;
+      top: 308px;
+      right: 11%;
+      z-index: 2; }
+      .home .featured-rooms .sec-room .fourth-img img {
+        width: 577px;
+        height: 354px; }
 
 body {
   font-family: "Roboto", sans-serif;
