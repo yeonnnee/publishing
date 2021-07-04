@@ -617,6 +617,115 @@ header {
         padding: 10px 0;
         width: 80%; }
 
+.about .intro .slide {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background-color: #f8f9fa; }
+  .about .intro .slide-content-container {
+    width: 100%;
+    height: 100%;
+    color: #000; }
+    .about .intro .slide-content-container p {
+      width: 32.5%;
+      position: absolute;
+      top: 50.8%;
+      left: 21%;
+      font-family: "Roboto", sans-serif;
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 1.7; }
+    .about .intro .slide-content-container h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 900;
+      font-size: 80px;
+      line-height: 1.2;
+      position: absolute;
+      top: 39.7%;
+      left: 21%; }
+
+.about .management .section-title {
+  margin: 100px 0 70px;
+  text-align: center;
+  transform: translateX(-9px); }
+  .about .management .section-title h3 {
+    padding: 16px 20px;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: "Cormorant Garamond", serif; }
+  .about .management .section-title hr {
+    width: 49px; }
+
+.about .management .philosophy {
+  position: relative; }
+  .about .management .philosophy .img-frame {
+    width: 634px;
+    height: 728px;
+    display: inline-block;
+    margin: 70px 0 0; }
+    .about .management .philosophy .img-frame img {
+      width: 634px;
+      height: 728px; }
+  .about .management .philosophy .philo-desc {
+    width: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    margin: 0 60px; }
+    .about .management .philosophy .philo-desc div {
+      display: inline-block;
+      width: 80%; }
+      .about .management .philosophy .philo-desc div .desc-section-2 {
+        position: absolute;
+        width: 63.8%;
+        right: -20%; }
+    .about .management .philosophy .philo-desc h4 {
+      margin: 0 50px 30px;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 500;
+      line-height: 1.2;
+      font-size: 1.75rem; }
+    .about .management .philosophy .philo-desc p {
+      padding: 0 50px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      color: #707070;
+      line-height: 1.7; }
+      .about .management .philosophy .philo-desc p:nth-child(2) {
+        margin: 20px 0 0; }
+
+.about .video {
+  margin: 300px 0 120px;
+  text-align: center; }
+  .about .video img {
+    width: 1111px; }
+  .about .video-desc {
+    position: relative;
+    margin: 0 0 60px; }
+    .about .video-desc div {
+      display: inline-block;
+      text-align: left; }
+      .about .video-desc div:nth-child(1) {
+        left: 20%;
+        width: 300px;
+        padding: 0 0 0 60px; }
+        .about .video-desc div:nth-child(1) h1 {
+          font-size: 3.5rem;
+          font-weight: 300;
+          line-height: 1.2;
+          font-family: "Cormorant Garamond", serif; }
+      .about .video-desc div:nth-child(2) {
+        right: 20%;
+        width: 30%; }
+        .about .video-desc div:nth-child(2) p {
+          padding: 0 50px;
+          font-family: "Roboto", sans-serif;
+          font-weight: 300;
+          color: #707070;
+          line-height: 1.7; }
+          .about .video-desc div:nth-child(2) p:nth-child(2) {
+            margin: 20px 0 0; }
+
 .amenities .intro .slide {
   width: 100vw;
   height: 100vh;
