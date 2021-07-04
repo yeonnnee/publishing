@@ -13,7 +13,7 @@
     rel="stylesheet" />
 </head>
 
-<body>
+<body class="room">
   <!-------------- header ----------->
   <header>
     <div class="logo">
@@ -23,10 +23,10 @@
     <nav>
       <ul class="gnb">
         <li class="main-menu">
-          <a href="./index.html" class="active">HOME</a>
+          <a href="./index.html">HOME</a>
         </li>
         <li class="main-menu">
-          <a href="./room.html">ROOMS</a>
+          <a href="./room.html" class="active">ROOMS</a>
         </li>
         <li class="main-menu">
           <a href="./amenities.html">AMENITIES</a>
@@ -79,65 +79,92 @@
   </header>
   <!-------------- Contents -------->
   <main class="room">
-    <section>
-      <div>
-        <h1>Our Rooms</h1>
+    <section class="intro">
+
+      <!-- contents-->
+      <div class="slide bg">
+        <div class="slide-content-container">
+          <div class="slide-content">
+            <h1>Our Rooms</h1>
+          </div>
+        </div>
       </div>
     </section>
+    <!-- desc -->
     <section>
-      <div>
+      <div class="section-title">
         <h1>Enjoy Your Stay</h1>
         <p>
           A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range
           from a modest-quality mattress
         </p>
       </div>
-      <!-------------------- ROOMS ------------------>
-      <ul>
-        <li>
-          <div>
-            <img src="./img/room_1_a.jpg">
-          </div>
-          <div>
-            <h1>King Bedroom</h1>
-            <div>
-              $200
-              <span>/night</span>
-            </div>
-            <p>
-              A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may
-              range from a modest-quality mattress
-            </p>
-            <p>
-              Small, lower-priced hotels may offer only the most basic guest services and facilities.
-            </p>
-            <div>
-              <h4>Amenities</h4>
-              <ul>
-                <li>
-                  32-inch LCD TV with cable channels and DVD player
-                </li>
-                <li>
-                  Handheld and mounted rain shower heads
-                </li>
-                <li>
-                  Wi-Fi access
-                </li>
-                <li>
-                  Safety deposit box
-                </li>
-                <li>
-                  Mini-bar
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
 
-        <li>
+    </section>
+    <!-------------------- ROOMS ------------------>
+    <ul class="room-list">
+
+      <!-- first room -->
+      <li class="room">
+        <div class="room-image king-bedroom"></div>
+        <div class="room-desc">
+          <h1>King Bedroom</h1>
+          <div class="price-info">
+            <span class="price">$200</span>
+            <span>/night</span>
+          </div>
+          <p>
+            A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may
+            range from a modest-quality mattress
+          </p>
+          <p>
+            Small, lower-priced hotels may offer only the most basic guest services and facilities.
+          </p>
+
+          <div class="room-info">
+            <h4>Amenities</h4>
+            <ul>
+              <li>
+                <p>
+                  <i class="fas fa-check"></i>
+                  32-inch LCD TV with cable channels and DVD player
+                </p>
+              </li>
+              <li>
+                <p>
+                  <i class="fas fa-check"></i>
+                  Handheld and mounted rain shower heads
+                </p>
+              </li>
+              <li>
+                <p>
+                  <i class="fas fa-check"></i>
+                  Wi-Fi access
+                </p>
+              </li>
+              <li>
+                <p>
+                  <i class="fas fa-check"></i>
+                  Safety deposit box
+                </p>
+              </li>
+              <li>
+                <p>
+                  <i class="fas fa-check"></i>
+                  Mini-bar
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <!-- second room -->
+      <li class="room">
+        <div class="room-desc">
           <h1>Queen & Double Bedroom</h1>
-          <div>
-            $200
+          <div class="price-info">
+            <span class="price">$200</span>
             <span>/night</span>
           </div>
           <p>
@@ -147,75 +174,106 @@
           <p>
             Small, lower-priced hotels may offer only the most basic guest services and facilities.
           </p>
-          <div>
+          <div class="room-info">
             <h4>Amenities</h4>
             <ul>
               <li>
-                32-inch LCD TV with cable channels and DVD player
+                <p>
+                  <i class="fas fa-check"></i>
+                  32-inch LCD TV with cable channels and DVD player
+                </p>
               </li>
               <li>
-                Handheld and mounted rain shower heads
+                <p>
+                  <i class="fas fa-check"></i>
+                  Handheld and mounted rain shower heads
+                </p>
               </li>
               <li>
-                Wi-Fi access
+                <p>
+                  <i class="fas fa-check"></i>
+                  Wi-Fi access
+                </p>
               </li>
               <li>
-                Safety deposit box
+                <p>
+                  <i class="fas fa-check"></i>
+                  Safety deposit box
+                </p>
               </li>
               <li>
-                Mini-bar
+                <p>
+                  <i class="fas fa-check"></i>
+                  Mini-bar
+                </p>
               </li>
             </ul>
           </div>
+        </div>
+        <div class="room-image queen-double"></div>
+      </li>
 
-          <div>
-            <img src="./img/room_2_b.jpg">
+      <!-- third room -->
+      <li class="room">
+        <div class="room-image king-bedroom"></div>
+        <div class="room-desc">
+          <h1>King Bedroom</h1>
+          <div class="price-info">
+            <span class="price">$200</span>
+            <span>/night</span>
           </div>
-        </li>
-        <li>
-          <div>
-            <img src="./img/room_1_a.jpg">
-          </div>
-          <div>
-            <h1>King Bedroom</h1>
-            <div>
-              $200
-              <span>/night</span>
-            </div>
-            <p>
-              A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may
-              range from a modest-quality mattress
-            </p>
-            <p>
-              Small, lower-priced hotels may offer only the most basic guest services and facilities.
-            </p>
-            <div>
-              <h4>Amenities</h4>
-              <ul>
-                <li>
+
+          <p>
+            A hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may
+            range from a modest-quality mattress
+          </p>
+          <p>
+            Small, lower-priced hotels may offer only the most basic guest services and facilities.
+          </p>
+          <div class="room-info">
+            <h4>Amenities</h4>
+            <ul>
+              <li>
+                <p>
+                  <i class="fas fa-check"></i>
                   32-inch LCD TV with cable channels and DVD player
-                </li>
-                <li>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <i class="fas fa-check"></i>
                   Handheld and mounted rain shower heads
-                </li>
-                <li>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <i class="fas fa-check"></i>
                   Wi-Fi access
-                </li>
-                <li>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <i class="fas fa-check"></i>
                   Safety deposit box
-                </li>
-                <li>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <i class="fas fa-check"></i>
                   Mini-bar
-                </li>
-              </ul>
-            </div>
+                </p>
+              </li>
+            </ul>
           </div>
-        </li>
+        </div>
+      </li>
 
-        <li>
+      <!-- fourth room -->
+      <li class="room">
+        <div class="room-desc">
           <h1>Queen & Double Bedroom</h1>
-          <div>
-            $200
+          <div class="price-info">
+            <span class="price">$200</span>
             <span>/night</span>
           </div>
           <p>
@@ -225,38 +283,48 @@
           <p>
             Small, lower-priced hotels may offer only the most basic guest services and facilities.
           </p>
-          <div>
+          <div class="room-info">
             <h4>Amenities</h4>
             <ul>
               <li>
-                32-inch LCD TV with cable channels and DVD player
+                <p>
+                  <i class="fas fa-check"></i>
+                  32-inch LCD TV with cable channels and DVD player
+                </p>
               </li>
               <li>
-                Handheld and mounted rain shower heads
+                <p>
+                  <i class="fas fa-check"></i>
+                  Handheld and mounted rain shower heads
+                </p>
               </li>
               <li>
-                Wi-Fi access
+                <p>
+                  <i class="fas fa-check"></i>
+                  Wi-Fi access
+                </p>
               </li>
               <li>
-                Safety deposit box
+                <p>
+                  <i class="fas fa-check"></i>
+                  Safety deposit box
+                </p>
               </li>
               <li>
-                Mini-bar
+                <p>
+                  <i class="fas fa-check"></i>
+                  Mini-bar
+                </p>
               </li>
             </ul>
           </div>
+        </div>
+        <div class="room-image queen-double"></div>
 
-          <div>
-            <img src="./img/room_2_b.jpg">
-          </div>
-        </li>
+      </li>
 
-      </ul>
-    </section>
-    <section>
-      <span>If you have any special requests, please feel free to call us.</span>
-      <span>+12.345.678.9012</span>
-    </section>
+    </ul>
+
   </main>
   <!-------------- footer ----------->
   <footer>
