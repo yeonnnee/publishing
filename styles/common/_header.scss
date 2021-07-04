@@ -1,11 +1,13 @@
 header {
   width: 100%;
+  height: 50px;
   position: fixed;
-  padding: 30px 0;
+  padding: 20px 0;
   background-color: transparent;
   color: $white;
   text-align: center;
   z-index: 999;
+  transition: all 0.3s linear;
 
   .logo {
     display: inline-block;
@@ -18,6 +20,8 @@ header {
 
   nav {
     display: inline-block;
+    position: absolute;
+    left: 35%;
 
     .gnb {
       .main-menu {
@@ -44,7 +48,6 @@ header {
         border-bottom: 1px solid $white;
       }
     }
-
     .sub-menu {
       width: 200px;
       display: none;
@@ -53,20 +56,21 @@ header {
       color: $gray;
       cursor: pointer;
       transform: translateX(70px);
-
+      box-shadow: 0 15px 30px 0 rgb(218, 217, 217);
+  
       &:hover {
         display: block;
       }
-
+  
       ul {
         padding: 20px 0;
-
+  
         li {
           padding: 10px 20px;
           font-size: 14px;
           text-align: start;
           position: relative;
-
+  
           i {
             position: absolute;
             right: 20px;
@@ -76,36 +80,38 @@ header {
             background-color: $light;
             color: $gray-dark;
           }
-
+  
           &:nth-child(1):hover ~ .secondary-sub-menu {
-           display: inline-block;
-           background-color: $white;
+            display: inline-block;
+            background-color: $white;
           }
         } 
       }
-
+  
       .secondary-sub-menu {
         position: absolute;
         display: none;
-        width: 200px;
         top: 0;
-        right: -240px;
+        right: -220px;
         color: $gray;
-
+        margin: 10px 5px 0;
+        box-shadow: 0 15px 30px 0 rgb(218, 217, 217);
+  
         &:hover {
           display: inline-block;
           background-color: $white;
+  
         }
-
+  
         &:hover ~ .sub-menu {
           display: block;
         }
-
+  
         ul {
-          padding: 20px 0;
-
+          padding: 10px 0;
+  
           li {
-            padding:10px 20px;
+            padding: 10px;
             font-size: 14px;
             text-align: start;
        
@@ -117,8 +123,10 @@ header {
         }
       }
     }
+  
+    
   }
-
+  
   .icon-section {
     display: inline-block;
     position: absolute;
@@ -164,6 +172,42 @@ header {
 
       i {
         margin: 8px auto;
+      }
+    }
+  }
+}
+
+.dark-header {
+  padding: 13px 0 0;
+  background-color: $white;
+  color: $black;
+  box-shadow: 0 5px 10px -5px rgb(218, 217, 217);
+
+  nav {
+
+    .gnb {
+      .main-menu {
+        a {
+          &:hover {
+            border-bottom: 1px solid $orange;
+          }
+        }
+      }
+      .now {
+        border-bottom: 1px solid $orange;
+      }
+    }
+  }
+
+  .icon-section {
+
+    li {
+      background-color: $black;
+      color: $white;
+ 
+      &:hover {
+        background-color: $primary;
+        transition: all 0.3s linear;
       }
     }
   }
