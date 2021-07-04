@@ -617,6 +617,96 @@ header {
         padding: 10px 0;
         width: 80%; }
 
+.amenities .intro .slide {
+  width: 100vw;
+  height: 100vh;
+  display: block; }
+  .amenities .intro .slide-content-container {
+    width: 100%;
+    height: 100%;
+    color: #fff; }
+    .amenities .intro .slide-content-container h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 900;
+      font-size: 80px;
+      line-height: 1.2;
+      position: absolute;
+      top: 44.5%;
+      left: 41.4%; }
+
+.amenities .intro .bg {
+  background: url(../img/room_2_b.jpg) no-repeat center center;
+  background-size: cover; }
+
+.amenities .amenities-section {
+  margin: 100px 0; }
+  .amenities .amenities-section img {
+    width: 50px;
+    height: 50px;
+    margin: 0 0 20px; }
+  .amenities .amenities-section .section-title {
+    margin: 100px 0 0;
+    text-align: center;
+    transform: translateX(-9px); }
+    .amenities .amenities-section .section-title h3 {
+      padding: 16px 20px;
+      font-size: 3rem;
+      font-weight: 700;
+      font-family: "Cormorant Garamond", serif; }
+    .amenities .amenities-section .section-title hr {
+      width: 49px; }
+  .amenities .amenities-section .card-list {
+    width: 80%;
+    margin: 70px 10% 0;
+    text-align: center; }
+    .amenities .amenities-section .card-list .card {
+      width: 257px;
+      height: 313px;
+      display: inline-block;
+      border: 1px solid #ececec;
+      padding: 40px 40px 60px;
+      margin: 0 50px 20px 0;
+      text-align: center; }
+      .amenities .amenities-section .card-list .card:nth-child(3) {
+        transform: translateY(22px); }
+        .amenities .amenities-section .card-list .card:nth-child(3):hover {
+          transform: translateY(18px); }
+      .amenities .amenities-section .card-list .card:nth-child(6) {
+        transform: translateY(30px); }
+        .amenities .amenities-section .card-list .card:nth-child(6):hover {
+          transform: translateY(27px); }
+      .amenities .amenities-section .card-list .card:hover {
+        border: 1px solid #000;
+        transform: translateY(-3px);
+        transition: transform 0.2s linear;
+        box-shadow: 0 5px 10px -5px #dad9d9; }
+      .amenities .amenities-section .card-list .card div {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0 0 0.5rem;
+        line-height: 1.2; }
+      .amenities .amenities-section .card-list .card p {
+        margin: 0 0 0.5rem;
+        font-family: "Roboto", sans-serif;
+        color: #707070;
+        font-weight: 300;
+        line-height: 1.7; }
+      .amenities .amenities-section .card-list .card button {
+        margin: 18px 0 0;
+        font-size: 11px;
+        letter-spacing: .2rem;
+        padding: 10px 0;
+        font-weight: 700;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-family: "Roboto", sans-serif;
+        border-bottom: 1px solid #000; }
+        .amenities .amenities-section .card-list .card button:hover {
+          border: none; }
+
 body {
   width: 100vw;
   height: 100vh;
