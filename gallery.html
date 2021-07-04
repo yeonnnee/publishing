@@ -13,7 +13,7 @@
     rel="stylesheet" />
 </head>
 
-<body>
+<body class="gallery">
   <!-------------- header ----------->
   <header>
     <div class="logo">
@@ -23,7 +23,7 @@
     <nav>
       <ul class="gnb">
         <li class="main-menu">
-          <a href="./index.html" class="active">HOME</a>
+          <a href="./index.html">HOME</a>
         </li>
         <li class="main-menu">
           <a href="./room.html">ROOMS</a>
@@ -32,7 +32,7 @@
           <a href="./amenities.html">AMENITIES</a>
         </li>
         <li class="main-menu">
-          <a href="./gallery.html">GALLERY</a>
+          <a href="./gallery.html" class="active">GALLERY</a>
         </li>
         <li class="main-menu">
           <a href="./about.html">ABOUT US</a>
@@ -78,33 +78,96 @@
     </ul>
   </header>
   <!-------------- Contents -------->
-  <main class="gallery">
-    <section>
-      <div>
-        <h1>Gallery</h1>
+  <main>
+    <section class="intro">
+
+      <!-- contents-->
+      <div class="slide bg">
+        <div class="slide-content-container">
+          <div class="slide-content">
+            <h1>Gallery</h1>
+          </div>
+        </div>
       </div>
     </section>
     <section>
-      <h1>Slider Gallery</h1>
-      <hr />
-      <div>
-        <div></div>
-        <div></div>
+      <div class="section-title">
+        <h3>Slider Gallery</h3>
+        <hr />
       </div>
+
+      <div class="slider-gallery">
+        <div class="current-img">
+          <!-- image list -->
+          <div class="slider-1 show"></div>
+          <div class="slider-2"></div>
+          <div class="slider-3"></div>
+          <div class="slider-4"></div>
+
+          <div class="img-counter">
+            <span>1/4</span>
+          </div>
+          <div class="slide-controller">
+            <button class="arrow-btn">
+              <i class="fas fa-angle-left"></i>
+            </button>
+            <button class="arrow-btn">
+              <i class="fas fa-angle-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="next-img">
+
+          <div class="slider-1"></div>
+          <div class="slider-2 show"></div>
+          <div class="slider-3"></div>
+          <div class="slider-4"></div>
+
+
+        </div>
+      </div>
+
+    </section>
+    <section class="more-galleries">
+      <div class="section-title">
+        <h3>More Galleries</h3>
+        <hr />
+      </div>
+
       <div>
-        <div class="left-arrow"></div>
-        <div class="right-arrow"></div>
+        <ul class="img-list">
+          <li>
+            <img src="./img/img_1.jpg">
+          </li>
+          <li>
+            <img src="./img/img_2.jpg">
+          </li>
+        </ul>
+
+        <ul class="img-list">
+          <li>
+            <img src="./img/img_1.jpg">
+          </li>
+          <li>
+            <img src="./img/img_1.jpg">
+          </li>
+          <li>
+            <img src="./img/img_1.jpg">
+          </li>
+        </ul>
+
+        <ul class="img-list">
+          <li>
+            <img src="./img/img_1.jpg">
+          </li>
+          <li>
+            <img src="./img/img_2.jpg">
+          </li>
+        </ul>
       </div>
     </section>
-    <section>
-      <h1>More Galleries</h1>
-      <hr />
-      <div></div>
-    </section>
-    <section>
-      <span>If you have any special requests, please feel free to call us.</span>
-      <span>+12.345.678.9012</span>
-    </section>
+
   </main>
   <!-------------- footer ----------->
   <footer>

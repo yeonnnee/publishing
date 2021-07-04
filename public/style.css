@@ -932,6 +932,128 @@ header {
           background-color: #ff896b;
           transition: all 0.3s linear; }
 
+.gallery .intro .slide {
+  width: 100vw;
+  height: 100vh;
+  display: block; }
+  .gallery .intro .slide-content-container {
+    width: 100%;
+    height: 100%;
+    color: #fff; }
+    .gallery .intro .slide-content-container h1 {
+      position: absolute;
+      top: 44.5%;
+      left: 44%;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 900;
+      font-size: 80px;
+      line-height: 1.2; }
+
+.gallery .intro .bg {
+  background: url(../img/room_2_b.jpg) no-repeat center center;
+  background-size: cover; }
+
+.gallery .section-title {
+  margin: 100px 0 0;
+  text-align: center;
+  transform: translateX(-9px); }
+  .gallery .section-title h3 {
+    padding: 16px 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3rem;
+    font-weight: 700; }
+  .gallery .section-title hr {
+    width: 49px; }
+
+.gallery .slider-1 {
+  background: url(../img/room_1_a.jpg) no-repeat center center;
+  background-size: cover; }
+
+.gallery .slider-2 {
+  background: url(../img/room_1_b.jpg) no-repeat center center;
+  background-size: cover; }
+
+.gallery .slider-3 {
+  background: url(../img/room_2_a.jpg) no-repeat center center;
+  background-size: cover; }
+
+.gallery .slider-4 {
+  background: url(../img/room_2_b.jpg) no-repeat center center;
+  background-size: cover; }
+
+.gallery .show {
+  width: 100%;
+  height: 100%; }
+
+.gallery .slider-gallery {
+  margin: 100px 0; }
+  .gallery .slider-gallery .current-img {
+    width: 75%;
+    height: 935px;
+    position: relative;
+    display: inline-block; }
+    .gallery .slider-gallery .current-img .show {
+      width: 100%;
+      height: 100%; }
+    .gallery .slider-gallery .current-img .img-counter {
+      width: 130px;
+      height: 30px;
+      padding: 20px 0;
+      position: absolute;
+      bottom: 0px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 20px;
+      background: #fff; }
+      .gallery .slider-gallery .current-img .img-counter span {
+        margin: 0 45px;
+        text-align: center; }
+    .gallery .slider-gallery .current-img .slide-controller {
+      position: absolute;
+      bottom: -20px;
+      left: 47%; }
+      .gallery .slider-gallery .current-img .slide-controller .arrow-btn {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        border-radius: 25px;
+        background-color: #fff;
+        color: #6c757d;
+        text-align: center;
+        box-shadow: 0 15px 30px 0 #c2c2c2;
+        outline: none;
+        border: none;
+        cursor: pointer; }
+        .gallery .slider-gallery .current-img .slide-controller .arrow-btn i {
+          margin: 18px 0; }
+  .gallery .slider-gallery .next-img {
+    width: 23%;
+    height: 750px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    margin: 4% 0;
+    opacity: 0.3;
+    cursor: pointer; }
+    .gallery .slider-gallery .next-img:hover {
+      opacity: 0.5;
+      transition: opacity 0.2s linear; }
+
+.gallery .more-galleries div:nth-child(2) {
+  margin: 100px 0; }
+
+.gallery .more-galleries .img-list {
+  text-align: center; }
+  .gallery .more-galleries .img-list li {
+    display: inline-block;
+    margin: 1px 0 0; }
+    .gallery .more-galleries .img-list li img {
+      display: inline-block;
+      width: 100%;
+      height: 100%; }
+  .gallery .more-galleries .img-list:nth-child(2) li {
+    width: calc(62.3% / 3);
+    height: calc(100% / 3); }
+
 .room {
   font-family: "Cormorant Garamond", serif; }
   .room .intro .slide {
