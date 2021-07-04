@@ -40,7 +40,7 @@ header {
         }
       }
 
-      .active {
+      .now {
         border-bottom: 1px solid $white;
       }
     }
@@ -137,6 +137,16 @@ header {
 
       &:hover {
         background-color: $white;
+      }
+    }
+
+    .dark-icon {
+      background-color: $black;
+      color: $white;
+
+      &:hover {
+        background-color: $primary;
+        transition: all 0.3s linear;
       }
     }
 

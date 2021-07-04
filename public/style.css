@@ -228,7 +228,7 @@ header {
         letter-spacing: .05rem; }
         header nav .gnb .main-menu a:hover {
           border-bottom: 1px solid #fff; }
-    header nav .gnb .active {
+    header nav .gnb .now {
       border-bottom: 1px solid #fff; }
     header nav .sub-menu {
       width: 200px;
@@ -293,6 +293,12 @@ header {
       cursor: pointer; }
       header .icon-section li:hover {
         background-color: #fff; }
+    header .icon-section .dark-icon {
+      background-color: #000;
+      color: #fff; }
+      header .icon-section .dark-icon:hover {
+        background-color: #ff896b;
+        transition: all 0.3s linear; }
     header .icon-section .search-icon {
       margin: 0 20px 0 0;
       font-size: 12px; }
@@ -303,19 +309,20 @@ header {
       header .icon-section .sns-icon i {
         margin: 8px auto; }
 
-.home .slider .arrow-btn__left {
-  position: absolute;
-  top: 48.5%;
-  left: 30px;
-  font-size: 23px;
-  color: #fff; }
-
-.home .slider .arrow-btn__right {
-  position: absolute;
-  top: 48.5%;
-  right: 30px;
-  font-size: 23px;
-  color: #fff; }
+.home .slider .arrow-btn {
+  cursor: pointer; }
+  .home .slider .arrow-btn__left {
+    position: absolute;
+    top: 48.5%;
+    left: 30px;
+    font-size: 23px;
+    color: #fff; }
+  .home .slider .arrow-btn__right {
+    position: absolute;
+    top: 48.5%;
+    right: 30px;
+    font-size: 23px;
+    color: #fff; }
 
 .home .slider .slides .slide {
   display: none; }
@@ -1054,82 +1061,89 @@ header {
     width: calc(62.3% / 3);
     height: calc(100% / 3); }
 
-.room {
-  font-family: "Cormorant Garamond", serif; }
-  .room .intro .slide {
-    width: 100vw;
-    height: 100vh;
-    display: block; }
-    .room .intro .slide-content-container {
-      width: 100%;
-      height: 100%;
-      color: #fff; }
-      .room .intro .slide-content-container h1 {
+.room .intro .slide {
+  width: 100vw;
+  height: 100vh;
+  display: block; }
+  .room .intro .slide-content-container {
+    width: 100%;
+    height: 100%;
+    color: #fff; }
+    .room .intro .slide-content-container h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 900;
+      font-size: 80px;
+      line-height: 1.2;
+      position: absolute;
+      top: 44.5%;
+      left: 41.4%; }
+
+.room .intro .bg {
+  background: url(../img/room_2_b.jpg) no-repeat center center;
+  background-size: cover; }
+
+.room .section-title {
+  margin: 100px 0 0;
+  text-align: center; }
+  .room .section-title p {
+    width: 48%;
+    margin: 10px 25% 0; }
+
+.room h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2; }
+
+.room p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #707070;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin: 20px 0; }
+
+.room h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.75rem;
+  margin: 30px 0 1.5rem;
+  font-weight: 500;
+  line-height: 1.2; }
+
+.room .room-list {
+  margin: 100px 0 50px; }
+  .room .room-list .room {
+    margin: 0 0 150px; }
+    .room .room-list .room:nth-child(4) {
+      margin: 0; }
+    .room .room-list .room .room-image {
+      display: inline-block;
+      width: 1110px;
+      height: 685px; }
+    .room .room-list .room .king-bedroom {
+      background: url(../img/room_1_a.jpg) no-repeat center center;
+      background-size: cover; }
+    .room .room-list .room .queen-double {
+      background: url(../img/room_2_b.jpg) no-repeat center center;
+      background-size: cover; }
+    .room .room-list .room .room-desc {
+      display: inline-block;
+      width: 500px;
+      margin: 0 150px; }
+      .room .room-list .room .room-desc h1 {
+        margin: 30px 0; }
+      .room .room-list .room .room-desc .price-info .price {
         font-family: "Cormorant Garamond", serif;
-        font-weight: 900;
-        font-size: 80px;
-        line-height: 1.2;
-        position: absolute;
-        top: 44.5%;
-        left: 41.4%; }
-  .room .intro .bg {
-    background: url(../img/room_2_b.jpg) no-repeat center center;
-    background-size: cover; }
-  .room .section-title {
-    margin: 100px 0 0;
-    text-align: center; }
-    .room .section-title p {
-      width: 48%;
-      margin: 10px 25% 0; }
-  .room h1 {
-    font-size: 3.5rem;
-    font-weight: 300;
-    line-height: 1.2; }
-  .room p {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    color: #707070;
-    line-height: 1.7;
-    font-size: 1rem;
-    margin: 20px 0; }
-  .room h4 {
-    font-size: 1.75rem;
-    margin: 30px 0 1.5rem;
-    font-weight: 500;
-    line-height: 1.2; }
-  .room .room-list {
-    margin: 100px 0 50px; }
-    .room .room-list .room {
-      margin: 0 0 150px; }
-      .room .room-list .room:nth-child(4) {
-        margin: 0; }
-      .room .room-list .room .room-image {
-        display: inline-block;
-        width: 1110px;
-        height: 685px; }
-      .room .room-list .room .king-bedroom {
-        background: url(../img/room_1_a.jpg) no-repeat center center;
-        background-size: cover; }
-      .room .room-list .room .queen-double {
-        background: url(../img/room_2_b.jpg) no-repeat center center;
-        background-size: cover; }
-      .room .room-list .room .room-desc {
-        display: inline-block;
-        width: 500px;
-        margin: 0 150px; }
-        .room .room-list .room .room-desc h1 {
-          margin: 30px 0; }
-        .room .room-list .room .room-desc .price-info .price {
-          font-size: 3rem;
-          line-height: 1;
-          font-weight: 300; }
-        .room .room-list .room .room-desc .price-info span:nth-child(2) {
-          color: rgba(0, 0, 0, 0.5); }
-        .room .room-list .room .room-desc .room-info ul li i {
-          color: #000;
-          margin: 0 5px; }
-      .room .room-list .room:nth-child(1) .room-desc, .room .room-list .room:nth-child(3) .room-desc {
-        transform: translateY(-70px); }
+        font-size: 3rem;
+        line-height: 1;
+        font-weight: 300; }
+      .room .room-list .room .room-desc .price-info span:nth-child(2) {
+        color: rgba(0, 0, 0, 0.5); }
+      .room .room-list .room .room-desc .room-info ul li i {
+        color: #000;
+        margin: 0 5px; }
+    .room .room-list .room:nth-child(1) .room-desc, .room .room-list .room:nth-child(3) .room-desc {
+      transform: translateY(-70px); }
 
 body {
   width: 100vw;
