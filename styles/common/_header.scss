@@ -9,28 +9,36 @@ header {
   z-index: 999;
   transition: all 0.3s linear;
 
-  .logo {
-    display: inline-block;
-    position: absolute;
-    left: 20%;
-    font-size: 1.3rem;
-    font-weight: 700;
-    transform: translateY(7px);
-  }
+
 
   nav {
     display: inline-block;
-    position: absolute;
-    left: 35%;
+    position:absolute;
+    right: 5%;
+    left: 5%;
 
+    .logo {
+      display: inline-block;
+      margin: 15px 0 0 0;
+      font-size: 1.3rem;
+      font-weight: 700;
+      
+    }
     .gnb {
       .main-menu {
         display: inline-block;
         padding: 10px 20px;
 
-        &:nth-child(2):hover ~ .sub-menu {
+        &:nth-child(3):hover ~ .sub-menu {
           display: block;
           background-color: $white;
+        }
+
+        &:nth-child(2) {
+          margin: 0 0 0 10%;
+        }
+        &:nth-child(7){
+          margin: 0 10% 0 0;
         }
 
         a {
@@ -47,142 +55,135 @@ header {
       .now {
         border-bottom: 1px solid $white;
       }
-    }
-    .sub-menu {
-      width: 200px;
-      display: none;
-      position: relative;
-      background-color: $white;
-      color: $gray;
-      cursor: pointer;
-      transform: translateX(70px);
-      box-shadow: 0 15px 30px 0 rgb(218, 217, 217);
-  
-      &:hover {
-        display: block;
-      }
-  
-      ul {
-        padding: 20px 0;
-  
-        li {
-          padding: 10px 20px;
-          font-size: 14px;
-          text-align: start;
-          position: relative;
-  
-          i {
-            position: absolute;
-            right: 20px;
-          }
-     
-          &:hover {
-            background-color: $light;
-            color: $gray-dark;
-          }
-  
-          &:nth-child(1):hover ~ .secondary-sub-menu {
-            display: inline-block;
-            background-color: $white;
-          }
-        } 
-      }
-  
-      .secondary-sub-menu {
-        position: absolute;
-        display: none;
-        top: 0;
-        right: -220px;
-        color: $gray;
-        margin: 10px 5px 0;
-        box-shadow: 0 15px 30px 0 rgb(218, 217, 217);
+
+      .icon {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        margin: 0 auto;
+        border-radius: 25px;
+        background-color: rgb(235, 233, 233);
+        color:#394f4b;
+        cursor: pointer;
   
         &:hover {
-          display: inline-block;
           background-color: $white;
-  
         }
+      }
+    
+      .dark-icon {
+        background-color: $black;
+        color: $white;
   
-        &:hover ~ .sub-menu {
+        &:hover {
+          background-color: $primary;
+          transition: all 0.3s linear;
+        }
+      }
+  
+      .search-icon {
+        margin: 0 20px 0 0;
+        font-size: 12px;
+  
+        i {
+          margin: 10px auto;
+        }
+      }
+      
+      .sns-icon {
+        font-size: 14px;
+  
+        i {
+          margin: 8px auto;
+        }
+      }
+
+      .sub-menu {
+        width: 200px;
+        display: none;
+        position: relative;
+        background-color: $white;
+        color: $gray;
+        left: 35%;
+        box-shadow: 0 15px 30px 0 rgb(168, 168, 168);
+        cursor: pointer;
+
+        &:hover {
           display: block;
         }
-  
+    
         ul {
-          padding: 10px 0;
-  
+          padding: 20px 0;
+    
           li {
-            padding: 10px;
+            padding: 10px 20px;
             font-size: 14px;
             text-align: start;
+            position: relative;
+    
+            i {
+              position: absolute;
+              right: 20px;
+            }
        
             &:hover {
               background-color: $light;
               color: $gray-dark;
             }
+    
+            &:nth-child(1):hover ~ .secondary-sub-menu {
+              display: inline-block;
+              background-color: $white;
+            }
+          } 
+        }
+    
+        .secondary-sub-menu {
+          display: none;
+          margin: 10px 5px 0;
+          position: absolute;
+          top: 0;
+          right: -224px;
+          color: $gray;
+          box-shadow: 0 15px 30px 0 rgb(168, 168, 168);
+    
+          &:hover {
+            display: inline-block;
+            background-color: $white;
+    
+          }
+    
+          &:hover ~ .sub-menu {
+            display: block;
+          }
+    
+          ul {
+            padding: 10px 0;
+    
+            li {
+              padding: 10px;
+              font-size: 14px;
+              text-align: start;
+         
+              &:hover {
+                background-color: $light;
+                color: $gray-dark;
+              }
+            }
           }
         }
       }
     }
-  
-    
-  }
-  
-  .icon-section {
-    display: inline-block;
-    position: absolute;
-    right: 20%;
-    transform: translateY(5px);
-
-    li {
-      width: 30px;
-      height: 30px;
-      display: inline-block;
-      margin: 0 auto;
-      border-radius: 25px;
-      background-color: rgb(235, 233, 233);
-      color:#394f4b;
-      cursor: pointer;
-
-      &:hover {
-        background-color: $white;
-      }
-    }
-
-    .dark-icon {
-      background-color: $black;
-      color: $white;
-
-      &:hover {
-        background-color: $primary;
-        transition: all 0.3s linear;
-      }
-    }
-
-    .search-icon {
-      margin: 0 20px 0 0;
-      font-size: 12px;
-
-      i {
-        margin: 10px auto;
-      }
-    }
-    
-    .sns-icon {
-      font-size: 14px;
-
-      i {
-        margin: 8px auto;
-      }
-    }
   }
 }
+  
+
 
 .opacity-header {
   background-color: $light;
   color: $black;
 
   nav {
-
     .gnb {
       .main-menu {
         a {
@@ -196,14 +197,17 @@ header {
       }
     }
   }
-
 }
 
 .dark-header {
   padding: 13px 0 0;
   background-color: $white;
   color: $black;
-  box-shadow: 0 5px 10px -5px rgb(218, 217, 217);
+  box-shadow: 0 2px 30px 0 rgb(224, 223, 223);
+
+  .logo{
+    margin: 5px 0 0;
+  }
 
   nav {
 
@@ -218,19 +222,19 @@ header {
       .now {
         border-bottom: 1px solid $orange;
       }
-    }
-  }
+      .icon {
 
-  .icon-section {
-
-    li {
-      background-color: $black;
-      color: $white;
- 
-      &:hover {
-        background-color: $primary;
-        transition: all 0.3s linear;
+        background-color: $black;
+        color: $white;
+    
+        &:hover {
+          background-color: $primary;
+          transition: all 0.3s linear;
+        }
       }
     }
   }
+
+
+  
 }
