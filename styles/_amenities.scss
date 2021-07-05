@@ -13,13 +13,14 @@
         color:$white;
     
         h1 {
+          position: absolute;
+          top: 44.5%;
+          left: 41.4%;
           font-family: "Cormorant Garamond", serif;
           font-weight: 900;
           font-size: 80px;
           line-height: 1.2;
-          position: absolute;
-          top: 44.5%;
-          left: 41.4%;
+         
         }
       }
     }
@@ -46,9 +47,9 @@
 
       h3 {
         padding: 16px 20px;
+        font-family: "Cormorant Garamond", serif;
         font-size: 3rem;
         font-weight: 700;
-        font-family: "Cormorant Garamond", serif;
       }
 
       hr {
@@ -64,10 +65,11 @@
       .card {
         width: 257px;
         height: 313px;
-        display: inline-block;
-        border: 1px solid rgb(236, 236, 236);
         padding: 40px 40px 60px;
         margin: 0 50px 20px 0;
+        display: inline-block;
+        border: 1px solid rgb(236, 236, 236);
+
         text-align: center;
 
         &:nth-child(3) {
@@ -94,10 +96,10 @@
         }
 
         div {
+          margin: 0 0 0.5rem;
           font-family: "Cormorant Garamond", serif;
           font-size: 20px;
           font-weight: 700;
-          margin: 0 0 0.5rem;
           line-height: 1.2;
         }
 
@@ -111,16 +113,16 @@
 
         button {
           margin: 18px 0 0;
+          padding: 10px 0;
+          font-family: "Roboto", sans-serif;
           font-size: 11px;
           letter-spacing: .2rem;
-          padding: 10px 0;
           font-weight: 700;
           border: none;
           outline: none;
           background-color: transparent;
-          cursor: pointer;
-          font-family: "Roboto", sans-serif;
           border-bottom: 1px solid $black;
+          cursor: pointer;
 
           &:hover {
             border:none;

@@ -24,13 +24,13 @@
         }
     
         h1 {
+          position: absolute;
+          top: 39.7%;
+          left: 21%;
           font-family: "Cormorant Garamond", serif;
           font-weight: 900;
           font-size: 80px;
           line-height: 1.2;
-          position: absolute;
-          top: 39.7%;
-          left: 21%;
         }
       }
     }
@@ -42,12 +42,12 @@
       margin: 100px 0 70px;
       text-align: center;
       transform: translateX(-9px);
+
       h3 {
         padding: 16px 20px;
+        font-family: "Cormorant Garamond", serif;
         font-size: 3rem;
         font-weight: 700;
-        font-family: "Cormorant Garamond", serif;
-      
       }
       hr {
         width: 49px;
@@ -71,18 +71,18 @@
       .philo-desc{
 
         width: 50%;
+        margin: 0 60px;
         display: inline-block;
         position: absolute;
         top: 0;
-        margin: 0 60px;
 
         div {
-          display: inline-block;
           width: 80%;
+          display: inline-block;
 
           .desc-section-2 {
-            position: absolute;
             width: 63.8%;
+            position: absolute;
             right: -20%;   
           }
         }
@@ -126,15 +126,15 @@
         text-align: left;
 
         &:nth-child(1) {
-          left:20%;
           width: 300px;
           padding: 0 0 0 60px;
+          left:20%;
 
           h1 {
+            font-family: "Cormorant Garamond", serif;
             font-size: 3.5rem;
             font-weight: 300;
             line-height: 1.2;
-            font-family: "Cormorant Garamond", serif;
           }
         }
 
