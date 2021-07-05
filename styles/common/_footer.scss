@@ -7,20 +7,20 @@ footer {
     width: 100%;
   }
   .footer-message {
-    background: #e6e6e6;
     padding: 7rem 0;
+    background: #e6e6e6;
     text-align: center;    
+    font-family: "Cormorant Garamond", serif;
     font-size: 2rem;
     color: #000;
-    font-family: "Cormorant Garamond", serif;
 
     div{
-      display: inline-block;
       width: 200px;
       height: 18px;
-      background-color: $primary;
+      display: inline-block;
       position: relative;
       top: 10px;
+      background-color: $primary;
 
       &:after {
         content: "+12.345.678.9012";
@@ -53,8 +53,8 @@ footer {
     }
 
     .category {
-      font-size: 20px;
       margin: 20px 0 ;
+      font-size: 20px;
       font-family: "Cormorant Garamond", serif;
       font-weight: 500;
       line-height: 1.2;
@@ -70,28 +70,13 @@ footer {
     .about {
       width: 364px;
 
-      button {
-        margin: 18px 0 0;
-        padding: 10px 0;
-        font-family: "Roboto", sans-serif;
-        font-weight: 700;
-        font-size: 11px;
-        letter-spacing: .2rem;
-        border: none;
-        outline: none;
-        background-color: transparent;
-        cursor: pointer;
-
-
-        &:hover {
-          border-bottom: 1px solid $black;
-        }
-      }
+      
     }
 
     .fnb {
       width: 150px;
       left: 400px;
+
       ul {
         li{
           margin: 0 0 10px;
@@ -131,6 +116,7 @@ footer {
         }
         .form {
           margin: 20px 0;
+
           input {
             width: 380px;
             padding: 0.70rem 0.75rem;
@@ -154,17 +140,17 @@ footer {
             }
           }
 
-          button {
-            height: 47px;
-            width: 123px;
-            background-color: $black;
-            color: $white;
-            font-size: 16px;
-            font-weight: 700;
-            outline: none;
-            border: none;
-            cursor: pointer;
-          }
+          // button {
+          //   height: 47px;
+          //   width: 123px;
+          //   background-color: $black;
+          //   color: $white;
+          //   font-size: 16px;
+          //   font-weight: 700;
+          //   outline: none;
+          //   border: none;
+          //   cursor: pointer;
+          // }
         }
         
       }

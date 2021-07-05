@@ -57,19 +57,19 @@ footer {
   footer section {
     width: 100%; }
   footer .footer-message {
-    background: #e6e6e6;
     padding: 7rem 0;
+    background: #e6e6e6;
     text-align: center;
+    font-family: "Cormorant Garamond", serif;
     font-size: 2rem;
-    color: #000;
-    font-family: "Cormorant Garamond", serif; }
+    color: #000; }
     footer .footer-message div {
-      display: inline-block;
       width: 200px;
       height: 18px;
-      background-color: #ff896b;
+      display: inline-block;
       position: relative;
-      top: 10px; }
+      top: 10px;
+      background-color: #ff896b; }
       footer .footer-message div:after {
         content: "+12.345.678.9012";
         height: 50px;
@@ -82,16 +82,16 @@ footer {
     margin: 70px 20% 0;
     position: relative; }
     footer .menu-list p, footer .menu-list a, footer .menu-list .text {
-      font-weight: 300;
       font-family: "Roboto", sans-serif;
+      font-weight: 300;
       line-height: 1.7;
       font-size: 15px;
       color: #707070; }
     footer .menu-list p {
       width: 84%; }
     footer .menu-list .category {
-      font-size: 20px;
       margin: 20px 0;
+      font-size: 20px;
       font-family: "Cormorant Garamond", serif;
       font-weight: 500;
       line-height: 1.2; }
@@ -103,19 +103,6 @@ footer {
       top: 0; }
     footer .menu-list .about {
       width: 364px; }
-      footer .menu-list .about button {
-        margin: 18px 0 0;
-        font-size: 11px;
-        letter-spacing: .2rem;
-        padding: 10px 0;
-        font-weight: 700;
-        border: none;
-        outline: none;
-        background-color: transparent;
-        cursor: pointer;
-        font-family: "Roboto", sans-serif; }
-        footer .menu-list .about button:hover {
-          border-bottom: 1px solid #000; }
     footer .menu-list .fnb {
       width: 150px;
       left: 400px; }
@@ -141,14 +128,14 @@ footer {
           margin: 20px 0; }
           footer .menu-list .contact .subscribe .form input {
             width: 380px;
-            border: 1px solid #ccc;
             padding: 0.70rem 0.75rem;
             margin: 0 0.5rem 0 0;
+            border: 1px solid #ccc;
+            font-family: inherit;
             font-size: 1rem;
             font-weight: 400;
             line-height: 1.5;
-            color: #495057;
-            font-family: inherit; }
+            color: #495057; }
             footer .menu-list .contact .subscribe .form input::placeholder {
               font-style: italic;
               color: #ccc; }
@@ -156,23 +143,13 @@ footer {
               outline: none;
               border: 1px solid #000;
               transition: all 0.2s linear; }
-          footer .menu-list .contact .subscribe .form button {
-            height: 47px;
-            width: 123px;
-            background-color: #000;
-            color: #fff;
-            font-size: 16px;
-            font-weight: 700;
-            outline: none;
-            border: none;
-            cursor: pointer; }
   footer .copyright .copyright-text {
     display: block;
     position: absolute;
     bottom: 10%;
     left: 21%;
-    font-size: 15px;
     font-family: "Roboto", sans-serif;
+    font-size: 15px;
     font-weight: 300;
     color: #707070;
     line-height: 1.7; }
@@ -184,9 +161,9 @@ footer {
     bottom: 10%;
     right: 21%; }
     footer .copyright .sns li {
-      display: inline-block;
       width: 40px;
       height: 40px;
+      display: inline-block;
       border-radius: 20px;
       background-color: #000;
       color: #fff;
@@ -339,6 +316,36 @@ header {
       background-color: #ff896b;
       transition: all 0.3s linear; }
 
+.more-btn {
+  margin: 18px 0 0;
+  padding: 10px 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  letter-spacing: .2rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer; }
+  .more-btn:hover {
+    border-bottom: 1px solid #000; }
+
+.underline-btn {
+  border-bottom: 1px solid #000; }
+  .underline-btn:hover {
+    border: none; }
+
+.black-btn {
+  height: 47px;
+  width: 123px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  cursor: pointer; }
+
 .home .slider .arrow-btn {
   cursor: pointer; }
   .home .slider .arrow-btn__left {
@@ -472,19 +479,6 @@ header {
       line-height: 1.7;
       font-family: "Roboto", sans-serif;
       font-weight: 300; }
-    .home .featured-rooms .room-info-section .room-desc button {
-      margin: 18px 0 0;
-      font-size: 11px;
-      letter-spacing: .2rem;
-      padding: 10px 0;
-      font-weight: 700;
-      border: none;
-      outline: none;
-      background-color: transparent;
-      cursor: pointer;
-      font-family: "Roboto", sans-serif; }
-      .home .featured-rooms .room-info-section .room-desc button:hover {
-        border-bottom: 1px solid #000; }
 
 .home .featured-rooms .sec-room {
   margin: 160px 0 0; }
@@ -539,10 +533,10 @@ header {
     .home .amenities-section .card-list .card {
       width: 257px;
       height: 313px;
+      margin: 0 50px 20px 0;
+      padding: 40px 40px 60px;
       display: inline-block;
       border: 1px solid #ececec;
-      padding: 40px 40px 60px;
-      margin: 0 50px 20px 0;
       text-align: center; }
       .home .amenities-section .card-list .card:nth-child(3) {
         transform: translateY(22px); }
@@ -558,10 +552,10 @@ header {
         transition: transform 0.2s linear;
         box-shadow: 0 5px 10px -5px #dad9d9; }
       .home .amenities-section .card-list .card div {
+        margin: 0 0 0.5rem;
         font-family: "Cormorant Garamond", serif;
         font-size: 20px;
         font-weight: 700;
-        margin: 0 0 0.5rem;
         line-height: 1.2; }
       .home .amenities-section .card-list .card p {
         margin: 0 0 0.5rem;
@@ -569,20 +563,6 @@ header {
         color: #707070;
         font-weight: 300;
         line-height: 1.7; }
-      .home .amenities-section .card-list .card button {
-        margin: 18px 0 0;
-        font-size: 11px;
-        letter-spacing: .2rem;
-        padding: 10px 0;
-        font-weight: 700;
-        border: none;
-        outline: none;
-        background-color: transparent;
-        cursor: pointer;
-        font-family: "Roboto", sans-serif;
-        border-bottom: 1px solid #000; }
-        .home .amenities-section .card-list .card button:hover {
-          border: none; }
 
 .home .news-section {
   width: 100%;
@@ -594,19 +574,19 @@ header {
     .home .news-section ul li {
       width: 353px;
       height: 486px;
-      display: inline-block;
       margin: 0 30px 0 0;
+      display: inline-block;
       text-align: left;
       cursor: pointer; }
       .home .news-section ul li img {
         width: 353px;
         height: 235px; }
       .home .news-section ul li h4 {
+        margin: 30px 0 10px;
+        font-family: "Cormorant Garamond", serif;
         font-size: 20px;
         font-weight: 700;
-        font-family: "Cormorant Garamond", serif;
         line-height: 1.2;
-        margin: 30px 0 10px;
         font-weight: 700; }
       .home .news-section ul li .date {
         font-family: "Roboto", sans-serif;
@@ -625,27 +605,14 @@ header {
         line-height: 1.7;
         font-size: 1rem;
         color: #707070; }
-      .home .news-section ul li button {
-        margin: 18px 0 0;
-        font-size: 11px;
-        letter-spacing: .2rem;
-        padding: 10px 0;
-        font-weight: 700;
-        border: none;
-        outline: none;
-        background-color: transparent;
-        cursor: pointer;
-        font-family: "Roboto", sans-serif; }
-        .home .news-section ul li button:hover {
-          border-bottom: 1px solid #000; }
     .home .news-section ul .section-title {
       position: relative;
       transform: translateY(-220px); }
       .home .news-section ul .section-title h3 {
         padding: 0 0 20px;
+        font-family: "Cormorant Garamond", serif;
         font-size: 3rem;
-        font-weight: 700;
-        font-family: "Cormorant Garamond", serif; }
+        font-weight: 700; }
       .home .news-section ul .section-title hr {
         width: 50px;
         position: absolute;
@@ -673,13 +640,13 @@ header {
       font-weight: 300;
       line-height: 1.7; }
     .about .intro .slide-content-container h1 {
+      position: absolute;
+      top: 39.7%;
+      left: 21%;
       font-family: "Cormorant Garamond", serif;
       font-weight: 900;
       font-size: 80px;
-      line-height: 1.2;
-      position: absolute;
-      top: 39.7%;
-      left: 21%; }
+      line-height: 1.2; }
 
 .about .management .section-title {
   margin: 100px 0 70px;
@@ -687,9 +654,9 @@ header {
   transform: translateX(-9px); }
   .about .management .section-title h3 {
     padding: 16px 20px;
+    font-family: "Cormorant Garamond", serif;
     font-size: 3rem;
-    font-weight: 700;
-    font-family: "Cormorant Garamond", serif; }
+    font-weight: 700; }
   .about .management .section-title hr {
     width: 49px; }
 
@@ -705,16 +672,16 @@ header {
       height: 728px; }
   .about .management .philosophy .philo-desc {
     width: 50%;
+    margin: 0 60px;
     display: inline-block;
     position: absolute;
-    top: 0;
-    margin: 0 60px; }
+    top: 0; }
     .about .management .philosophy .philo-desc div {
-      display: inline-block;
-      width: 80%; }
+      width: 80%;
+      display: inline-block; }
       .about .management .philosophy .philo-desc div .desc-section-2 {
-        position: absolute;
         width: 63.8%;
+        position: absolute;
         right: -20%; }
     .about .management .philosophy .philo-desc h4 {
       margin: 0 50px 30px;
@@ -743,14 +710,14 @@ header {
       display: inline-block;
       text-align: left; }
       .about .video-desc div:nth-child(1) {
-        left: 20%;
         width: 300px;
-        padding: 0 0 0 60px; }
+        padding: 0 0 0 60px;
+        left: 20%; }
         .about .video-desc div:nth-child(1) h1 {
+          font-family: "Cormorant Garamond", serif;
           font-size: 3.5rem;
           font-weight: 300;
-          line-height: 1.2;
-          font-family: "Cormorant Garamond", serif; }
+          line-height: 1.2; }
       .about .video-desc div:nth-child(2) {
         right: 20%;
         width: 30%; }
@@ -772,13 +739,13 @@ header {
     height: 100%;
     color: #fff; }
     .amenities .intro .slide-content-container h1 {
+      position: absolute;
+      top: 44.5%;
+      left: 41.4%;
       font-family: "Cormorant Garamond", serif;
       font-weight: 900;
       font-size: 80px;
-      line-height: 1.2;
-      position: absolute;
-      top: 44.5%;
-      left: 41.4%; }
+      line-height: 1.2; }
 
 .amenities .intro .bg {
   background: url(../img/room_2_b.jpg) no-repeat center center;
@@ -796,9 +763,9 @@ header {
     transform: translateX(-9px); }
     .amenities .amenities-section .section-title h3 {
       padding: 16px 20px;
+      font-family: "Cormorant Garamond", serif;
       font-size: 3rem;
-      font-weight: 700;
-      font-family: "Cormorant Garamond", serif; }
+      font-weight: 700; }
     .amenities .amenities-section .section-title hr {
       width: 49px; }
   .amenities .amenities-section .card-list {
@@ -808,10 +775,10 @@ header {
     .amenities .amenities-section .card-list .card {
       width: 257px;
       height: 313px;
-      display: inline-block;
-      border: 1px solid #ececec;
       padding: 40px 40px 60px;
       margin: 0 50px 20px 0;
+      display: inline-block;
+      border: 1px solid #ececec;
       text-align: center; }
       .amenities .amenities-section .card-list .card:nth-child(3) {
         transform: translateY(22px); }
@@ -827,10 +794,10 @@ header {
         transition: transform 0.2s linear;
         box-shadow: 0 5px 10px -5px #dad9d9; }
       .amenities .amenities-section .card-list .card div {
+        margin: 0 0 0.5rem;
         font-family: "Cormorant Garamond", serif;
         font-size: 20px;
         font-weight: 700;
-        margin: 0 0 0.5rem;
         line-height: 1.2; }
       .amenities .amenities-section .card-list .card p {
         margin: 0 0 0.5rem;
@@ -838,20 +805,6 @@ header {
         color: #707070;
         font-weight: 300;
         line-height: 1.7; }
-      .amenities .amenities-section .card-list .card button {
-        margin: 18px 0 0;
-        font-size: 11px;
-        letter-spacing: .2rem;
-        padding: 10px 0;
-        font-weight: 700;
-        border: none;
-        outline: none;
-        background-color: transparent;
-        cursor: pointer;
-        font-family: "Roboto", sans-serif;
-        border-bottom: 1px solid #000; }
-        .amenities .amenities-section .card-list .card button:hover {
-          border: none; }
 
 .contact .intro .slide {
   width: 100vw;
@@ -872,13 +825,13 @@ header {
       font-weight: 300;
       line-height: 1.7; }
     .contact .intro .slide-content-container h1 {
+      position: absolute;
+      top: 39.7%;
+      left: 21%;
       font-family: "Cormorant Garamond", serif;
       font-weight: 900;
       font-size: 80px;
-      line-height: 1.2;
-      position: absolute;
-      top: 39.7%;
-      left: 21%; }
+      line-height: 1.2; }
 
 .contact article {
   margin: 130px 400px;
@@ -894,17 +847,17 @@ header {
   .contact article .user-info div {
     margin: 10px 0; }
   .contact article .user-info label {
+    margin-bottom: 0.5rem;
+    display: block;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     color: #707070;
     line-height: 1.7;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    display: block; }
+    font-size: 1rem; }
   .contact article .user-info input, .contact article .user-info textarea {
     width: 541px;
-    border: 1px solid #ccc;
     padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -932,12 +885,12 @@ header {
     .contact article .contact-info .info {
       margin: 30px 0 0; }
     .contact article .contact-info span {
+      display: block;
+      margin: 0 0 10px;
       font-family: "Roboto", sans-serif;
       font-size: 12px;
       text-transform: uppercase;
-      display: block;
       color: #b3b3b3;
-      margin-bottom: 10px;
       font-weight: 700;
       letter-spacing: .1rem;
       line-height: 1.7; }
@@ -1027,8 +980,8 @@ header {
   .gallery .slider-gallery .current-img {
     width: 75%;
     height: 935px;
-    position: relative;
-    display: inline-block; }
+    display: inline-block;
+    position: relative; }
     .gallery .slider-gallery .current-img .img-counter {
       width: 130px;
       height: 30px;
@@ -1099,13 +1052,13 @@ header {
     height: 100%;
     color: #fff; }
     .room .intro .slide-content-container h1 {
+      position: absolute;
+      top: 44.5%;
+      left: 41.4%;
       font-family: "Cormorant Garamond", serif;
       font-weight: 900;
       font-size: 80px;
-      line-height: 1.2;
-      position: absolute;
-      top: 44.5%;
-      left: 41.4%; }
+      line-height: 1.2; }
 
 .room .intro .bg {
   background: url(../img/room_2_b.jpg) no-repeat center center;
@@ -1125,17 +1078,17 @@ header {
   line-height: 1.2; }
 
 .room p {
+  margin: 20px 0;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   color: #707070;
   line-height: 1.7;
-  font-size: 1rem;
-  margin: 20px 0; }
+  font-size: 1rem; }
 
 .room h4 {
+  margin: 30px 0 1.5rem;
   font-family: "Cormorant Garamond", serif;
   font-size: 1.75rem;
-  margin: 30px 0 1.5rem;
   font-weight: 500;
   line-height: 1.2; }
 
@@ -1156,9 +1109,9 @@ header {
       background: url(../img/room_2_b.jpg) no-repeat center center;
       background-size: cover; }
     .room .room-list .room .room-desc {
-      display: inline-block;
       width: 500px;
-      margin: 0 150px; }
+      margin: 0 150px;
+      display: inline-block; }
       .room .room-list .room .room-desc h1 {
         margin: 30px 0; }
       .room .room-list .room .room-desc .price-info .price {
