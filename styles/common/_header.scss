@@ -177,6 +177,28 @@ header {
   }
 }
 
+.opacity-header {
+  background-color: $light;
+  color: $black;
+
+  nav {
+
+    .gnb {
+      .main-menu {
+        a {
+          &:hover {
+            border-bottom: 1px solid $orange;
+          }
+        }
+      }
+      .now {
+        border-bottom: 1px solid $orange;
+      }
+    }
+  }
+
+}
+
 .dark-header {
   padding: 13px 0 0;
   background-color: $white;

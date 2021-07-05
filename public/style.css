@@ -315,6 +315,14 @@ header {
       header .icon-section .sns-icon i {
         margin: 8px auto; }
 
+.opacity-header {
+  background-color: #f8f9fa;
+  color: #000; }
+  .opacity-header nav .gnb .main-menu a:hover {
+    border-bottom: 1px solid #fd7e14; }
+  .opacity-header nav .gnb .now {
+    border-bottom: 1px solid #fd7e14; }
+
 .dark-header {
   padding: 13px 0 0;
   background-color: #fff;
@@ -994,25 +1002,26 @@ header {
   .gallery .section-title hr {
     width: 49px; }
 
-.gallery .slider-1 {
+.gallery .slider-1, .gallery .preview-1 {
   background: url(../img/room_1_a.jpg) no-repeat center center;
   background-size: cover; }
 
-.gallery .slider-2 {
+.gallery .slider-2, .gallery .preview-2 {
   background: url(../img/room_1_b.jpg) no-repeat center center;
   background-size: cover; }
 
-.gallery .slider-3 {
+.gallery .slider-3, .gallery .preview-3 {
   background: url(../img/room_2_a.jpg) no-repeat center center;
   background-size: cover; }
 
-.gallery .slider-4 {
+.gallery .slider-4, .gallery .preview-4 {
   background: url(../img/room_2_b.jpg) no-repeat center center;
   background-size: cover; }
 
-.gallery .show {
+.gallery .show, .gallery .next {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  transition: all 0.3s; }
 
 .gallery .slider-gallery {
   margin: 100px 0; }
@@ -1021,9 +1030,6 @@ header {
     height: 935px;
     position: relative;
     display: inline-block; }
-    .gallery .slider-gallery .current-img .show {
-      width: 100%;
-      height: 100%; }
     .gallery .slider-gallery .current-img .img-counter {
       width: 130px;
       height: 30px;
@@ -1066,6 +1072,8 @@ header {
     .gallery .slider-gallery .next-img:hover {
       opacity: 0.5;
       transition: opacity 0.2s linear; }
+    .gallery .slider-gallery .next-img div {
+      display: inline-block; }
 
 .gallery .more-galleries div:nth-child(2) {
   margin: 100px 0; }
