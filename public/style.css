@@ -871,14 +871,7 @@ header {
     height: 250px; }
   .contact article .user-info button {
     height: 47px;
-    width: 130px;
-    background-color: #000;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 700;
-    outline: none;
-    border: none;
-    cursor: pointer; }
+    width: 130px; }
   .contact article .contact-info {
     margin: 37px 0 0 200px;
     position: absolute; }
