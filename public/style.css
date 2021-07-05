@@ -220,11 +220,12 @@ header {
       display: inline-block;
       margin: 0 auto;
       border-radius: 25px;
-      background-color: #ebe9e9;
+      background-color: #fff;
       color: #394f4b;
-      cursor: pointer; }
+      cursor: pointer;
+      opacity: 0.8; }
       header nav .gnb .icon:hover {
-        background-color: #fff; }
+        opacity: 1; }
     header nav .gnb .search-icon {
       margin: 0 20px 0 0;
       font-size: 12px; }

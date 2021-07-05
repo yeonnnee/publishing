@@ -62,12 +62,13 @@ header {
         display: inline-block;
         margin: 0 auto;
         border-radius: 25px;
-        background-color: rgb(235, 233, 233);
+        background-color: $icon-background;
         color:$green;
         cursor: pointer;
-  
+        opacity: 0.8;
+
         &:hover {
-          background-color: $white;
+          opacity: 1;
         }
       }
     
