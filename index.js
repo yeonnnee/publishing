@@ -1,4 +1,7 @@
 const header = document.querySelector('header');
+const footer =document.querySelector('footer');
+const main = document.querySelector('main');
+
 const slideBtn1 = document.querySelector('.slide1');
 const slideBtn2 = document.querySelector('.slide2');
 const slideBtn3 = document.querySelector('.slide3');
@@ -14,6 +17,9 @@ const nextBtn = document.querySelector('.arrow-right');
 const prevBtn = document.querySelector('.arrow-left');
 const previewNext = document.querySelector('.next-img');
 
+const searchBtn = document.querySelector('.search-icon');
+const closeBtn = document.querySelector('.close-btn');
+const searchModal = document.querySelector('.search-modal')
 
 let pageNum = 1;
 let previewNum = 2;
@@ -200,6 +206,21 @@ function getPrevPic() {
   }
 }
 
+function showModal() {
+  header.style.display = 'none';
+  main.style.display ='none';
+  footer.style.display ='none';
+  searchModal.classList.add('show-modal');
+}
+
+function closeModal() {
+  header.style.display = 'block';
+  main.style.display ='block';
+  footer.style.display ='block';
+  searchModal.classList.remove('show-modal');
+
+}
+
 
 window.addEventListener('scroll', headerController);
 slideBtn1 && slideBtn1.addEventListener('click', handleSlider);
@@ -212,3 +233,6 @@ nextSlideBtn && nextSlideBtn.addEventListener('click',getNextSlide);
 nextBtn && nextBtn.addEventListener('click', getNextPic);
 prevBtn && prevBtn.addEventListener('click', getPrevPic);
 previewNext && previewNext.addEventListener('click', getNextPic);
+
+searchBtn && searchBtn.addEventListener('click', showModal);
+closeBtn && closeBtn.addEventListener('click', closeModal);
