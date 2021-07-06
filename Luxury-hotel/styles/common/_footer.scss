@@ -1,0 +1,196 @@
+footer {
+  height: 100%;
+  height: 90%;
+  position: relative;
+
+  section{
+    width: 100%;
+  }
+  .footer-message {
+    padding: 7rem 0;
+    background: #e6e6e6;
+    text-align: center;    
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    color: $black;
+
+    div{
+      width: 200px;
+      height: 18px;
+      display: inline-block;
+      position: relative;
+      top: 10px;
+      background-color: $primary;
+
+      &:after {
+        content: "+12.345.678.9012";
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top:-20px;
+        left:0;
+      }
+    }
+  }
+
+
+  .menu-list{
+    width: 80%;
+    margin: 70px 20% 0;
+    position: relative;
+
+    p, a, .text {
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      font-size: 15px;
+      color: $light-font;
+
+    }
+
+    p{
+      width: 84%;
+    }
+
+    .category {
+      margin: 20px 0 ;
+      font-size: 20px;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .about, .fnb, .contact {
+      height: 273px;
+      margin: 0 40px 0 0;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+    }
+    .about {
+      width: 364px;
+
+      
+    }
+
+    .fnb {
+      width: 150px;
+      left: 400px;
+
+      ul {
+        li{
+          margin: 0 0 10px;
+
+          a{
+            font-size: 14px;
+
+            &:hover {
+              color: $black;
+              transition: all 0.3s linear;
+            }
+          }
+
+       
+        }
+      }
+    }
+
+    .contact {
+      width: 580px;
+      left: 600px;
+  
+      .contact-info {
+        .address, .tel {
+          display: inline-block;
+        }
+
+        .address {
+          margin: 0 120px 0 0;
+        }
+      }
+      .subscribe {
+        margin: 30px 0 0;
+
+        .category{
+          margin: 0;
+        }
+        .form {
+          margin: 20px 0;
+
+          input {
+            width: 380px;
+            padding: 0.70rem 0.75rem;
+            margin: 0 0.5rem 0 0;
+            border: 1px solid #ccc;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: $dark-blue;
+
+            &::placeholder {
+              font-style: italic;
+              color:#ccc;
+            }
+
+            &:focus{
+              outline: none;
+              border:1px solid $black;
+              transition: all 0.2s linear;
+            }
+          }
+        }
+        
+      }
+    }
+  }
+
+  .copyright {
+  
+    .copyright-text {
+      display: block;
+      position: absolute;
+      bottom: 10%;
+      left: 21%;
+      font-family: "Roboto", sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: $light-font;
+      line-height: 1.7;
+
+      span{
+        color: $orange;
+      }
+    }
+
+    .sns {
+      display: inline-block;
+      position: absolute;
+      bottom: 10%;
+      right: 21%;
+
+      li {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        border-radius: 20px;
+        background-color: $black;
+        color:$white;
+        text-align: center;
+        font-size: 15px;
+        cursor: pointer;
+        
+        i {
+          margin: 13px auto;
+        }
+
+
+        &:hover{
+          background-color: $primary;
+          transition: all 0.3s linear;
+        }
+      }
+    }
+  }
+
+}

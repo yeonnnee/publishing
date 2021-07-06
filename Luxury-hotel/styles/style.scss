@@ -1,0 +1,24 @@
+// common
+@import './common/reset';
+@import "./common/color";
+@import "./common/footer";
+@import './common/header';
+@import './common/button';
+
+
+// pages
+
+@import './main';
+@import './about';
+@import './amenities';
+@import './contact';
+@import './gallery';
+@import './room';
+@import './search';
+
+body{
+  width: 100vw;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
