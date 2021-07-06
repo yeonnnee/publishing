@@ -1,0 +1,15 @@
+{
+  "name": "sedna",
+  "version": "1.0.0",
+  "description": "practice publishing",
+  "main": "index.js",
+  "scripts": {
+    "test": "node-sass -w styles/style.scss -o public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeonnnee/publishing.git"
+  },
+  "author": "chloe",
+  "license": "ISC"
+}
