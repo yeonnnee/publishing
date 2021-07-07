@@ -48,24 +48,28 @@ header {
         display: inline-block;
         margin: 0 22px 0 0;
 
-        &:nth-child(2) {
-          margin: 0;
-          padding: 8px 39px;
-          color: $white;
-          font-size: 13px;
-          border: 2px solid $white;
-          background: transparent;
-          border-radius: 50px;
-
-          &:hover {
-            border: 2px solid $pink;
-            transition: border 0.15s ease-out;
-          }
-        }
 
         &:hover{
           color: $pink;
           transition: color 0.15s ease-out;
+        }
+      }
+
+      button {
+        margin: 0;
+        padding: 8px 40px;
+        color: $white;
+        font-size: 13px;
+        line-height: 1.4;
+        border: 2px solid $white;
+        background: transparent;
+        border-radius: 50px;
+        font-family: inherit;
+        
+        &:hover {
+          border: 2px solid $pink;
+          color: $pink;
+          transition: all 0.15s ease-out;
         }
       }
 
