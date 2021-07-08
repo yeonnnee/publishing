@@ -22,23 +22,98 @@ footer {
         cursor: pointer;
       }
     }
-
- 
-  }
- div {
-   display: flex;
-   .fnb {
-    width: 60%;
-    background-color: #404653;
-
   }
 
-  .sns {
-    width: 40%;
-    background-color: #363b46;
+ .fnb {
+    height: 400px;
+    display: flex;
 
+   
+    .fnb-left {
+      width: 60%;
+      background-color: #404653;
+      padding: 150px 75px 0 21.3%;
+      color: $white;
+      font-size: 13px;
+      ul {
+        display: flex;
+        border-top: 1px solid #5C5F6A;
 
+        li{
+          padding: 20px 0 40px;
+          margin: 0 25px 0 0;
+        }
+      }
+      .copyright{
+        span {
+          color:#c1c1c2;
+        }
+      }
+
+      .licence {
+        margin: 10px 0 0 0;
+        span {
+         
+          &:nth-child(1) {
+            border-right: 1px solid #c1c1c2;
+            padding: 0 3px;
+          }
+          &:nth-child(2) {
+            color:#c1c1c2;
+          }
+          &:nth-child(3) {
+            color:rgb(211, 50, 50);
+            padding: 0 3px;
+          }
+          &:nth-child(4) {
+            color:#c1c1c2;
+          }
+        }
+      }
+
+    }
+
+    .sns {
+      width: 40%;
+      background-color: #363b46;
+      padding: 150px 21.3% 0 75px;
+      
+      p {
+        font-size: 13px;
+        color:$white;
+        font-family: inherit;
+      }
+      &__btn {
+        display: flex;
+
+        .sns-btn {
+       
+          height: 60px;
+          width: 60px;
+          border-radius: 4px;
+          text-align: center;
+          color: $white;
+          font-size: 20px;
+  
+          i{
+            margin: 20px 0;
+          }
+        }
+  
+        .facebook {
+          background-color: $facebook-blue;
+          margin: 20px 20px 0 0;
+        
+
+        }
+  
+        .twitter {
+          background-color: $twitter-blue;
+          margin: 20px 20px 0 0;
+        }
+      }
+      
+    }
   }
- }
 
 }

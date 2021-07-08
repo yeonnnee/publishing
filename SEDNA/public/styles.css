@@ -100,14 +100,60 @@ footer {
       footer .scroll-to-top .arrow-up:hover {
         background-color: rgba(0, 0, 0, 0.4);
         cursor: pointer; }
-  footer div {
+  footer .fnb {
+    height: 400px;
     display: flex; }
-    footer div .fnb {
+    footer .fnb .fnb-left {
       width: 60%;
-      background-color: #404653; }
-    footer div .sns {
+      background-color: #404653;
+      padding: 150px 75px 0 21.3%;
+      color: #fff;
+      font-size: 13px; }
+      footer .fnb .fnb-left ul {
+        display: flex;
+        border-top: 1px solid #5C5F6A; }
+        footer .fnb .fnb-left ul li {
+          padding: 20px 0 40px;
+          margin: 0 25px 0 0; }
+      footer .fnb .fnb-left .copyright span {
+        color: #c1c1c2; }
+      footer .fnb .fnb-left .licence {
+        margin: 10px 0 0 0; }
+        footer .fnb .fnb-left .licence span:nth-child(1) {
+          border-right: 1px solid #c1c1c2;
+          padding: 0 3px; }
+        footer .fnb .fnb-left .licence span:nth-child(2) {
+          color: #c1c1c2; }
+        footer .fnb .fnb-left .licence span:nth-child(3) {
+          color: #d33232;
+          padding: 0 3px; }
+        footer .fnb .fnb-left .licence span:nth-child(4) {
+          color: #c1c1c2; }
+    footer .fnb .sns {
       width: 40%;
-      background-color: #363b46; }
+      background-color: #363b46;
+      padding: 150px 21.3% 0 75px; }
+      footer .fnb .sns p {
+        font-size: 13px;
+        color: #fff;
+        font-family: inherit; }
+      footer .fnb .sns__btn {
+        display: flex; }
+        footer .fnb .sns__btn .sns-btn {
+          height: 60px;
+          width: 60px;
+          border-radius: 4px;
+          text-align: center;
+          color: #fff;
+          font-size: 20px; }
+          footer .fnb .sns__btn .sns-btn i {
+            margin: 20px 0; }
+        footer .fnb .sns__btn .facebook {
+          background-color: #3B5898;
+          margin: 20px 20px 0 0; }
+        footer .fnb .sns__btn .twitter {
+          background-color: #1AB4EF;
+          margin: 20px 20px 0 0; }
 
 main .intro {
   padding: 120px 0 26px;
