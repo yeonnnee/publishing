@@ -83,7 +83,7 @@ header {
 
 .solid-header {
   height: 100px;
-  background-color: #1b1d22;
+  background-color: #272a31;
   transition: all 0.3s linear; }
   .solid-header .gnb {
     padding: 44px 0;
@@ -426,7 +426,7 @@ main .download {
 
 main .blog {
   width: 100%;
-  margin: 200px 0;
+  margin: 200px 0 150px;
   flex-direction: column;
   display: flex;
   align-items: center; }
@@ -507,6 +507,7 @@ main .blog {
         main .blog ul li .blog-title i {
           margin: 0 0 0 6px; }
   main .blog button {
+    margin: 0 20px 0 0;
     padding: 9px 43px;
     border-radius: 80px;
     font-size: 13px;
@@ -514,22 +515,69 @@ main .blog {
     cursor: pointer;
     color: #FF5274;
     background-color: transparent;
-    border: 2px solid #FF5274;
-    margin: 0 20px 0 0; }
+    border: 2px solid #FF5274; }
     main .blog button:hover {
       background-color: #FF5274;
       color: #fff;
       transition: all 0.15s ease-out; }
 
 main .slider {
-  width: 100%; }
+  height: 520px;
+  text-align: center;
+  background: url(../img/testimonials-bg.jpg) no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  align-items: center; }
+  main .slider .slider__btn-left {
+    float: left;
+    width: 50px;
+    height: 100%;
+    vertical-align: middle;
+    font-size: 30px; }
+  main .slider .slider__btn-right {
+    float: right;
+    width: 50px;
+    height: 100%;
+    vertical-align: middle;
+    font-size: 30px; }
+  main .slider .slider__slides {
+    width: 100%;
+    text-align: center;
+    padding: 20px 100px; }
+    main .slider .slider__slides .slides {
+      display: none; }
+    main .slider .slider__slides .show {
+      padding: 0 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      main .slider .slider__slides .show .avatar {
+        width: 80px;
+        height: 80px;
+        border: 4px solid #fff;
+        overflow: hidden;
+        border-radius: 50px; }
+      main .slider .slider__slides .show h3 {
+        font-size: 40px;
+        color: #fff; }
+      main .slider .slider__slides .show:nth-child(1) .avatar {
+        background: url(../img/avatar.jpg) no-repeat center center;
+        background-size: cover; }
+      main .slider .slider__slides .show:nth-child(2) .avatar {
+        background: url(../img/mani.jpg) no-repeat center center;
+        background-size: cover; }
+      main .slider .slider__slides .show:nth-child(3) .avatar {
+        background: url(../img/130.jpg) no-repeat center center;
+        background-size: cover; }
 
 main .sign-up {
-  width: 100%;
+  margin: 150px 0 0;
   text-align: center; }
   main .sign-up h2 {
-    font-size: 25px;
     margin: 0 0 20px;
+    font-size: 25px;
     color: #3D4351;
     line-height: 1.1; }
   main .sign-up p {

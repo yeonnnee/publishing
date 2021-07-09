@@ -381,7 +381,7 @@ main {
 
   .blog {
     width: 100%;
-    margin: 200px 0;
+    margin: 200px 0 150px;
     flex-direction: column;
     display: flex;
     align-items: center;
@@ -506,6 +506,7 @@ main {
     }
 
     button {
+      margin: 0 20px 0 0;
       padding: 9px 43px;
       border-radius: 80px;
       font-size: 13px;
@@ -514,7 +515,6 @@ main {
       color: $pink;
       background-color: transparent;
       border: 2px solid $pink;
-      margin: 0 20px 0 0;
 
       &:hover {
         background-color:$pink;
@@ -525,17 +525,112 @@ main {
   }
 
   .slider {
-    width: 100%;
-    
+    height: 520px;
+  
+    text-align: center;
+    background: url(../img/testimonials-bg.jpg) no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    .slider__btn-left {
+      float: left;
+      width: 50px;
+      height: 100%;
+      vertical-align: middle;
+      font-size: 30px;
+    }
+
+    .slider__btn-right {
+      float: right;
+      width: 50px;
+      height: 100%;
+      vertical-align: middle;
+      font-size: 30px;
+    }
+    .slider__slides{
+      width: 100%;
+      text-align: center;
+      padding: 20px 100px;
+
+      .slides {
+        display: none;
+      }
+      .show { 
+        padding: 0 100px;
+        // display: block;
+        // text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .avatar {
+          width: 80px;
+          height: 80px;
+          border: 4px solid $white;
+          overflow: hidden;
+          border-radius: 50px;
+
+     
+        }
+
+        h3{
+          font-size: 40px;
+          color: $white;
+        }
+        // .slides-contents {
+        //   width: 900px;
+        //   padding: 0 100px;
+        //   display: flex;
+        //   flex-direction: column;
+        //   align-items: center;
+        //   .avatar {
+        //     width: 80px;
+        //     height: 80px;
+        //     border: 4px solid $white;
+        //     overflow: hidden;
+        //     border-radius: 50px;
+  
+       
+        //   }
+
+        //   h3{
+        //     font-size: 40px;
+        //     color: $white;
+        //   }
+        // }
+ 
+
+        &:nth-child(1){
+          .avatar {
+            background: url(../img/avatar.jpg) no-repeat center center;
+            background-size: cover;
+          }
+        }
+        &:nth-child(2){
+          .avatar {
+            background: url(../img/mani.jpg) no-repeat center center;
+            background-size: cover;
+          }
+        }
+        &:nth-child(3){
+          .avatar {
+            background: url(../img/130.jpg) no-repeat center center;
+            background-size: cover;
+          }
+        }
+      }
+    }
   }
 
   .sign-up {
-    width: 100%;
+    margin: 150px 0 0;
     text-align: center;
 
     h2{
-      font-size: 25px;
       margin: 0 0 20px;
+      font-size: 25px;
       color: #3D4351;
       line-height: 1.1;
     }
@@ -545,8 +640,7 @@ main {
       line-height: 29px;
       color: rgba(28, 54, 83, 0.6);
       padding: 0 0 20px;
-    position: relative;
-
+      position: relative;
     }
 
     .form {
