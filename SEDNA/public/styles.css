@@ -83,9 +83,10 @@ header {
 
 .solid-header {
   height: 100px;
-  background-color: #363b46;
+  background-color: #1b1d22;
   transition: all 0.3s linear; }
   .solid-header .gnb {
+    padding: 44px 0;
     border-bottom: none; }
 
 footer {
