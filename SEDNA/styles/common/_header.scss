@@ -7,6 +7,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 999;
+  transition: all 0.3s linear;
 
   .gnb {
     width: 61.5%;
@@ -102,4 +103,13 @@ header {
 
   }
 
+}
+
+.solid-header {
+  height: 100px;
+  background-color: #363b46;
+  transition: all 0.3s linear;
+  .gnb {
+    border-bottom: none;
+  }
 }

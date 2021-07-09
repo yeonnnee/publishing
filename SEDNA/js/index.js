@@ -6,6 +6,24 @@ const slideBtn3 = document.querySelector('.slide3');
 const prevSlideBtn = document.querySelector('.arrow-btn__left');
 const nextSlideBtn = document.querySelector('.arrow-btn__right');
 
+const header = document.querySelector('header');
+
+function headerController() {
+  const scrollPosition = window.scrollY;
+
+  if (scrollPosition > 0) {
+    header.classList.add('solid-header');
+
+  } else if(scrollPosition === 0){
+    header.classList.remove('solid-header');
+
+  } else {
+    return;
+  }
+}
+
+
+
 
 // 버튼 클릭시 동작
 function handleSlider(e) {
@@ -95,11 +113,17 @@ function getPrevSlide() {
 }
 
 
+window.addEventListener('scroll', headerController);
 
-slideBtn1 && slideBtn1.addEventListener('click', handleSlider);
-slideBtn2 && slideBtn2.addEventListener('click', handleSlider);
-slideBtn3 && slideBtn3.addEventListener('click', handleSlider);
+function init() {
+  slideBtn1 && slideBtn1.addEventListener('click', handleSlider);
+  slideBtn2 && slideBtn2.addEventListener('click', handleSlider);
+  slideBtn3 && slideBtn3.addEventListener('click', handleSlider);
+  
+  prevSlideBtn && prevSlideBtn.addEventListener('click', getPrevSlide);
+  nextSlideBtn && nextSlideBtn.addEventListener('click',getNextSlide);
+}
 
-prevSlideBtn && prevSlideBtn.addEventListener('click', getPrevSlide);
-nextSlideBtn && nextSlideBtn.addEventListener('click',getNextSlide);
+init();
+
 
