@@ -94,6 +94,7 @@ footer {
           text-align: center;
           color: $white;
           font-size: 20px;
+          cursor: pointer;
   
           i{
             margin: 20px 0;
@@ -104,12 +105,19 @@ footer {
           background-color: $facebook-blue;
           margin: 20px 20px 0 0;
         
+          &:hover {
+            background-color: #304779;
+          }
 
         }
   
         .twitter {
           background-color: $twitter-blue;
           margin: 20px 20px 0 0;
+
+          &:hover {
+            background-color: #337ab7;
+          }
         }
       }
       

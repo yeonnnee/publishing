@@ -375,6 +375,9 @@ main {
       position: absolute;
       bottom: -80px;
       left:45%;
+
+
+
     }
   }
 
@@ -439,12 +442,30 @@ main {
           min-width: 600px;
           min-height: 330px;
           margin: 15px;
+          cursor: pointer;
+
+          i{
+            visibility: hidden;
+            color: $white;
+            float: right;
+            margin: 20px 30px;
+          }
+          &:hover  i {
+            visibility: visible;
+          }
+      
         }
 
         &:nth-child(1) {
           .blog__img-frame {
             background:url(../img/blog-img-01.jpg) no-repeat center center;
             background-size: cover;
+
+            &:hover {
+              opacity: 0.6;
+              background-size: 130%;
+              transition: all 0.3s linear;
+            }
           }
         }
 
@@ -452,6 +473,12 @@ main {
           .blog__img-frame {
             background:url(../img/blog-img-02.jpg) no-repeat center center;
             background-size: cover;
+          
+            &:hover {
+              opacity: 0.6;
+              background-size: 130%;
+              transition: all 0.3s linear;
+            }
           }
         }
 
@@ -459,6 +486,12 @@ main {
           .blog__img-frame {
             background:url(../img/blog-img-03.jpg) no-repeat center center;
             background-size: cover;
+
+            &:hover {
+              opacity: 0.6;
+              background-size: 130%;
+              transition: all 0.3s linear;
+            }
           }
         }
         
@@ -468,6 +501,7 @@ main {
           color: #FF5274;
           font-size: 11px;
           font-weight: bold;
+          cursor: default;
           
           .tooltip {
             visibility: hidden;
@@ -491,16 +525,20 @@ main {
           }
 
           &:hover .tooltip {
-              visibility: visible;
+            visibility: visible;
           }
         }
         .blog-title {
           color: #3D4351;
           opacity: 0.6;
+          cursor: pointer;
 
+  
+     
           i {
             margin:  0 0 0 6px;
           }
+
         }
       }
     }
@@ -607,9 +645,11 @@ main {
     }
 
     .slider__slides{
-      width: 60%;
+      width: 70%;
+      height: 500px;
       text-align: center;
       padding: 20px 100px;
+      margin: 150px 0 0 0;
       overflow: hidden;
       cursor: pointer;
 

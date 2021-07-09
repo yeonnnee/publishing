@@ -1,7 +1,7 @@
 
-const slideBtn1 = document.querySelector('.slide1');
-const slideBtn2 = document.querySelector('.slide2');
-const slideBtn3 = document.querySelector('.slide3');
+const slideBtn1 = document.querySelector('.slide1-btn');
+const slideBtn2 = document.querySelector('.slide2-btn');
+const slideBtn3 = document.querySelector('.slide3-btn');
 
 const slider1 = document.querySelector('.slide-1');
 const slider2 = document.querySelector('.slide-2');
@@ -10,11 +10,15 @@ const slider3 = document.querySelector('.slide-3');
 const prevSlideBtn = document.querySelector('.slider__btn-left');
 const nextSlideBtn = document.querySelector('.slider__btn-right');
 
+const scrollTopBtn = document.querySelector('.arrow-up');
+
 const header = document.querySelector('header');
+const closeAdBtn = document.querySelector('.close-ad')
 
 let pageNum = 1;
 
 
+// 스크롤시 header 배경색 변경
 function headerController() {
   const scrollPosition = window.scrollY;
 
@@ -30,16 +34,26 @@ function headerController() {
 }
 
 
+// footer 에 있는 화살표 클릭시 위로 스크롤
+function scorllToTop() {
+  window.scrollTo(0,0);
+}
+
+// 광고 close 버튼 클릭시 닫기
+function closeAd() {
+  const ad = document.querySelector('.ad');
+  ad.style.display = 'none';
+}
 
 
-// 버튼 클릭시 동작
+// 슬라이드 하단 라디오 버튼 클릭시 동작
 function handleSlider(e) {
   const currentSlide = document.querySelector('.show');
   const currentBtn = document.querySelector('.selected');
   const target = e.target.classList;
 
 
-  if(target.value.includes('slide1')) {
+  if(target.value.includes('slide1-btn')) {
     // 첫번째 슬라이드 및 버튼 활성화
     currentSlide.classList.remove('show');
     currentBtn.classList.remove('selected');
@@ -49,7 +63,7 @@ function handleSlider(e) {
 
     pageNum = 1;
 
-  } else if( target.value.includes('slide2')) {
+  } else if( target.value.includes('slide2-btn')) {
     // 첫번째 슬라이드 및 버튼 활성화
 
     currentSlide.classList.remove('show');
@@ -59,7 +73,7 @@ function handleSlider(e) {
     slideBtn2.classList.add('selected');
 
     pageNum = 2;
-  } else if(target.value.includes('slide3')) {
+  } else if(target.value.includes('slide3-btn')) {
     // 세번째 슬라이드 및 버튼 활성화
 
     currentSlide.classList.remove('show');
@@ -84,26 +98,27 @@ function getNextSlide() {
 
   if(activedSlide.includes(`slide-${pageNum}`) && pageNum < 3) {
     const next = document.querySelector(`.slide-${pageNum + 1}`);
-    const nextBtn = document.querySelector(`.slide${pageNum + 1}`);
-    console.log(nextBtn);
+    const selectedBtn = document.querySelector(`.slide${pageNum + 1}-btn`);
+
     pageNum = pageNum + 1;
 
     currentBtn.classList.remove('selected');
     currentSlide.classList.remove('show');
+  
     next.classList.add('show');
-    nextBtn.classList.add('selected')
+    selectedBtn.classList.add('selected')
 
 
   } else if(pageNum === 3){
     pageNum = 1;
     const next = document.querySelector(`.slide-${pageNum}`);
-    const nextBtn = document.querySelector(`.slide${pageNum}`);
+    const selectedBtn = document.querySelector(`.slide${pageNum}-btn`);
 
 
     currentSlide.classList.remove('show');
     currentBtn.classList.remove('selected');
     next.classList.add('show');
-    nextBtn.classList.add('selected');
+    selectedBtn.classList.add('selected');
   } else {
     return;
   }
@@ -117,22 +132,27 @@ function getPrevSlide() {
   const activedSlide = currentSlide.classList.value;
 
   if(activedSlide.includes(`slide-${pageNum}`) && pageNum > 1) {
-    const prev = document.querySelector(`.slide-${pageNum - 1}`);
-    const nextBtn = document.querySelector(`.slide${pageNum -1}`);
+    const prevSlide = document.querySelector(`.slide-${pageNum - 1}`);
+    const selectedBtn = document.querySelector(`.slide${pageNum -1}-btn`);
     pageNum = pageNum - 1;
 
     currentBtn.classList.remove('selected');
     currentSlide.classList.remove('show');
-    prev.classList.add('show');
-    nextBtn.classList.add('selected')
+
+    prevSlide.classList.add('show');
+    selectedBtn.classList.add('selected')
 
 
   } else if(pageNum === 1){
     pageNum = 3;
-    const prev = document.querySelector(`.slide-${pageNum}`);
+    const prevSlide = document.querySelector(`.slide-${pageNum}`);
+    const selectedBtn =  document.querySelector(`.slide${pageNum}-btn`);
 
     currentSlide.classList.remove('show');
-    prev.classList.add('show');
+    currentBtn.classList.remove('selected');
+
+    prevSlide.classList.add('show');
+    selectedBtn.classList.add('selected')
   } else {
     return;
   }
@@ -142,13 +162,17 @@ function getPrevSlide() {
 
 window.addEventListener('scroll', headerController);
 
+
 function init() {
   slideBtn1 && slideBtn1.addEventListener('click', handleSlider);
   slideBtn2 && slideBtn2.addEventListener('click', handleSlider);
   slideBtn3 && slideBtn3.addEventListener('click', handleSlider);
   
   prevSlideBtn && prevSlideBtn.addEventListener('click', getPrevSlide);
-  nextSlideBtn && nextSlideBtn.addEventListener('click',getNextSlide);
+  nextSlideBtn && nextSlideBtn.addEventListener('click', getNextSlide);
+  
+  scrollTopBtn && scrollTopBtn.addEventListener('click', scorllToTop);
+  closeAdBtn && closeAdBtn.addEventListener('click', closeAd)
 }
 
 init();

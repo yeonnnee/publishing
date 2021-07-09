@@ -154,15 +154,20 @@ footer {
           border-radius: 4px;
           text-align: center;
           color: #fff;
-          font-size: 20px; }
+          font-size: 20px;
+          cursor: pointer; }
           footer .fnb .sns__btn .sns-btn i {
             margin: 20px 0; }
         footer .fnb .sns__btn .facebook {
           background-color: #3B5898;
           margin: 20px 20px 0 0; }
+          footer .fnb .sns__btn .facebook:hover {
+            background-color: #304779; }
         footer .fnb .sns__btn .twitter {
           background-color: #1AB4EF;
           margin: 20px 20px 0 0; }
+          footer .fnb .sns__btn .twitter:hover {
+            background-color: #337ab7; }
 
 main .intro {
   padding: 120px 0 26px;
@@ -466,22 +471,43 @@ main .blog {
       main .blog ul li .blog__img-frame {
         min-width: 600px;
         min-height: 330px;
-        margin: 15px; }
+        margin: 15px;
+        cursor: pointer; }
+        main .blog ul li .blog__img-frame i {
+          visibility: hidden;
+          color: #fff;
+          float: right;
+          margin: 20px 30px; }
+        main .blog ul li .blog__img-frame:hover i {
+          visibility: visible; }
       main .blog ul li:nth-child(1) .blog__img-frame {
         background: url(../img/blog-img-01.jpg) no-repeat center center;
         background-size: cover; }
+        main .blog ul li:nth-child(1) .blog__img-frame:hover {
+          opacity: 0.6;
+          background-size: 130%;
+          transition: all 0.3s linear; }
       main .blog ul li:nth-child(2) .blog__img-frame {
         background: url(../img/blog-img-02.jpg) no-repeat center center;
         background-size: cover; }
+        main .blog ul li:nth-child(2) .blog__img-frame:hover {
+          opacity: 0.6;
+          background-size: 130%;
+          transition: all 0.3s linear; }
       main .blog ul li:nth-child(3) .blog__img-frame {
         background: url(../img/blog-img-03.jpg) no-repeat center center;
         background-size: cover; }
+        main .blog ul li:nth-child(3) .blog__img-frame:hover {
+          opacity: 0.6;
+          background-size: 130%;
+          transition: all 0.3s linear; }
       main .blog ul li .category {
         margin: 40px 0 15px;
         position: relative;
         color: #FF5274;
         font-size: 11px;
-        font-weight: bold; }
+        font-weight: bold;
+        cursor: default; }
         main .blog ul li .category .tooltip {
           visibility: hidden;
           width: 100px;
@@ -503,7 +529,8 @@ main .blog {
           visibility: visible; }
       main .blog ul li .blog-title {
         color: #3D4351;
-        opacity: 0.6; }
+        opacity: 0.6;
+        cursor: pointer; }
         main .blog ul li .blog-title i {
           margin: 0 0 0 6px; }
   main .blog button {
@@ -570,9 +597,11 @@ main .slider {
       border: 2px solid #fff;
       background-color: #3D4351; }
   main .slider .slider__slides {
-    width: 60%;
+    width: 70%;
+    height: 500px;
     text-align: center;
     padding: 20px 100px;
+    margin: 150px 0 0 0;
     overflow: hidden;
     cursor: pointer; }
     main .slider .slider__slides:hover ~ .slider__btn-left {
