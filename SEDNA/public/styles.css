@@ -292,8 +292,8 @@ main .features {
       top: 40%; }
   main .features__contents {
     width: 25%;
-    transform: translateY(-20px);
-    margin: 0 0 100px; }
+    margin: 0 0 100px;
+    transform: translateY(-20px); }
     main .features__contents p {
       font-size: 15px;
       line-height: 29px;
@@ -427,8 +427,8 @@ main .download {
 main .blog {
   width: 100%;
   margin: 200px 0 150px;
-  flex-direction: column;
   display: flex;
+  flex-direction: column;
   align-items: center; }
   main .blog .blog-desc .section-title {
     margin: 0 0 80px 21%; }
@@ -477,22 +477,22 @@ main .blog {
         background: url(../img/blog-img-03.jpg) no-repeat center center;
         background-size: cover; }
       main .blog ul li .category {
-        position: relative;
         margin: 40px 0 15px;
+        position: relative;
         color: #FF5274;
         font-size: 11px;
         font-weight: bold; }
         main .blog ul li .category .tooltip {
           visibility: hidden;
           width: 100px;
+          padding: 5px 0;
+          position: absolute;
+          top: -30px;
+          right: 42%;
           background-color: #202020;
           color: #fff;
           text-align: center;
-          padding: 5px 0;
-          border-radius: 6px;
-          position: absolute;
-          top: -30px;
-          right: 42%; }
+          border-radius: 6px; }
           main .blog ul li .category .tooltip i {
             font-size: 12px;
             position: absolute;
@@ -523,28 +523,62 @@ main .blog {
 
 main .slider {
   height: 520px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: url(../img/testimonials-bg.jpg) no-repeat center center;
   background-size: cover;
-  overflow: hidden;
-  display: flex;
-  align-items: center; }
-  main .slider .slider__btn-left {
-    float: left;
-    width: 50px;
-    height: 100%;
-    vertical-align: middle;
-    font-size: 30px; }
+  position: relative; }
   main .slider .slider__btn-right {
-    float: right;
-    width: 50px;
-    height: 100%;
-    vertical-align: middle;
-    font-size: 30px; }
+    position: absolute;
+    right: 20%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    visibility: hidden; }
+    main .slider .slider__btn-right:hover {
+      visibility: visible; }
+    main .slider .slider__btn-right:hover ~ .slider__btn-left {
+      visibility: visible; }
+  main .slider .slider__btn-left {
+    position: absolute;
+    left: 20%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    visibility: hidden; }
+    main .slider .slider__btn-left:hover {
+      visibility: visible; }
+    main .slider .slider__btn-left:hover ~ .slider__btn-right {
+      visibility: visible; }
+  main .slider .slide-control {
+    padding: 20px 30px;
+    position: absolute;
+    right: 47%;
+    bottom: 30px; }
+    main .slider .slide-control__btn {
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      background-color: #4a4e5c;
+      border-radius: 10px;
+      margin: 3px;
+      cursor: pointer; }
+      main .slider .slide-control__btn:hover {
+        background-color: #fff; }
+    main .slider .slide-control .selected {
+      border: 2px solid #fff;
+      background-color: #3D4351; }
   main .slider .slider__slides {
-    width: 100%;
+    width: 60%;
     text-align: center;
-    padding: 20px 100px; }
+    padding: 20px 100px;
+    overflow: hidden;
+    cursor: pointer; }
+    main .slider .slider__slides:hover ~ .slider__btn-left {
+      visibility: visible; }
+    main .slider .slider__slides:hover ~ .slider__btn-right {
+      visibility: visible; }
     main .slider .slider__slides .slides {
       display: none; }
     main .slider .slider__slides .show {
@@ -561,7 +595,11 @@ main .slider {
         border-radius: 50px; }
       main .slider .slider__slides .show h3 {
         font-size: 40px;
-        color: #fff; }
+        color: #fff;
+        margin: 30px 0; }
+      main .slider .slider__slides .show p {
+        color: #ACB1B4;
+        letter-spacing: 2px; }
       main .slider .slider__slides .show:nth-child(1) .avatar {
         background: url(../img/avatar.jpg) no-repeat center center;
         background-size: cover; }
