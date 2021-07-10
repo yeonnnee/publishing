@@ -430,13 +430,10 @@ main .download {
     left: 45%; }
 
 main .blog {
-  width: 100%;
   margin: 200px 0 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
+  text-align: center; }
   main .blog .blog-desc .section-title {
-    margin: 0 0 80px 21%; }
+    margin: 0 0 80px 11%; }
     main .blog .blog-desc .section-title h2 {
       width: 50%;
       font-size: 25px;
@@ -445,7 +442,8 @@ main .blog {
       line-height: 1.1; }
   main .blog .blog-desc .section-content {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    text-align: left; }
     main .blog .blog-desc .section-content .desc {
       padding: 0 21.3% 0 75px; }
       main .blog .blog-desc .section-content .desc h4 {

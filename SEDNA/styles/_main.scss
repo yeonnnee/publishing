@@ -382,16 +382,17 @@ main {
   }
 
   .blog {
-    width: 100%;
+    // width: 100%;
     margin: 200px 0 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
 
     .blog-desc {
 
       .section-title {
-        margin: 0 0 80px 21%; 
+        margin: 0 0 80px 11%; 
         h2 {
           width: 50%;
           font-size: 25px;
@@ -403,6 +404,7 @@ main {
       .section-content {
         display: flex;
         align-items: center;
+        text-align: left;
 
         .desc{
           padding: 0 21.3% 0 75px;
