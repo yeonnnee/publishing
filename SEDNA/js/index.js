@@ -20,7 +20,7 @@ let pageNum = 1;
 
 // 스크롤시 header 배경색 변경
 function headerController() {
-  const scrollPosition = window.scrollY;
+  const scrollPosition = window.pageYOffset;
 
   if (scrollPosition > 0) {
     header.classList.add('solid-header');
@@ -50,10 +50,12 @@ function closeAd() {
 function handleSlider(e) {
   const currentSlide = document.querySelector('.show');
   const currentBtn = document.querySelector('.selected');
-  const target = e.target.classList;
+  // const target = e.target.classList;
+  const target = e.target.classList.toString();
 
+  
 
-  if(target.value.includes('slide1-btn')) {
+  if(target.indexOf('slide1-btn') > -1) {
     // 첫번째 슬라이드 및 버튼 활성화
     currentSlide.classList.remove('show');
     currentBtn.classList.remove('selected');
@@ -63,7 +65,7 @@ function handleSlider(e) {
 
     pageNum = 1;
 
-  } else if( target.value.includes('slide2-btn')) {
+  } else if( target.indexOf('slide2-btn') > -1) {
     // 첫번째 슬라이드 및 버튼 활성화
 
     currentSlide.classList.remove('show');
@@ -73,7 +75,7 @@ function handleSlider(e) {
     slideBtn2.classList.add('selected');
 
     pageNum = 2;
-  } else if(target.value.includes('slide3-btn')) {
+  } else if(target.indexOf('slide3-btn') > -1) {
     // 세번째 슬라이드 및 버튼 활성화
 
     currentSlide.classList.remove('show');
@@ -94,11 +96,11 @@ function handleSlider(e) {
 function getNextSlide() {
   const currentSlide = document.querySelector('.show');
   const currentBtn = document.querySelector('.selected');
-  const activedSlide = currentSlide.classList.value;
+  const activedSlide = currentSlide.classList.toString();
 
-  if(activedSlide.includes(`slide-${pageNum}`) && pageNum < 3) {
-    const next = document.querySelector(`.slide-${pageNum + 1}`);
-    const selectedBtn = document.querySelector(`.slide${pageNum + 1}-btn`);
+  if(activedSlide.indexOf(`slide-${pageNum}`) > -1 && pageNum < 3) {
+    const next = document.querySelector(`.slide-${pageNum+1}`);
+    const selectedBtn = document.querySelector(`.slide${pageNum+1}-btn`);
 
     pageNum = pageNum + 1;
 
@@ -129,11 +131,11 @@ function getNextSlide() {
 function getPrevSlide() {
   const currentSlide = document.querySelector('.show');
   const currentBtn = document.querySelector('.selected');
-  const activedSlide = currentSlide.classList.value;
+  const activedSlide = currentSlide.classList.toString();
 
-  if(activedSlide.includes(`slide-${pageNum}`) && pageNum > 1) {
-    const prevSlide = document.querySelector(`.slide-${pageNum - 1}`);
-    const selectedBtn = document.querySelector(`.slide${pageNum -1}-btn`);
+  if(activedSlide.indexOf(`slide-${pageNum}`) > -1 && pageNum > 1) {
+    const prevSlide = document.querySelector(`.slide-${pageNum-1}`);
+    const selectedBtn = document.querySelector(`.slide${pageNum-1}-btn`);
     pageNum = pageNum - 1;
 
     currentBtn.classList.remove('selected');
