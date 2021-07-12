@@ -1,0 +1,16 @@
+{
+  "name": "urku",
+  "version": "1.0.0",
+  "description": "urku portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "node-sass -w styles/styles.scss -o public",
+    "build": "babel js/index.js --out-file script.js --presets=es2015"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeonnnee/publishing.git"
+  },
+  "author": "chloe",
+  "license": "ISC"
+}
