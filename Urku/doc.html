@@ -37,14 +37,291 @@
     </nav>
   </header>
 
-  <main></main>
+  <main class="doc">
+    <section>
+      <h1>Documentation</h1>
+    </section>
+
+    <section>
+      <h2>Portfolio Items</h2>
+      <h3>Static Items</h3>
+      <p>
+        You can create a static portfolio page by using our grid system <span>Aurora</span>, creating the grid
+        structure with
+        <code>ae-grid</code>, adding your items with <code>ae-grid__item</code> and <span>customizing</span> it as you
+        want.
+      </p>
+      <ul>
+        <li>
+          <h2>Essential Stationery</h2>
+          <span>Branding</span>
+        </li>
+        <li>
+          <h2>Tumblr hammock</h2>
+          <span>Packaging</span>
+        </li>
+        <li>
+          <h2>Biodiesel etsy</h2>
+          <span>Branding</span>
+        </li>
+      </ul>
+
+      <div>
+
+        <pre>
+          <code>
+            <div class="ae-grid">
+              <!-- first column -->
+              <div class="ae-grid__item item-lg-4"
+                <a href="item-url" class="rk-item">
+                  <img src="img-url" />
+                  <span class="item-meta">
+                    <h2>Title</h2>
+                    <p>Category</p>
+                  </span>
+                </a>
+              </div>
+    
+              <!-- other columns... -->
+            </div>
+           </code>
+        </pre>
+
+      </div>
+    </section>
+
+    <section>
+      <h3>Masonry Items</h3>
+      <p>
+        You can also use the <span>Masorny</span> grid style of <span>Aurora</span>. Create a ae-masonry container and
+        add each item with the
+        class <code>ae-masonry__item</code>. You can also set the number of columns for each viewport.
+      </p>
+      <div>
+        <ul>
+          <li>
+            <h2>Essential Stationery</h2>
+            <span>Branding</span>
+          </li>
+          <li>
+            <h2>Tumblr hammock</h2>
+            <span>Packaging</span>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <h2>Essential Stationery</h2>
+            <span>Branding</span>
+          </li>
+          <li>
+            <h2>Tumblr hammock</h2>
+            <span>Packaging</span>
+          </li>
+        </ul>
+      </div>
+
+
+      <div>
+
+        <pre>
+          <code>
+            <div class="ae-grid">
+              <!-- first column -->
+              <div class="ae-grid__item item-lg-4"
+                <a href="item-url" class="rk-item">
+                  <img src="img-url" />
+                  <span class="item-meta">
+                    <h2>Title</h2>
+                    <p>Category</p>
+                  </span>
+                </a>
+              </div>
+    
+              <!-- other columns... -->
+            </div>
+           </code>
+        </pre>
+
+      </div>
+    </section>
+
+    <section>
+      <h3>Flexible Items</h3>
+      <p>
+        The special portfolio items we are using in Urku Portfolio adapt in a <span>flexible</span> way to the viewport,
+        alowing them
+        for instance to resize to new <span>layout switches</span>. Just add the class <code>rk-item--flex</code> along
+        the
+        <code>rk-item</code>
+        class on each
+        items, inside the flex container with the <code>rk-portfolio__items</code> class.
+        Those flexible items are implemented as <code>background-image</code> with incremental numbered classes like
+        <code>item-{number}</code> to
+        set the specific <code>background-image</code> for each item.
+      </p>
+      <ul>
+        <li>
+          <h2>Tumblr hammock</h2>
+          <span>Packaging</span>
+        </li>
+        <li>
+          <h2>Tumblr hammock</h2>
+          <span>Packaging</span>
+        </li>
+        <li>
+          <h2>Tumblr hammock</h2>
+          <span>Packaging</span>
+        </li>
+        <li>
+          <h2>Tumblr hammock</h2>
+          <span>Packaging</span>
+        </li>
+        <li>
+          <h2>Tumblr hammock</h2>
+          <span>Packaging</span>
+        </li>
+      </ul>
+
+      <div>코드블럭</div>
+    </section>
+
+    <section>
+      <h3>Advanced Layouts</h3>
+      <p>
+        Our flexible items can be modified easily to create original custom advanced layouts.<br />
+        A series of class allows you to modify the item size, aspect ratio and create smart item containers for precise
+        layouts.
+      </p>
+
+      <h4>Size</h4>
+      <p>Based on a 12 columns grid, you can control the size in columns with the class <code>rk-size-{cols}</code>, for
+        example <code>rk-size-6</code> would fill half a row (6 columns of 12).
+      </p>
+
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div>code block</div>
+
+      <h4>Aspect Ratio</h4>
+      <p>Based on a 12 columns grid, you can control the size in columns with the class <code>rk-size-{cols}</code>, for
+        example <code>rk-size-6</code> would fill half a row (6 columns of 12).
+      </p>
+
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div>code block</div>
+
+      <h4>hover style</h4>
+      <p>Based on a 12 columns grid, you can control the size in columns with the class <code>rk-size-{cols}</code>, for
+        example <code>rk-size-6</code> would fill half a row (6 columns of 12).
+      </p>
+
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <h4>Smart Item Containers</h4>
+      <p>Based on a 12 columns grid, you can control the size in columns with the class <code>rk-size-{cols}</code>, for
+        example <code>rk-size-6</code> would fill half a row (6 columns of 12).
+      </p>
+
+      <div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+        <div></div>
+      </div>
+
+      <div>코드블럭</div>
+
+      <h4>Switch Layout</h4>
+      <p>Based on a 12 columns grid, you can control the size in columns with the class <code>rk-size-{cols}</code>, for
+        example <code>rk-size-6</code> would fill half a row (6 columns of 12).
+      </p>
+
+      <div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+        <div></div>
+      </div>
+
+      <div>코드블럭</div>
+    </section>
+
+    <section>
+      <h3>Blog items</h3>
+      <p>
+        Our flexible items can be modified easily to create original custom advanced layouts.<br />
+        A series of class allows you to modify the item size, aspect ratio and create smart item containers for precise
+        layouts.
+      </p>
+      <div>코드 블럭 </div>
+      <p>We created another switch layout display for the blog section with a switch between full width item and three
+        columns (2/3 columns depending on the viewport media quesries). In case you want only the columns view, you
+        would add the class rk-blog--columns to the parent container rk-blog.
+        The code to include is pretty similar to the portfolio switch. Include it before the blog container elements.
+      </p>
+
+      <div>코드블럭</div>
+    </section>
+
+    <section>
+      <h3>Blog items</h3>
+      <h4>Hero Image</h4>
+      <p>
+        To create a dynamic flexible layout, the section with the class rk-portfolio-cover will automatically cover all
+        the height of the viewport until the end user scrolls down.
+        You can see an example in an inner page here.
+        You can also use a helper class item-inside__meta--contrast that adds a subtle opacity layer between the image
+        and the Item Title to augment the legibility of the text if needed.
+      </p>
+      <div>코드블럭</div>
+
+      <h4>Smart Styles</h4>
+      <p>We created smart design styles that lets you display your text and image while maintaining vertical rhythm and
+        white spaces to create precise and harmonious responsive layouts.</p>
+      <p>Check them out in this page with ready to use snippets.</p>
+      <div><a href="">Design Styles</a></div>
+    </section>
+
+    <section>
+      <h3>Arrow Buttons</h3>
+    </section>
+
+    <section>
+      <h3>Main Header</h3>
+      <p>The rk-header is the header component used in all pages, it contains the rk-logo and therk-navigation with
+        rk-menu and rk-search inside of it.
+        To set the header and switch as fixed, you can add the classtop-fixed to the body element.</p>
+    </section>
+
+    <section>
+      <h3>Plugin peHoverImage</h3>
+      <p>This plugin allows you to show another image when hovering a portfolio item.
+        Add the class rk-item--hover to the item and declare the alternative image through the data-bg-src attribute.
+        For the Flex Portfolio, you need to add data-bg-src="origin" and declare the alternative image as data-img-src.
+        You could also declare both data-bg-src(main) and data-img-src(alt) through the html markup.</p>
+    </section>
+
+    <section>View Examples</section>
+  </main>
 
   <footer>
     <div class="fnb">
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>About</li>
+        <li>Docs</li>
+        <li>Contact</li>
       </ul>
       <div class="email">
         <span>Email:</span>
