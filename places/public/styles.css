@@ -88,7 +88,7 @@ main .intro {
         color: #cecdcd;
         line-height: 1.7; }
         main .intro .intro-overlay .intro-content p a {
-          color: #09d356;
+          color: #09c752;
           opacity: 1; }
       main .intro .intro-overlay .intro-content button {
         margin: 30px 0 0;
@@ -106,9 +106,9 @@ main .intro {
       margin: 0 0 40px;
       background-color: #fff;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-around;
       align-items: center;
+      flex-wrap: wrap;
       color: #979696; }
       main .intro .intro-overlay .travel-form label {
         font-size: 12px;
@@ -133,7 +133,7 @@ main .intro {
           -webkit-appearance: none;
           display: none; }
         main .intro .intro-overlay .travel-form .travel-date input:focus {
-          border: 1px solid #09d356; }
+          border: 1px solid #09c752; }
       main .intro .intro-overlay .travel-form .form-content {
         width: 190px;
         display: flex;
@@ -161,8 +161,264 @@ main .intro {
           background-color: #039639;
           transition: all 0.2s linear; }
 
+main .top-places {
+  padding: 100px 0 0;
+  margin: 220px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: nowrap;
+  border-top: 1px solid #d1d1d1; }
+  main .top-places ul {
+    margin: 45px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap; }
+    main .top-places ul:hover > li {
+      opacity: 0.5; }
+    main .top-places ul li {
+      margin: 0 28px 0 0; }
+      main .top-places ul li:nth-child(4) {
+        margin: 0; }
+      main .top-places ul li .place {
+        width: 230px;
+        height: 340px;
+        cursor: pointer; }
+        main .top-places ul li .place:hover + .place-name {
+          visibility: visible; }
+      main .top-places ul li .buena {
+        background: url(../img/img_1.jpg) no-repeat center center;
+        background-size: cover; }
+      main .top-places ul li .road {
+        background: url(../img/img_2.jpg) no-repeat center center;
+        background-size: cover; }
+      main .top-places ul li .australia {
+        background: url(../img/img_3.jpg) no-repeat center center;
+        background-size: cover; }
+      main .top-places ul li .japan {
+        background: url(../img/img_4.jpg) no-repeat center center;
+        background-size: cover; }
+      main .top-places ul li .place-name {
+        visibility: hidden;
+        font-size: 25px;
+        font-weight: 300;
+        margin: 20px 0 0; }
+      main .top-places ul li:hover {
+        opacity: 1; }
+
+main .services {
+  margin: 200px 0 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  main .services ul {
+    width: 100%;
+    margin: 180px 0 108px;
+    display: flex;
+    flex-wrap: wrap; }
+    main .services ul li {
+      width: 50%;
+      padding: 100px;
+      background-color: #ececec; }
+      main .services ul li:nth-child(1) {
+        background: url(../img/img_2.jpg) no-repeat center center;
+        background-size: cover; }
+      main .services ul li:nth-child(4) {
+        background: url(../img/img_3.jpg) no-repeat center center;
+        background-size: cover; }
+      main .services ul li h3 {
+        color: #212529;
+        font-size: 30px;
+        font-weight: 300; }
+      main .services ul li p {
+        margin: 22px 0 0;
+        font-size: 13px;
+        line-height: 1.7;
+        opacity: 0.4; }
+      main .services ul li button {
+        margin: 15px 0 0;
+        padding: 15px 23px;
+        background-color: #09c752;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 12px;
+        letter-spacing: 2.5px;
+        cursor: pointer; }
+        main .services ul li button:hover {
+          background-color: #039639; }
+
+main .phrase {
+  text-align: center;
+  padding: 100px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  main .phrase p {
+    font-size: 1.15rem;
+    font-weight: 300;
+    line-height: 1.7;
+    font-style: italic;
+    width: 53.5%; }
+  main .phrase .writer {
+    margin: 30px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    main .phrase .writer__avatar {
+      width: 65px;
+      height: 65px;
+      border-radius: 40px;
+      background: url(../img/person_1.jpg) no-repeat center center;
+      background-size: cover; }
+    main .phrase .writer__name {
+      margin: 10px 0 8px;
+      font-size: 12px;
+      letter-spacing: 1.7px;
+      font-weight: bold; }
+    main .phrase .writer__position {
+      font-size: 13px;
+      color: #bdbcbc;
+      cursor: pointer; }
+
+main .more-services {
+  padding: 130px 0 118px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ececec; }
+  main .more-services ul {
+    width: 60%;
+    margin: 30px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; }
+    main .more-services ul li {
+      margin: 13px;
+      width: 460px;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #fff; }
+      main .more-services ul li .desc {
+        width: 230px;
+        height: 220px;
+        padding: 20px; }
+        main .more-services ul li .desc h4 {
+          color: #212529;
+          font-size: 18px;
+          font-weight: 300; }
+        main .more-services ul li .desc p {
+          margin: 20px 0 0;
+          font-size: 14px;
+          line-height: 1.7;
+          opacity: 0.4; }
+      main .more-services ul li:nth-child(1) .img-wrapper {
+        width: 230px;
+        height: 220px;
+        background: url(../img/img_1.jpg);
+        background-size: cover; }
+      main .more-services ul li:nth-child(2) .img-wrapper {
+        width: 230px;
+        height: 220px;
+        background: url(../img/img_4.jpg);
+        background-size: cover; }
+      main .more-services ul li:nth-child(3) .img-wrapper {
+        width: 230px;
+        height: 220px;
+        background: url(../img/img_2.jpg);
+        background-size: cover; }
+      main .more-services ul li:nth-child(4) .img-wrapper {
+        width: 230px;
+        height: 220px;
+        background: url(../img/img_5.jpg);
+        background-size: cover; }
+
+main .news {
+  padding: 130px 0 118px;
+  margin: 210px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ececec; }
+  main .news ul {
+    width: 60%;
+    margin: 30px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; }
+    main .news ul li {
+      margin: 13px;
+      width: 480px;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #fff; }
+      main .news ul li .desc {
+        width: 250px;
+        height: 300px;
+        padding: 27px; }
+        main .news ul li .desc__date {
+          font-size: 14px;
+          opacity: 0.4;
+          line-height: 1.7; }
+        main .news ul li .desc h4 {
+          color: #212529;
+          font-size: 18px;
+          font-weight: 300;
+          padding: 0 10px 0 0; }
+        main .news ul li .desc p {
+          margin: 17px 0;
+          font-size: 14px;
+          line-height: 1.7;
+          opacity: 0.4; }
+        main .news ul li .desc .more-btn {
+          font-size: 14px;
+          color: #09c752;
+          cursor: pointer; }
+          main .news ul li .desc .more-btn:hover {
+            color: #039639; }
+      main .news ul li:nth-child(1) .img-wrapper {
+        width: 230px;
+        height: 300px;
+        background: url(../img/img_1.jpg);
+        background-size: cover; }
+      main .news ul li:nth-child(2) .img-wrapper {
+        width: 230px;
+        height: 300px;
+        background: url(../img/img_4.jpg);
+        background-size: cover; }
+      main .news ul li:nth-child(3) .img-wrapper {
+        width: 230px;
+        height: 300px;
+        background: url(../img/img_2.jpg);
+        background-size: cover; }
+      main .news ul li:nth-child(4) .img-wrapper {
+        width: 230px;
+        height: 300px;
+        background: url(../img/img_5.jpg);
+        background-size: cover; }
+
 body {
   width: 100%;
   height: 100%;
   font-family: work sans,Arial,sans-serif;
   font-weight: 400; }
+
+hr {
+  margin: 17px 0 20px;
+  width: 46px;
+  border: 1px solid #09c752; }
+
+h2 {
+  font-size: 3.2rem;
+  line-height: 1.1;
+  font-weight: 300; }
