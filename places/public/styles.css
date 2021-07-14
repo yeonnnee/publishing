@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+ul, li, ol {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit; }
+
+button {
+  outline: none; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer; }
+
+header {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  z-index: 999; }
+  header nav {
+    width: 53%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; }
+    header nav .logo {
+      padding: 2px 0 2px 4px;
+      font-size: 1.1rem;
+      letter-spacing: .3em;
+      color: #fff;
+      font-weight: 300; }
+    header nav ul {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      padding: 2px 5px 0 0; }
+      header nav ul li {
+        margin: 0 10px;
+        font-size: 11px;
+        letter-spacing: .1em;
+        color: rgba(255, 255, 255, 0.5); }
+        header nav ul li:hover {
+          color: #fff; }
+      header nav ul .current-page {
+        color: #fff; }
+
+main .intro {
+  width: 100%;
+  height: 100%;
+  background: url(../img/bg_1.jpg) no-repeat center center;
+  background-size: cover; }
+  main .intro .intro-overlay {
+    width: 100%;
+    padding: 152px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(24, 24, 24, 0.582); }
+    main .intro .intro-overlay .intro-content {
+      width: 25%;
+      padding: 105px 0;
+      margin: 0 30px 0 0;
+      color: #fff;
+      font-weight: 300; }
+      main .intro .intro-overlay .intro-content h1 {
+        font-size: 3.2rem;
+        line-height: 1.1;
+        opacity: 0.9; }
+      main .intro .intro-overlay .intro-content p {
+        margin: 10px 0 0;
+        font-size: 18px;
+        color: #cecdcd;
+        line-height: 1.7; }
+        main .intro .intro-overlay .intro-content p a {
+          color: #09d356;
+          opacity: 1; }
+      main .intro .intro-overlay .intro-content button {
+        margin: 30px 0 0;
+        background-color: #02ca4f;
+        color: white;
+        border: none;
+        padding: 15px 50px;
+        border-radius: 3px;
+        font-size: 12px;
+        letter-spacing: 1.5px; }
+    main .intro .intro-overlay .travel-form {
+      width: 25.7%;
+      height: 320px;
+      padding: 27px 20px;
+      margin: 0 0 40px;
+      background-color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      color: #979696; }
+      main .intro .intro-overlay .travel-form label {
+        font-size: 12px;
+        margin: 0 0 10px;
+        font-weight: 300; }
+      main .intro .intro-overlay .travel-form input, main .intro .intro-overlay .travel-form select {
+        padding: 9px 20px;
+        text-align: center;
+        border: 1px solid #d1d1d1; }
+      main .intro .intro-overlay .travel-form .travel-date {
+        margin: 0 0 20px; }
+        main .intro .intro-overlay .travel-form .travel-date input::-webkit-datetime-edit-text {
+          -webkit-appearance: none;
+          display: none; }
+        main .intro .intro-overlay .travel-form .travel-date input::-webkit-datetime-edit-month-field {
+          -webkit-appearance: none;
+          display: none; }
+        main .intro .intro-overlay .travel-form .travel-date input::-webkit-datetime-edit-day-field {
+          -webkit-appearance: none;
+          display: none; }
+        main .intro .intro-overlay .travel-form .travel-date input::-webkit-datetime-edit-year-field {
+          -webkit-appearance: none;
+          display: none; }
+        main .intro .intro-overlay .travel-form .travel-date input:focus {
+          border: 1px solid #09d356; }
+      main .intro .intro-overlay .travel-form .form-content {
+        width: 190px;
+        display: flex;
+        flex-direction: column; }
+      main .intro .intro-overlay .travel-form .travel-type {
+        flex-direction: row;
+        font-size: 12px; }
+        main .intro .intro-overlay .travel-form .travel-type .type-oneway {
+          margin: 0 0 20px 50px; }
+        main .intro .intro-overlay .travel-form .travel-type input {
+          width: 11px;
+          height: 11px;
+          margin: 0; }
+      main .intro .intro-overlay .travel-form button {
+        width: 190px;
+        padding: 15px 20px;
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 1.8px;
+        background-color: #02ca4f;
+        color: #fff;
+        border: none;
+        border-radius: 4px; }
+        main .intro .intro-overlay .travel-form button:hover {
+          background-color: #039639;
+          transition: all 0.2s linear; }
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: work sans,Arial,sans-serif;
+  font-weight: 400; }

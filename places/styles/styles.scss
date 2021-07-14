@@ -1,0 +1,17 @@
+// common
+@import './common/reset';
+@import './common/colors';
+@import './common/header';
+@import './common/footer';
+
+
+// pages
+@import './main';
+
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: work sans,Arial,sans-serif;
+  font-weight: 400;
+}

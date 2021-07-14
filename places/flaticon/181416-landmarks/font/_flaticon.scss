@@ -1,0 +1,99 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 26/07/2016 09:44
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-atlantis-palm:before { content: "\f100"; }
+.flaticon-burj-al-arab:before { content: "\f101"; }
+.flaticon-cathedral-of-cordoba:before { content: "\f102"; }
+.flaticon-cathedral-of-saint-sava:before { content: "\f103"; }
+.flaticon-chiang-kai-shek-memorial:before { content: "\f104"; }
+.flaticon-church-of-santa-engracia:before { content: "\f105"; }
+.flaticon-cusco-cathedral:before { content: "\f106"; }
+.flaticon-dresden-frauenkirche:before { content: "\f107"; }
+.flaticon-gate-of-india:before { content: "\f108"; }
+.flaticon-gate-of-india-1:before { content: "\f109"; }
+.flaticon-heuvelse-kerk-tilburg:before { content: "\f10a"; }
+.flaticon-leaning-tower-of-pisa:before { content: "\f10b"; }
+.flaticon-london-bridge:before { content: "\f10c"; }
+.flaticon-marina-bay-sands:before { content: "\f10d"; }
+.flaticon-national-museum-of-serbia:before { content: "\f10e"; }
+.flaticon-nur-astana-mosque:before { content: "\f10f"; }
+.flaticon-osaka-castle:before { content: "\f110"; }
+.flaticon-palace-of-the-sun:before { content: "\f111"; }
+.flaticon-parthenon:before { content: "\f112"; }
+.flaticon-pura-ulun-danu-bratan:before { content: "\f113"; }
+.flaticon-royal-museum-of-the-armed-forces:before { content: "\f114"; }
+.flaticon-rua-augusta-arch:before { content: "\f115"; }
+.flaticon-saint-paul-cathedral:before { content: "\f116"; }
+.flaticon-saint-stephen-basilica:before { content: "\f117"; }
+.flaticon-samarra-minaret:before { content: "\f118"; }
+.flaticon-sher-dor-madrasah:before { content: "\f119"; }
+.flaticon-statue-of-liberty:before { content: "\f11a"; }
+.flaticon-swayambhunath:before { content: "\f11b"; }
+.flaticon-taj-mahal:before { content: "\f11c"; }
+.flaticon-teatro-de-la-caridad:before { content: "\f11d"; }
+    
+    $font-Flaticon-atlantis-palm: "\f100";
+    $font-Flaticon-burj-al-arab: "\f101";
+    $font-Flaticon-cathedral-of-cordoba: "\f102";
+    $font-Flaticon-cathedral-of-saint-sava: "\f103";
+    $font-Flaticon-chiang-kai-shek-memorial: "\f104";
+    $font-Flaticon-church-of-santa-engracia: "\f105";
+    $font-Flaticon-cusco-cathedral: "\f106";
+    $font-Flaticon-dresden-frauenkirche: "\f107";
+    $font-Flaticon-gate-of-india: "\f108";
+    $font-Flaticon-gate-of-india-1: "\f109";
+    $font-Flaticon-heuvelse-kerk-tilburg: "\f10a";
+    $font-Flaticon-leaning-tower-of-pisa: "\f10b";
+    $font-Flaticon-london-bridge: "\f10c";
+    $font-Flaticon-marina-bay-sands: "\f10d";
+    $font-Flaticon-national-museum-of-serbia: "\f10e";
+    $font-Flaticon-nur-astana-mosque: "\f10f";
+    $font-Flaticon-osaka-castle: "\f110";
+    $font-Flaticon-palace-of-the-sun: "\f111";
+    $font-Flaticon-parthenon: "\f112";
+    $font-Flaticon-pura-ulun-danu-bratan: "\f113";
+    $font-Flaticon-royal-museum-of-the-armed-forces: "\f114";
+    $font-Flaticon-rua-augusta-arch: "\f115";
+    $font-Flaticon-saint-paul-cathedral: "\f116";
+    $font-Flaticon-saint-stephen-basilica: "\f117";
+    $font-Flaticon-samarra-minaret: "\f118";
+    $font-Flaticon-sher-dor-madrasah: "\f119";
+    $font-Flaticon-statue-of-liberty: "\f11a";
+    $font-Flaticon-swayambhunath: "\f11b";
+    $font-Flaticon-taj-mahal: "\f11c";
+    $font-Flaticon-teatro-de-la-caridad: "\f11d";

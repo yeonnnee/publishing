@@ -6,14 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Places</title>
+  <link rel="stylesheet" href="./public/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
   <header>
-    <div></div>
     <nav>
+      <div class="logo">PLACES</div>
+
       <ul>
-        <li>HOME</li>
+        <li class="current-page">HOME</li>
         <li>CITY GUIDES</li>
         <li>SERVICES</li>
         <li>TRAVEL WITH US</li>
@@ -24,43 +28,21 @@
 
   <main>
     <section class="intro">
-      <div>
-        <h1>Explore The World With Ease</h1>
-        <p>Hope u like it! another free template by <a>uicookies.com</a></p>
-        <p>Under License <a>CC 3.0</a> </p>
-        <button>SEE ONEPAGE VERION</button>
-      </div>
-
-      <div>
-        <div>
-          <div>
-            <label for="">FROM</label>
-            <select>
-              <div>
-                <div>
-                  <input type="text">
-                </div>
-                <option value="Australia">Australia</option>
-                <option value="Japan">Japan</option>
-                <option value="United States">United States</option>
-                <option value="Brazil">Brazil</option>
-                <option value="China">China</option>
-                <option value="Israel">Israel</option>
-                <option value="Philippines">Philippines</option>
-                <option value="Malaysia">Malaysia</option>
-                <option value="Canada">Canada</option>
-                <option value="Chile">Chile</option>
-                <option value="Zimbabwe">Zimbabwe</option>
-              </div>
-            </select>
-          </div>
+      <div class="intro-overlay">
+        <div class="intro-content">
+          <h1>Explore The World With Ease</h1>
+          <p>Hope u like it! another free template by <a>uicookies.com</a> <br />
+            Under License <a>CC 3.0</a>
+          </p>
+          <button>SEE ONEPAGE VERION</button>
         </div>
 
-        <div>
-          <label for="">TO</label>
-          <select>
-            <div>
-              <input type="text">
+        <div class="travel-form">
+          <div class="destination form-content">
+            <label for="">FROM</label>
+            <select>
+
+              <!-- <input type="text">
               <option value="Australia">Australia</option>
               <option value="Japan">Japan</option>
               <option value="United States">United States</option>
@@ -71,36 +53,67 @@
               <option value="Malaysia">Malaysia</option>
               <option value="Canada">Canada</option>
               <option value="Chile">Chile</option>
-              <option value="Zimbabwe">Zimbabwe</option>
+              <option value="Zimbabwe">Zimbabwe</option> -->
+
+            </select>
+          </div>
+
+
+          <div class="destination form-content">
+            <label for="">TO</label>
+            <select>
+
+              <!-- <input type="text">
+              <option value="Australia">Australia</option>
+              <option value="Japan">Japan</option>
+              <option value="United States">United States</option>
+              <option value="Brazil">Brazil</option>
+              <option value="China">China</option>
+              <option value="Israel">Israel</option>
+              <option value="Philippines">Philippines</option>
+              <option value="Malaysia">Malaysia</option>
+              <option value="Canada">Canada</option>
+              <option value="Chile">Chile</option>
+              <option value="Zimbabwe">Zimbabwe</option> -->
+
+            </select>
+          </div>
+
+
+          <div class="travel-date departure form-content">
+            <label for="">DEPARTURE</label>
+            <input type="date">
+          </div>
+
+          <div class="travel-date arrival form-content">
+            <label for="">ARRIVAL</label>
+            <input type="date">
+          </div>
+
+
+          <!-- 여행타입 -->
+          <div class="travel-type form-content">
+            <div class="type-round">
+              <input type="radio" id="ROUND" name="drone" value="ROUND">
+              <label for="ROUND">ROUND</label>
             </div>
-          </select>
+            <div class="type-oneway">
+              <input type="radio" id="ONEWAY" name="drone" value="ONEWAY">
+              <label for="ONEWAY">ONEWAY</label>
+            </div>
+          </div>
+
+          <button>SUBMIT</button>
         </div>
       </div>
 
-      <div>
-        <div>
-          <label for="">DEPARTURE</label>
-          <input type="date">
-        </div>
-        <div>
-          <label for="">ARRIVAL</label>
-          <input type="date">
-        </div>
-      </div>
 
-      <div>
-        <div>
-          <div>
-            <input type="radio" id="ROUND" name="drone" value="ROUND">
-            <label for="ROUND">ROUND</label>
-          </div>
-          <div> <input type="radio" id="ONEWAY" name="drone" value="ONEWAY">
-            <label for="ONEWAY">ONEWAY</label>
-          </div>
-        </div>
-        <button>Submit</button>
-      </div>
-      </div>
+
+
+
+
+
+
     </section>
 
     <section>

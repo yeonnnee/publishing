@@ -1,0 +1,21 @@
+{
+  "name": "sedna",
+  "version": "1.0.0",
+  "description": "practice publishing",
+  "main": "index.js",
+  "scripts": {
+    "test": "node-sass -w styles/styles.scss -o public ",
+    "build": "babel js/index.js --out-file script.js --presets=es2015"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeonnnee/publishing.git"
+  },
+  "author": "chloe",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
