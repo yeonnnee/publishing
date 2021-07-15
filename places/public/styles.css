@@ -66,6 +66,7 @@ header {
         margin: 0 10px;
         font-size: 11px;
         letter-spacing: .1em;
+        cursor: pointer;
         color: rgba(255, 255, 255, 0.5); }
         header nav ul li:hover {
           color: #fff; }
@@ -119,6 +120,14 @@ footer {
         font-size: 10px; }
     footer .source a {
       color: #09c752; }
+
+@keyframes ShowUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
 
 main .intro {
   width: 100%;
@@ -248,9 +257,13 @@ main .top-places {
         width: 230px;
         height: 340px;
         cursor: pointer; }
+        main .top-places ul li .place:hover {
+          transform: scale(1.1) translateY(-17px);
+          box-shadow: 5px 4px 10px #d8d8d8;
+          transition: all 0.2s linear; }
         main .top-places ul li .place:hover + .place-name {
           visibility: visible;
-          bottom: -30px;
+          bottom: -40px;
           transition: all 0.2s linear; }
       main .top-places ul li .buena {
         background: url(../img/img_1.jpg) no-repeat center center;
@@ -270,7 +283,8 @@ main .top-places {
         font-weight: 300;
         position: absolute;
         bottom: 0;
-        left: 80px; }
+        left: 80px;
+        z-index: -1; }
       main .top-places ul li:hover {
         opacity: 1; }
 
@@ -661,6 +675,9 @@ main .news {
         height: 300px;
         background: url(../img/img_5.jpg);
         background-size: cover; }
+
+main .show-up {
+  animation: ShowUp 0.2s linear; }
 
 body {
   width: 100%;
