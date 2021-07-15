@@ -60,6 +60,46 @@ header {
       header nav ul .current-page {
         color: #fff; }
 
+footer {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  border-top: 1px solid #eeecec; }
+  footer ul {
+    width: 50%;
+    margin: 0 100px 100px 0;
+    display: flex;
+    justify-content: space-around; }
+    footer ul li {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      font-weight: 300; }
+      footer ul li div {
+        margin: 10px 0; }
+      footer ul li a {
+        color: #0fb64f;
+        font-size: 14px;
+        opacity: 0.7;
+        line-height: 1.7;
+        cursor: pointer; }
+        footer ul li a:hover {
+          color: #086608;
+          opacity: 1; }
+  footer .source {
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.7;
+    font-weight: 300; }
+    footer .source p {
+      margin: 8px 0 20px; }
+      footer .source p span {
+        font-size: 10px; }
+    footer .source a {
+      color: #09c752; }
+
 main .intro {
   width: 100%;
   height: 100%;
@@ -71,7 +111,7 @@ main .intro {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(24, 24, 24, 0.582); }
+    background-color: rgba(0, 0, 0, 0.5); }
     main .intro .intro-overlay .intro-content {
       width: 25%;
       padding: 105px 0;
@@ -180,7 +220,8 @@ main .top-places {
     main .top-places ul:hover > li {
       opacity: 0.5; }
     main .top-places ul li {
-      margin: 0 28px 0 0; }
+      margin: 0 28px 0 0;
+      position: relative; }
       main .top-places ul li:nth-child(4) {
         margin: 0; }
       main .top-places ul li .place {
@@ -188,7 +229,9 @@ main .top-places {
         height: 340px;
         cursor: pointer; }
         main .top-places ul li .place:hover + .place-name {
-          visibility: visible; }
+          visibility: visible;
+          bottom: -30px;
+          transition: all 0.2s linear; }
       main .top-places ul li .buena {
         background: url(../img/img_1.jpg) no-repeat center center;
         background-size: cover; }
@@ -205,12 +248,14 @@ main .top-places {
         visibility: hidden;
         font-size: 25px;
         font-weight: 300;
-        margin: 20px 0 0; }
+        position: absolute;
+        bottom: 0;
+        left: 80px; }
       main .top-places ul li:hover {
         opacity: 1; }
 
 main .services {
-  margin: 200px 0 48px;
+  margin: 200px 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -251,6 +296,194 @@ main .services {
         cursor: pointer; }
         main .services ul li button:hover {
           background-color: #039639; }
+
+main .suggest {
+  text-align: center;
+  padding: 0 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  main .suggest .container {
+    margin: 60px 0 50px; }
+    main .suggest .container .swiper-container {
+      width: 990px;
+      height: 100%;
+      display: flex;
+      position: relative;
+      overflow: hidden; }
+      main .suggest .container .swiper-container .swiper-wrapper {
+        width: 910px;
+        height: 250px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        padding: 0 50px; }
+        main .suggest .container .swiper-container .swiper-wrapper .swiper-slide {
+          height: 150px;
+          padding: 100px 95px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 18px;
+          background: #fff;
+          border: 1px solid #f1f1f1; }
+          main .suggest .container .swiper-container .swiper-wrapper .swiper-slide:nth-child(2n+2) {
+            margin: 0 20px; }
+          main .suggest .container .swiper-container .swiper-wrapper .swiper-slide .icon::before {
+            text-align: center;
+            font-size: 90px;
+            margin: 0; }
+          main .suggest .container .swiper-container .swiper-wrapper .swiper-slide .place-desc {
+            display: none;
+            width: 150px;
+            margin: 20px 0;
+            font-size: 12px;
+            color: #cecdcd;
+            text-align: center; }
+      main .suggest .container .swiper-container .swiper-button {
+        position: absolute;
+        text-align: center;
+        height: 150px;
+        width: 30px;
+        padding: 100px 0;
+        font-size: 35px;
+        opacity: 0.5;
+        cursor: pointer; }
+        main .suggest .container .swiper-container .swiper-button i {
+          transform: translateY(-20px); }
+      main .suggest .container .swiper-container .swiper-button-prev {
+        left: 0; }
+      main .suggest .container .swiper-container .swiper-button-next {
+        right: 0; }
+      main .suggest .container .swiper-container .swiper-radio-btn {
+        position: absolute;
+        bottom: 0;
+        right: 46%;
+        display: flex;
+        cursor: pointer; }
+        main .suggest .container .swiper-container .swiper-radio-btn .swiper-controller {
+          width: 9px;
+          height: 9px;
+          background-color: #dddbdb;
+          border-radius: 5px; }
+          main .suggest .container .swiper-container .swiper-radio-btn .swiper-controller:nth-child(2n+2) {
+            margin: 0 10px; }
+        main .suggest .container .swiper-container .swiper-radio-btn .selected {
+          background-color: #09c752; }
+
+main .recommendation {
+  text-align: center;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  main .recommendation .slider-container {
+    margin: 50px 0 50px; }
+    main .recommendation .slider-container .drag-container {
+      width: 983px;
+      height: 580px;
+      display: flex;
+      position: relative;
+      overflow: hidden; }
+      main .recommendation .slider-container .drag-container .drag-wrapper {
+        width: 980px;
+        height: 500px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap; }
+        main .recommendation .slider-container .drag-container .drag-wrapper .drag-slide {
+          height: 550px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 18px;
+          background: #fff;
+          margin: 0; }
+          main .recommendation .slider-container .drag-container .drag-wrapper .drag-slide:nth-child(2n+2) {
+            margin: 0 20px; }
+          main .recommendation .slider-container .drag-container .drag-wrapper .drag-slide .desc {
+            padding: 20px;
+            text-align: left;
+            box-shadow: 3px 3px 5px #f1f1f1, -1px 1px 5px #f1f1f1; }
+            main .recommendation .slider-container .drag-container .drag-wrapper .drag-slide .desc h4 {
+              color: #212529;
+              font-size: 18px;
+              font-weight: 300; }
+            main .recommendation .slider-container .drag-container .drag-wrapper .drag-slide .desc p {
+              padding: 20px 0 0;
+              font-size: 14px;
+              line-height: 1.7;
+              opacity: 0.4; }
+          main .recommendation .slider-container .drag-container .drag-wrapper .drag-slide .img-wrapper {
+            width: 315px;
+            height: 320px;
+            padding: 30px 0; }
+          main .recommendation .slider-container .drag-container .drag-wrapper .drag-slide:nth-child(1) .img-wrapper {
+            background: url(../img/sq_img_2.jpg) center;
+            background-size: cover; }
+          main .recommendation .slider-container .drag-container .drag-wrapper .drag-slide:nth-child(2) .img-wrapper {
+            background: url(../img/sq_img_1.jpg) center;
+            background-size: cover; }
+          main .recommendation .slider-container .drag-container .drag-wrapper .drag-slide:nth-child(3) .img-wrapper {
+            background: url(../img/sq_img_3.jpg) center;
+            background-size: cover; }
+          main .recommendation .slider-container .drag-container .drag-wrapper .drag-slide:nth-child(4) .img-wrapper {
+            background: url(../img/sq_img_4.jpg) center;
+            background-size: cover; }
+          main .recommendation .slider-container .drag-container .drag-wrapper .drag-slide:nth-child(5) .img-wrapper {
+            background: url(../img/sq_img_5.jpg) center;
+            background-size: cover; }
+          main .recommendation .slider-container .drag-container .drag-wrapper .drag-slide:nth-child(6) .img-wrapper {
+            background: url(../img/sq_img_2.jpg) center;
+            background-size: cover; }
+          main .recommendation .slider-container .drag-container .drag-wrapper .drag-slide:nth-child(7) .img-wrapper {
+            background: url(../img/sq_img_1.jpg) center;
+            background-size: cover; }
+          main .recommendation .slider-container .drag-container .drag-wrapper .drag-slide:nth-child(8) .img-wrapper {
+            background: url(../img/sq_img_3.jpg) center;
+            background-size: cover; }
+          main .recommendation .slider-container .drag-container .drag-wrapper .drag-slide:nth-child(9) .img-wrapper {
+            background: url(../img/sq_img_4.jpg) center;
+            background-size: cover; }
+          main .recommendation .slider-container .drag-container .drag-wrapper .drag-slide:nth-child(10) .img-wrapper {
+            background: url(../img/img_5.jpg) center;
+            background-size: cover; }
+      main .recommendation .slider-container .drag-container .drag-button {
+        position: absolute;
+        text-align: center;
+        height: 150px;
+        width: 30px;
+        padding: 100px 0;
+        font-size: 35px;
+        opacity: 0.5;
+        cursor: pointer; }
+        main .recommendation .slider-container .drag-container .drag-button i {
+          transform: translateY(-20px); }
+      main .recommendation .slider-container .drag-container .drag-button-prev {
+        left: 0;
+        top: 120px; }
+      main .recommendation .slider-container .drag-container .drag-button-next {
+        right: 0;
+        top: 120px; }
+      main .recommendation .slider-container .drag-container .drag-radio-btn {
+        position: absolute;
+        bottom: 0;
+        right: 46%;
+        display: flex;
+        cursor: pointer; }
+        main .recommendation .slider-container .drag-container .drag-radio-btn .drag-controller {
+          width: 9px;
+          height: 9px;
+          background-color: #dddbdb;
+          border-radius: 5px; }
+          main .recommendation .slider-container .drag-container .drag-radio-btn .drag-controller:nth-child(2n+2) {
+            margin: 0 10px; }
+        main .recommendation .slider-container .drag-container .drag-radio-btn .selected {
+          background-color: #09c752; }
 
 main .phrase {
   text-align: center;
