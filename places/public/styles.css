@@ -406,6 +406,8 @@ main .recommendation {
           main .recommendation .slider-container .drag-container .drag-wrapper .drag-slide:nth-child(2n+2) {
             margin: 0 20px; }
           main .recommendation .slider-container .drag-container .drag-wrapper .drag-slide .desc {
+            width: 315px;
+            height: 200px;
             padding: 20px;
             text-align: left;
             box-shadow: 3px 3px 5px #f1f1f1, -1px 1px 5px #f1f1f1; }
