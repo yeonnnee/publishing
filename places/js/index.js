@@ -46,20 +46,70 @@ function scrollHandler() {
 }
 
 let swiperNum = 0;
+let swiperGroup = 1;
 
-function handleSwiper() {}
+function handleSwiper(e) {
+  const swiperSlider = document.querySelector('.swiper-wrapper');
+  const target = e.target.classList.toString();
+
+  if(target.indexOf(`swiper-group1`) > -1) {
+    swiperGroup = 1;
+    const val = swiperGroup * 3 * -270;
+    swiperSlider.style.transform = `translateX(${val}px)`;
+    swiperSlider.style.transition = `all 0.2s linear`;
+
+  } else if(target.indexOf(`swiper-group2`) > -1){
+    swiperGroup = 2;
+    const val = swiperGroup * 3 * -270;
+    swiperSlider.style.transform = `translateX(${val}px)`;
+    swiperSlider.style.transition = `all 0.2s linear`;
+
+  } else if(target.indexOf(`swiper-group3`) > -1){
+    swiperGroup = 3;
+    const val = swiperGroup * 3 * -270;
+    swiperSlider.style.transform = `translateX(${val}px)`;
+    swiperSlider.style.transition = `all 0.2s linear`;
+
+  } else if(target.indexOf(`swiper-group4`) > -1){
+    swiperGroup = 4;
+    const val = swiperGroup * 3 * -270;
+    swiperSlider.style.transform = `translateX(${val}px)`;
+    swiperSlider.style.transition = `all 0.2s linear`;
+
+  } else if(target.indexOf(`swiper-group5`) > -1){
+    swiperGroup = 5;
+    const val = swiperGroup * 3 * -270;
+    swiperSlider.style.transform = `translateX(${val}px)`;
+    swiperSlider.style.transition = `all 0.2s linear`;
+  }
+}
 function handleDragSlider() {}
 
-function getPrevSwiper() {}
+function getPrevSwiper() {
+  const swiperSlider = document.querySelector('.swiper-wrapper');
+
+  if (swiperNum >0) {
+    swiperNum = swiperNum -1;
+    let val = swiperNum  * -270;
+    swiperSlider.style.transform = `translateX(${val}px)`;
+    swiperSlider.style.transition = `all 0.2s linear`;
+  } else {
+    return;
+  } 
+
+
+}
 
 function getNextSwiper() {
   const swiperSlider = document.querySelector('.swiper-wrapper');
-  swiperNum = swiperNum + 1;
 
   if (swiperNum < 13) {
-    let val = swiperNum * -270
-    swiperSlider.style.transform = `translateX(${val})`;
-    console.log('hger')
+    swiperNum = swiperNum + 1;
+    let val = swiperNum * -270;
+    swiperSlider.style.transform = `translateX(${val}px)`;
+    swiperSlider.style.transition = `all 0.2s linear`;
+  } else {
+    return;
   }
 
 }

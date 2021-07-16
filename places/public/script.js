@@ -46,20 +46,64 @@ function scrollHandler() {
 }
 
 var swiperNum = 0;
+var swiperGroup = 1;
 
-function handleSwiper() {}
+function handleSwiper(e) {
+  var swiperSlider = document.querySelector('.swiper-wrapper');
+  var target = e.target.classList.toString();
+
+  if (target.indexOf('swiper-group1') > -1) {
+    swiperGroup = 1;
+    var val = swiperGroup * 3 * -270;
+    swiperSlider.style.transform = 'translateX(' + val + 'px)';
+    swiperSlider.style.transition = 'all 0.2s linear';
+  } else if (target.indexOf('swiper-group2') > -1) {
+    swiperGroup = 2;
+    var _val = swiperGroup * 3 * -270;
+    swiperSlider.style.transform = 'translateX(' + _val + 'px)';
+    swiperSlider.style.transition = 'all 0.2s linear';
+  } else if (target.indexOf('sswiper-group3') > -1) {
+    swiperGroup = 3;
+    var _val2 = swiperGroup * 3 * -270;
+    swiperSlider.style.transform = 'translateX(' + _val2 + 'px)';
+    swiperSlider.style.transition = 'all 0.2s linear';
+  } else if (target.indexOf('swiper-group4') > -1) {
+    swiperGroup = 4;
+    var _val3 = swiperGroup * 3 * -270;
+    swiperSlider.style.transform = 'translateX(' + _val3 + 'px)';
+    swiperSlider.style.transition = 'all 0.2s linear';
+  } else if (target.indexOf('swiper-group5') > -1) {
+    swiperGroup = 5;
+    var _val4 = swiperGroup * 3 * -270;
+    swiperSlider.style.transform = 'translateX(' + _val4 + 'px)';
+    swiperSlider.style.transition = 'all 0.2s linear';
+  }
+}
 function handleDragSlider() {}
 
-function getPrevSwiper() {}
+function getPrevSwiper() {
+  var swiperSlider = document.querySelector('.swiper-wrapper');
+
+  if (swiperNum > 0) {
+    swiperNum = swiperNum - 1;
+    var val = swiperNum * -270;
+    swiperSlider.style.transform = 'translateX(' + val + 'px)';
+    swiperSlider.style.transition = 'all 0.2s linear';
+  } else {
+    return;
+  }
+}
 
 function getNextSwiper() {
   var swiperSlider = document.querySelector('.swiper-wrapper');
-  swiperNum = swiperNum + 1;
 
   if (swiperNum < 13) {
+    swiperNum = swiperNum + 1;
     var val = swiperNum * -270;
-    swiperSlider.style.transform = 'translateX(' + val + ')';
-    console.log('hger');
+    swiperSlider.style.transform = 'translateX(' + val + 'px)';
+    swiperSlider.style.transition = 'all 0.2s linear';
+  } else {
+    return;
   }
 }
 function getPrevDragSlider() {}
