@@ -46,73 +46,248 @@ function scrollHandler() {
 }
 
 let swiperNum = 0;
-let swiperGroup = 1;
 
 function handleSwiper(e) {
   const swiperSlider = document.querySelector('.swiper-wrapper');
+  const currentBtn = document.querySelector('.selected');
   const target = e.target.classList.toString();
 
+  let val;
   if(target.indexOf(`swiper-group1`) > -1) {
-    swiperGroup = 1;
-    const val = swiperGroup * 3 * -270;
-    swiperSlider.style.transform = `translateX(${val}px)`;
-    swiperSlider.style.transition = `all 0.2s linear`;
+    swiperNum = 0;
+    val = -20;
+
+    currentBtn.classList.remove('selected');
+    swiperGroup1.classList.add('selected');
 
   } else if(target.indexOf(`swiper-group2`) > -1){
-    swiperGroup = 2;
-    const val = swiperGroup * 3 * -270;
-    swiperSlider.style.transform = `translateX(${val}px)`;
-    swiperSlider.style.transition = `all 0.2s linear`;
+    swiperNum = 3;
+    val =  (3 * -348) - 5;
+
+    currentBtn.classList.remove('selected');
+    swiperGroup2.classList.add('selected');
 
   } else if(target.indexOf(`swiper-group3`) > -1){
-    swiperGroup = 3;
-    const val = swiperGroup * 3 * -270;
-    swiperSlider.style.transform = `translateX(${val}px)`;
-    swiperSlider.style.transition = `all 0.2s linear`;
+    swiperNum = 6;
+    val = (6 * -344) - 7;
+
+    currentBtn.classList.remove('selected');
+    swiperGroup3.classList.add('selected');
 
   } else if(target.indexOf(`swiper-group4`) > -1){
-    swiperGroup = 4;
-    const val = swiperGroup * 3 * -270;
-    swiperSlider.style.transform = `translateX(${val}px)`;
-    swiperSlider.style.transition = `all 0.2s linear`;
+    swiperNum = 9;
+    val = (9 * -344);
+
+    currentBtn.classList.remove('selected');
+    swiperGroup4.classList.add('selected');
 
   } else if(target.indexOf(`swiper-group5`) > -1){
-    swiperGroup = 5;
-    const val = swiperGroup * 3 * -270;
-    swiperSlider.style.transform = `translateX(${val}px)`;
-    swiperSlider.style.transition = `all 0.2s linear`;
+    swiperNum = 12;
+    val = (12 * -344) + 3 ;
+
+    currentBtn.classList.remove('selected');
+    swiperGroup5.classList.add('selected');
   }
+
+  swiperSlider.style.transform = `translateX(${val}px)`;
+  swiperSlider.style.transition = `all 1.3s ease`;
 }
-function handleDragSlider() {}
+
 
 function getPrevSwiper() {
   const swiperSlider = document.querySelector('.swiper-wrapper');
+  const currentBtn = document.querySelector('.selected');
 
-  if (swiperNum >0) {
-    swiperNum = swiperNum -1;
-    let val = swiperNum  * -270;
-    swiperSlider.style.transform = `translateX(${val}px)`;
-    swiperSlider.style.transition = `all 0.2s linear`;
-  } else {
-    return;
-  } 
+  let val;
+
+  switch (swiperNum) {
+    case 0: {
+      break;
+    }
+    case 1: {
+      swiperNum = swiperNum - 1;
+      val = -20;
+
+      currentBtn.classList.remove('selected');
+      swiperGroup1.classList.add('selected');
+      break;
+    }
+    case 2: {
+      swiperNum = swiperNum - 1;
+      val = swiperNum * -363;
+      break;
+    }
+    case 3:{
+      swiperNum = swiperNum - 1;
+      val = (swiperNum * -348) - 3;
+      break;
+    }
+    case 4: {
+      swiperNum = swiperNum - 1;
+      val = (swiperNum * -347);
+
+      currentBtn.classList.remove('selected');
+      swiperGroup2.classList.add('selected');
+      break;
+    }
+    case 5: {
+      swiperNum = swiperNum - 1;
+      val = (swiperNum * -347) + 3;
+
+      break;
+    }
+    case 6: {
+      swiperNum = swiperNum - 1;
+      val = (swiperNum * -347) + 9;
+      break;
+    }
+    case 7: {
+      swiperNum = swiperNum - 1;
+      val = (swiperNum * -347) + 15;
+
+      currentBtn.classList.remove('selected');
+      swiperGroup3.classList.add('selected');
+      break;
+    }
+    case 8: {
+      swiperNum = swiperNum - 1;
+      val = (swiperNum * -347) + 20;
+
+      break;
+    }
+    case 9: {
+      swiperNum = swiperNum - 1;
+      val = (swiperNum * -347) + 25;
+
+      break;
+    }
+    case 10: {
+      swiperNum = swiperNum - 1;
+      val = (swiperNum * -344) + 3;
+
+      currentBtn.classList.remove('selected');
+      swiperGroup4.classList.add('selected');
+      break;
+    }
+    case 11: {
+      swiperNum = swiperNum - 1;
+      val = (swiperNum * -344) + 3;
+
+      break;
+    } case 12: {
+      swiperNum = swiperNum - 1;
+      val = (swiperNum * -344) + 3;
+      break;
+    }
+    case 13: {
+      swiperNum = swiperNum - 1;
+      val = (swiperNum * -344) + 3;
+      break;
+    }
+    default: break;
+  }
+
+  swiperSlider.style.transform = `translateX(${val}px)`;
+  swiperSlider.style.transition = `all 0.2s linear`;
 
 
 }
 
 function getNextSwiper() {
   const swiperSlider = document.querySelector('.swiper-wrapper');
+  const currentBtn = document.querySelector('.selected');
 
-  if (swiperNum < 13) {
-    swiperNum = swiperNum + 1;
-    let val = swiperNum * -270;
-    swiperSlider.style.transform = `translateX(${val}px)`;
-    swiperSlider.style.transition = `all 0.2s linear`;
-  } else {
-    return;
+  let val;
+
+  switch (swiperNum) {
+    case 0: {
+      swiperNum = swiperNum + 1;
+      val = swiperNum * -363;
+      break;
+    }
+    case 1: {
+      swiperNum = swiperNum + 1;
+      val = swiperNum * -353;
+      break;
+    }
+    case 2: {
+      swiperNum = swiperNum + 1;
+      val = (swiperNum * -348) - 3;
+
+      currentBtn.classList.remove('selected');
+      swiperGroup2.classList.add('selected');
+      break;
+    }
+    case 3:{
+      swiperNum = swiperNum + 1;
+      val = (swiperNum * -347);
+
+      break;
+    }
+    case 4: {
+      swiperNum = swiperNum + 1;
+      val = (swiperNum * -347) + 3;
+      break;
+    }
+    case 5: {
+      swiperNum = swiperNum + 1;
+      val = (swiperNum * -347) + 9;
+
+      currentBtn.classList.remove('selected');
+      swiperGroup3.classList.add('selected');
+      break;
+    }
+    case 6: {
+      swiperNum = swiperNum + 1;
+      val = (swiperNum * -347) + 15;
+
+      break;
+    }
+    case 7: {
+      swiperNum = swiperNum + 1;
+      val = (swiperNum * -347) + 20;
+      break;
+    }
+    case 8: {
+      swiperNum = swiperNum + 1;
+      val = (swiperNum * -347) + 25;
+
+      currentBtn.classList.remove('selected');
+      swiperGroup4.classList.add('selected');
+      break;
+    }
+    case 9: {
+      swiperNum = swiperNum + 1;
+      val = (swiperNum * -344) + 3;
+      break;
+    }
+    case 10: {
+      swiperNum = swiperNum + 1;
+      val = (swiperNum * -344) + 3;
+      break;
+    }
+    case 11: {
+      swiperNum = swiperNum + 1;
+      val = (swiperNum * -344) + 3;
+
+      currentBtn.classList.remove('selected');
+      swiperGroup5.classList.add('selected');
+      break;
+    }
+    case 12: {
+      val = (swiperNum * -344) + 3;
+
+      break;
+    }
+
+    default: break;
   }
 
+  swiperSlider.style.transform = `translateX(${val}px)`;
+  swiperSlider.style.transition = `all 0.2s linear`;
 }
+
+function handleDragSlider() {}
 function getPrevDragSlider() {}
 function getNextDragSlider() {}
 
@@ -127,7 +302,7 @@ swiperGroup1 && swiperGroup1.addEventListener('click', handleSwiper);
 swiperGroup2 && swiperGroup2.addEventListener('click', handleSwiper);
 swiperGroup3 && swiperGroup3.addEventListener('click', handleSwiper);
 swiperGroup4 && swiperGroup4.addEventListener('click', handleSwiper);
-swiperGroup4 && swiperGroup5.addEventListener('click', handleSwiper);
+swiperGroup5 && swiperGroup5.addEventListener('click', handleSwiper);
 
 swiperPreBtn && swiperPreBtn.addEventListener('click', getPrevSwiper);
 swiperNextBtn && swiperNextBtn.addEventListener('click', getNextSwiper);

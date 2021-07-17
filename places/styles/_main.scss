@@ -312,27 +312,25 @@ main {
       margin: 60px 0 50px;
 
       .swiper-container {
-        width: 990px;
+        width: 1095px;
         height: 100%;
+        padding: 20px 0 20px 45px;
         display: flex;
         position: relative;
         overflow: hidden;
 
-
-
         .swiper-wrapper {
-          width: 910px;
+          width: 5159px;
           height: 250px;
-
           display: flex;
           justify-content: flex-start;
+          align-items: center;
           flex-wrap: nowrap;
-          padding: 0 50px 0 0;
+          transform: translateX(-20px);
 
           .swiper-slide {
             height: 150px;
-            // padding: 100px 75px;
-            padding: 100px 95px;
+            padding: 100px 115px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -340,10 +338,15 @@ main {
             font-size: 18px;
             background: #fff;
             border: 1px solid #f1f1f1;
-
-            &:nth-child(2n+2) {
-              margin: 0 20px;
+            margin: 0 10px;
+            
+            &:nth-child(1) {
+              margin: 0 10px 0 20px;
             }
+            &:nth-child(15) {
+              margin: 0 20px 0 10px;
+            }
+
             .icon {
 
               &::before {
@@ -368,27 +371,21 @@ main {
 
         .swiper-button {
           position:absolute;
-          text-align: center;
           height: 150px;
           width: 30px;
-          padding: 100px 0;
+          padding: 100px 10px;
           font-size: 35px;
           opacity: 0.5;
           cursor: pointer;
-
-          i{
-            transform:translateY(-20px);
-          }
-
         }
 
         .swiper-button-prev {
-          left: 0;
+          left: -10px;
 
         }
 
         .swiper-button-next {
-          right:0;
+          right: 0;
         }
 
         .swiper-radio-btn {

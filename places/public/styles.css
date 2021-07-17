@@ -341,30 +341,35 @@ main .suggest {
   main .suggest .container {
     margin: 60px 0 50px; }
     main .suggest .container .swiper-container {
-      width: 990px;
+      width: 1095px;
       height: 100%;
+      padding: 20px 0 20px 45px;
       display: flex;
       position: relative;
       overflow: hidden; }
       main .suggest .container .swiper-container .swiper-wrapper {
-        width: 910px;
+        width: 5159px;
         height: 250px;
         display: flex;
         justify-content: flex-start;
+        align-items: center;
         flex-wrap: nowrap;
-        padding: 0 50px; }
+        transform: translateX(-20px); }
         main .suggest .container .swiper-container .swiper-wrapper .swiper-slide {
           height: 150px;
-          padding: 100px 95px;
+          padding: 100px 115px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           font-size: 18px;
           background: #fff;
-          border: 1px solid #f1f1f1; }
-          main .suggest .container .swiper-container .swiper-wrapper .swiper-slide:nth-child(2n+2) {
-            margin: 0 20px; }
+          border: 1px solid #f1f1f1;
+          margin: 0 10px; }
+          main .suggest .container .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) {
+            margin: 0 10px 0 20px; }
+          main .suggest .container .swiper-container .swiper-wrapper .swiper-slide:nth-child(15) {
+            margin: 0 20px 0 10px; }
           main .suggest .container .swiper-container .swiper-wrapper .swiper-slide .icon::before {
             text-align: center;
             font-size: 90px;
@@ -378,17 +383,14 @@ main .suggest {
             text-align: center; }
       main .suggest .container .swiper-container .swiper-button {
         position: absolute;
-        text-align: center;
         height: 150px;
         width: 30px;
-        padding: 100px 0;
+        padding: 100px 10px;
         font-size: 35px;
         opacity: 0.5;
         cursor: pointer; }
-        main .suggest .container .swiper-container .swiper-button i {
-          transform: translateY(-20px); }
       main .suggest .container .swiper-container .swiper-button-prev {
-        left: 0; }
+        left: -10px; }
       main .suggest .container .swiper-container .swiper-button-next {
         right: 0; }
       main .suggest .container .swiper-container .swiper-radio-btn {
