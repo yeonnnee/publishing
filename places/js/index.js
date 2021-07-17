@@ -17,6 +17,12 @@ const dragGroup2 = document.querySelector('.drag-group2');
 const dragGroup3 = document.querySelector('.drag-group3');
 const dragGroup4 = document.querySelector('.drag-group4');
 
+const origin = document.querySelector('.origin-input');
+const destination = document.querySelector('.destination-input');
+const originList = document.querySelector('.origin-list');
+const destinationList = document.querySelector('.destination-list');
+
+
 // 스크롤시 header 배경색 변경
 function scrollHandler() {
   const mainPhrase = document.querySelector(".control-header-point");
@@ -409,15 +415,50 @@ function getNextSwiper() {
   swiperSlider.style.transition = `all 0.2s linear`;
 }
 
-let slideNum = 0;
 
+let showDestinationList = false;
+let showOriginList = false;
 
-// function getPrevDragSlider() {}
-// function getNextDragSlider() {}
+function openDestinationList() {
 
+  const icon = document.querySelector('.to-arrow');
 
+  if (!showDestinationList) {
+    destinationList.style.display = 'block';
+    originList.style.display = 'none';
+    icon.style.transform = 'rotate(180deg)';
+    origin.style.border = `1px solid #d1d1d1`;
+    showDestinationList = true;
+    showOriginList = false;
 
+  } else {
+    destinationList.style.display = 'none';
+    icon.style.transform = 'rotate(360deg)';
+    destination.style.border = `1px solid #09c752`;
+    showDestinationList = false;
+  }
+}
 
+function openOriginList() {
+
+  const icon = document.querySelector('.from-arrow');
+
+  if (!showOriginList) {
+    originList.style.display = 'block';
+    destinationList.style.display = 'none';
+    icon.style.transform = 'rotate(180deg)';
+    destination.style.border = `1px solid #d1d1d1`;
+    showOriginList = true;
+    showDestinationList = false;
+
+  } else {
+    originList.style.display = 'none';
+    icon.style.transform = 'rotate(360deg)';
+    origin.style.border = `1px solid #09c752`;
+
+    showOriginList = false;
+  }
+}
 
 
 
@@ -444,4 +485,7 @@ dragNextBtn && dragNextBtn.addEventListener('click', getNextDragSlider);
 dragSlider&&dragSlider.addEventListener('mouseup', cancelDrag);
 dragSlider&&dragSlider.addEventListener('mouseleave', cancelDrag);
 dragSlider&&dragSlider.addEventListener('mousedown', dragSlide);
-dragSlider&&dragSlider.addEventListener('mousemove', mouseDrag);
+dragSlider && dragSlider.addEventListener('mousemove', mouseDrag);
+
+origin.addEventListener('click', openOriginList);
+destination.addEventListener('click', openDestinationList);
