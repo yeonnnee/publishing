@@ -401,7 +401,7 @@ main {
           width: 30px;
           padding: 100px 10px;
           font-size: 35px;
-          opacity: 0.5;
+          color:rgb(179, 177, 177);
           cursor: pointer;
         }
 
@@ -451,6 +451,13 @@ main {
     align-items: center;
     justify-content: center;
 
+    .active {
+      cursor: -webkit-grabbing;
+      cursor: -moz-grabbing;
+      cursor: grabbing;
+
+
+    }
     .slider-container{
       margin: 50px 0 50px;
 
@@ -465,11 +472,12 @@ main {
 
         .drag-wrapper {
           width: 980px;
-          height: 500px;
-
+          height: 800px;
+          cursor: grab;
           display: flex;
           justify-content: flex-start;
           flex-wrap: nowrap;
+          overflow: hidden;
 
           .drag-slide {
             height: 550px;
@@ -593,7 +601,7 @@ main {
           width: 30px;
           padding: 100px 0;
           font-size: 35px;
-          opacity: 0.5;
+          color:rgb(179, 177, 177);
           cursor: pointer;
 
           i{
@@ -633,7 +641,7 @@ main {
             }
           }
 
-          .selected {
+          .clicked {
             background-color: $light-green;
           }
         }

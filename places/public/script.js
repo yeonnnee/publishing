@@ -11,6 +11,7 @@ var swiperGroup3 = document.querySelector('.swiper-group3');
 var swiperGroup4 = document.querySelector('.swiper-group4');
 var swiperGroup5 = document.querySelector('.swiper-group5');
 
+var dragSlider = document.querySelector('.drag-wrapper');
 var dragPreBtn = document.querySelector('.drag-button-prev');
 var dragNextBtn = document.querySelector('.drag-button-next');
 var dragGroup1 = document.querySelector('.drag-group1');
@@ -35,14 +36,127 @@ function scrollHandler() {
   } else {
     return;
   }
+}
 
-  // const phraseTitle = document.querySelector(".top-places-title");
-  // const phraseTitleP = phraseTitle.offsetBottom;
-  // // Fade In 시키기위한 로직
-  // if (phraseTitleP > scrollPosition) {
-  //   console.log('j')
-  //   phraseTitle.style.opacity = '1';
-  // }
+var isDown = false;
+var startX = void 0;
+var scrollLeft = void 0;
+
+dragSlider.scrollLeft = 0;
+
+function dragSlide(e) {
+  isDown = true;
+  dragSlider.classList.add('active');
+  startX = e.pageX - dragSlider.offsetLeft;
+  scrollLeft = dragSlider.scrollLeft;
+}
+
+function cancelDrag() {
+  isDown = false;
+  dragSlider.classList.remove('active');
+}
+
+function mouseDrag(e) {
+  dragSlider.style.cursor = 'grabbing';
+  if (!isDown) {
+    return;
+  }
+  e.preventDefault();
+  var x = e.pageX - dragSlider.offsetLeft;
+  var walk = x - startX;
+  var val = scrollLeft - walk;
+  dragSlider.scrollLeft = val;
+};
+
+function controlsSlider(num) {
+  var smooth = setInterval(function () {
+    dragSlider.scrollLeft += num;
+  }, 10);
+  setTimeout(function () {
+    clearInterval(smooth);
+  }, 210);
+}
+
+function getNextDragSlider() {
+
+  if (clickNum < 7) {
+    clickNum = clickNum + 1;
+    controlsSlider(16);
+  } else {
+    return;
+  }
+};
+
+function getPrevDragSlider() {
+
+  clickNum = clickNum - 1;
+  controlsSlider(-16);
+};
+
+var clickNum = 0;
+function getNextSlide() {
+  dragSlider.style.overflow = 'visible';
+
+  if (clickNum < 7) {
+    clickNum = clickNum + 1;
+    val = -334 * clickNum;
+  } else {
+    return;
+  }
+  dragSlider.style.transform = 'translateX(' + num + 'px)';
+  dragSlider.style.transition = 'all 0.3s ease';
+}
+
+function getPrevSlide() {
+  dragSlider.style.overflow = 'visible';
+
+  if (clickNum > 0) {
+    clickNum = clickNum - 1;
+    val = -334 * clickNum;
+  } else {
+    return;
+  }
+  dragSlider.style.transform = 'translateX(' + num + 'px)';
+  dragSlider.style.transition = 'all 0.3s ease';
+}
+
+function handleDragSlider(e) {
+  var currentBtn = document.querySelector('.clicked');
+  var target = e.target.classList.toString();
+
+  dragSlider.style.overflow = 'visible';
+
+  var val = void 0;
+  if (target.indexOf('drag-group1') > -1) {
+    clickNum = 0;
+    val = 0;
+
+    currentBtn.classList.remove('clicked');
+    dragGroup1.classList.add('clicked');
+  } else if (target.indexOf('drag-group2') > -1) {
+    clickNum = 3;
+    val = -334 * 3;
+
+    currentBtn.classList.remove('clicked');
+    dragGroup2.classList.add('clicked');
+  } else if (target.indexOf('drag-group3') > -1) {
+    clickNum = 6;
+    val = -334 * 6;
+
+    currentBtn.classList.remove('clicked');
+    dragGroup3.classList.add('clicked');
+  } else if (target.indexOf('drag-group4') > -1) {
+    clickNum = 9;
+    val = -335 * 7;
+
+    currentBtn.classList.remove('clicked');
+    dragGroup4.classList.add('clicked');
+  } else {
+    return;
+  }
+
+  dragSlider.style.transform = 'translateX(' + val + 'px)';
+  dragSlider.style.transition = 'all 0.3s ease';
 }
 
 var swiperNum = 0;
@@ -309,9 +423,11 @@ function getNextSwiper() {
   swiperSlider.style.transition = 'all 0.2s linear';
 }
 
-function handleDragSlider() {}
-function getPrevDragSlider() {}
-function getNextDragSlider() {}
+var slideNum = 0;
+
+// function getPrevDragSlider() {}
+// function getNextDragSlider() {}
+
 
 window.addEventListener('scroll', scrollHandler);
 
@@ -331,3 +447,8 @@ swiperNextBtn && swiperNextBtn.addEventListener('click', getNextSwiper);
 
 dragPreBtn && dragPreBtn.addEventListener('click', getPrevDragSlider);
 dragNextBtn && dragNextBtn.addEventListener('click', getNextDragSlider);
+
+dragSlider && dragSlider.addEventListener('mouseup', cancelDrag);
+dragSlider && dragSlider.addEventListener('mouseleave', cancelDrag);
+dragSlider && dragSlider.addEventListener('mousedown', dragSlide);
+dragSlider && dragSlider.addEventListener('mousemove', mouseDrag);

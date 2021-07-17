@@ -400,7 +400,7 @@ main .suggest {
         width: 30px;
         padding: 100px 10px;
         font-size: 35px;
-        opacity: 0.5;
+        color: #b3b1b1;
         cursor: pointer; }
       main .suggest .container .swiper-container .swiper-button-prev {
         left: -10px; }
@@ -429,6 +429,10 @@ main .recommendation {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
+  main .recommendation .active {
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+    cursor: grabbing; }
   main .recommendation .slider-container {
     margin: 50px 0 50px; }
     main .recommendation .slider-container .drag-container {
@@ -439,10 +443,12 @@ main .recommendation {
       overflow: hidden; }
       main .recommendation .slider-container .drag-container .drag-wrapper {
         width: 980px;
-        height: 500px;
+        height: 800px;
+        cursor: grab;
         display: flex;
         justify-content: flex-start;
-        flex-wrap: nowrap; }
+        flex-wrap: nowrap;
+        overflow: hidden; }
         main .recommendation .slider-container .drag-container .drag-wrapper .drag-slide {
           height: 550px;
           display: flex;
@@ -510,7 +516,7 @@ main .recommendation {
         width: 30px;
         padding: 100px 0;
         font-size: 35px;
-        opacity: 0.5;
+        color: #b3b1b1;
         cursor: pointer; }
         main .recommendation .slider-container .drag-container .drag-button i {
           transform: translateY(-20px); }
@@ -533,7 +539,7 @@ main .recommendation {
           border-radius: 5px; }
           main .recommendation .slider-container .drag-container .drag-radio-btn .drag-controller:nth-child(2n+2) {
             margin: 0 10px; }
-        main .recommendation .slider-container .drag-container .drag-radio-btn .selected {
+        main .recommendation .slider-container .drag-container .drag-radio-btn .clicked {
           background-color: #09c752; }
 
 main .phrase {
