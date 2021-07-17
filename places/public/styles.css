@@ -341,14 +341,14 @@ main .suggest {
   main .suggest .container {
     margin: 60px 0 50px; }
     main .suggest .container .swiper-container {
-      width: 1095px;
+      width: 1024px;
       height: 100%;
       padding: 20px 0 20px 45px;
       display: flex;
       position: relative;
       overflow: hidden; }
       main .suggest .container .swiper-container .swiper-wrapper {
-        width: 5159px;
+        width: 4800px;
         height: 250px;
         display: flex;
         justify-content: flex-start;
@@ -357,7 +357,9 @@ main .suggest {
         transform: translateX(-20px); }
         main .suggest .container .swiper-container .swiper-wrapper .swiper-slide {
           height: 150px;
-          padding: 100px 115px;
+          width: 300px;
+          padding: 100px 0;
+          margin: 0 10px;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -365,19 +367,30 @@ main .suggest {
           font-size: 18px;
           background: #fff;
           border: 1px solid #f1f1f1;
-          margin: 0 10px; }
+          cursor: pointer; }
           main .suggest .container .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) {
             margin: 0 10px 0 20px; }
           main .suggest .container .swiper-container .swiper-wrapper .swiper-slide:nth-child(15) {
             margin: 0 20px 0 10px; }
+          main .suggest .container .swiper-container .swiper-wrapper .swiper-slide:hover > .icon {
+            color: #09c752;
+            transform: translateY(-10px);
+            transition: all 0.3s ease; }
+          main .suggest .container .swiper-container .swiper-wrapper .swiper-slide:hover > .place-desc {
+            opacity: 1;
+            transform: translateY(10px);
+            transition: all 0.5s ease; }
+          main .suggest .container .swiper-container .swiper-wrapper .swiper-slide:hover {
+            transform: translateY(-10px);
+            box-shadow: 3px 3px 10px #eeeded, 0 0 2px #f0f0f0;
+            transition: all 0.3s ease; }
           main .suggest .container .swiper-container .swiper-wrapper .swiper-slide .icon::before {
             text-align: center;
             font-size: 90px;
             margin: 0; }
           main .suggest .container .swiper-container .swiper-wrapper .swiper-slide .place-desc {
-            display: none;
-            width: 150px;
-            margin: 20px 0;
+            opacity: 0;
+            transform: translateY(30px);
             font-size: 12px;
             color: #cecdcd;
             text-align: center; }

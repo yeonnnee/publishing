@@ -62,28 +62,28 @@ function handleSwiper(e) {
 
   } else if(target.indexOf(`swiper-group2`) > -1){
     swiperNum = 3;
-    val =  (3 * -348) - 5;
+    val =  (3 * -325) + 3;
 
     currentBtn.classList.remove('selected');
     swiperGroup2.classList.add('selected');
 
   } else if(target.indexOf(`swiper-group3`) > -1){
     swiperNum = 6;
-    val = (6 * -344) - 7;
+    val = (6 * -325) + 24;
 
     currentBtn.classList.remove('selected');
     swiperGroup3.classList.add('selected');
 
   } else if(target.indexOf(`swiper-group4`) > -1){
     swiperNum = 9;
-    val = (9 * -344);
+    val = (9 * -322) + 15;
 
     currentBtn.classList.remove('selected');
     swiperGroup4.classList.add('selected');
 
   } else if(target.indexOf(`swiper-group5`) > -1){
     swiperNum = 12;
-    val = (12 * -344) + 3 ;
+    val = (12 * -322) + 20 ;
 
     currentBtn.classList.remove('selected');
     swiperGroup5.classList.add('selected');
@@ -114,17 +114,17 @@ function getPrevSwiper() {
     }
     case 2: {
       swiperNum = swiperNum - 1;
-      val = swiperNum * -363;
+      val = swiperNum * -330;
       break;
     }
     case 3:{
       swiperNum = swiperNum - 1;
-      val = (swiperNum * -348) - 3;
+      val = (swiperNum * -325) - 3;
       break;
     }
     case 4: {
       swiperNum = swiperNum - 1;
-      val = (swiperNum * -347);
+      val = (swiperNum * -325) + 3;
 
       currentBtn.classList.remove('selected');
       swiperGroup2.classList.add('selected');
@@ -132,18 +132,18 @@ function getPrevSwiper() {
     }
     case 5: {
       swiperNum = swiperNum - 1;
-      val = (swiperNum * -347) + 3;
+      val = (swiperNum * -325) + 9;
 
       break;
     }
     case 6: {
       swiperNum = swiperNum - 1;
-      val = (swiperNum * -347) + 9;
+      val = (swiperNum * -325) + 15;
       break;
     }
     case 7: {
       swiperNum = swiperNum - 1;
-      val = (swiperNum * -347) + 15;
+      val = (swiperNum * -325) + 24;
 
       currentBtn.classList.remove('selected');
       swiperGroup3.classList.add('selected');
@@ -151,19 +151,19 @@ function getPrevSwiper() {
     }
     case 8: {
       swiperNum = swiperNum - 1;
-      val = (swiperNum * -347) + 20;
+      val = (swiperNum * -325) + 28;
 
       break;
     }
     case 9: {
       swiperNum = swiperNum - 1;
-      val = (swiperNum * -347) + 25;
+      val = (swiperNum * -325) + 34;
 
       break;
     }
     case 10: {
       swiperNum = swiperNum - 1;
-      val = (swiperNum * -344) + 3;
+      val = (swiperNum * -322) + 15;
 
       currentBtn.classList.remove('selected');
       swiperGroup4.classList.add('selected');
@@ -171,17 +171,17 @@ function getPrevSwiper() {
     }
     case 11: {
       swiperNum = swiperNum - 1;
-      val = (swiperNum * -344) + 3;
+      val = (swiperNum * -322) + 15;
 
       break;
     } case 12: {
       swiperNum = swiperNum - 1;
-      val = (swiperNum * -344) + 3;
+      val = (swiperNum * -322) + 20;
       break;
     }
     case 13: {
       swiperNum = swiperNum - 1;
-      val = (swiperNum * -344) + 3;
+      val = (swiperNum * -322) + 20;
       break;
     }
     default: break;
@@ -202,17 +202,17 @@ function getNextSwiper() {
   switch (swiperNum) {
     case 0: {
       swiperNum = swiperNum + 1;
-      val = swiperNum * -363;
+      val = swiperNum * -340;
       break;
     }
     case 1: {
       swiperNum = swiperNum + 1;
-      val = swiperNum * -353;
+      val = swiperNum * -330;
       break;
     }
     case 2: {
       swiperNum = swiperNum + 1;
-      val = (swiperNum * -348) - 3;
+      val = (swiperNum * -325) - 3;
 
       currentBtn.classList.remove('selected');
       swiperGroup2.classList.add('selected');
@@ -220,18 +220,18 @@ function getNextSwiper() {
     }
     case 3:{
       swiperNum = swiperNum + 1;
-      val = (swiperNum * -347);
+      val = (swiperNum * -325) + 3;
 
       break;
     }
     case 4: {
       swiperNum = swiperNum + 1;
-      val = (swiperNum * -347) + 3;
+      val = (swiperNum * -325) + 9;
       break;
     }
     case 5: {
       swiperNum = swiperNum + 1;
-      val = (swiperNum * -347) + 9;
+      val = (swiperNum * -325) + 15;
 
       currentBtn.classList.remove('selected');
       swiperGroup3.classList.add('selected');
@@ -239,18 +239,18 @@ function getNextSwiper() {
     }
     case 6: {
       swiperNum = swiperNum + 1;
-      val = (swiperNum * -347) + 15;
+      val = (swiperNum * -325) + 24;
 
       break;
     }
     case 7: {
       swiperNum = swiperNum + 1;
-      val = (swiperNum * -347) + 20;
+      val = (swiperNum * -325) + 28;
       break;
     }
     case 8: {
       swiperNum = swiperNum + 1;
-      val = (swiperNum * -347) + 25;
+      val = (swiperNum * -325) + 34;
 
       currentBtn.classList.remove('selected');
       swiperGroup4.classList.add('selected');
@@ -258,24 +258,24 @@ function getNextSwiper() {
     }
     case 9: {
       swiperNum = swiperNum + 1;
-      val = (swiperNum * -344) + 3;
+      val = (swiperNum * -322) + 15;
       break;
     }
     case 10: {
       swiperNum = swiperNum + 1;
-      val = (swiperNum * -344) + 3;
+      val = (swiperNum * -322) + 15;
       break;
     }
     case 11: {
       swiperNum = swiperNum + 1;
-      val = (swiperNum * -344) + 3;
+      val = (swiperNum * -322) + 20;
 
       currentBtn.classList.remove('selected');
       swiperGroup5.classList.add('selected');
       break;
     }
     case 12: {
-      val = (swiperNum * -344) + 3;
+      val = (swiperNum * -322) + 20;
 
       break;
     }

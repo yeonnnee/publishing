@@ -312,7 +312,7 @@ main {
       margin: 60px 0 50px;
 
       .swiper-container {
-        width: 1095px;
+        width: 1024px;
         height: 100%;
         padding: 20px 0 20px 45px;
         display: flex;
@@ -320,7 +320,7 @@ main {
         overflow: hidden;
 
         .swiper-wrapper {
-          width: 5159px;
+          width: 4800px;
           height: 250px;
           display: flex;
           justify-content: flex-start;
@@ -330,7 +330,9 @@ main {
 
           .swiper-slide {
             height: 150px;
-            padding: 100px 115px;
+            width: 300px;
+            padding: 100px 0;
+            margin: 0 10px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -338,13 +340,36 @@ main {
             font-size: 18px;
             background: #fff;
             border: 1px solid #f1f1f1;
-            margin: 0 10px;
+            cursor: pointer;
             
             &:nth-child(1) {
               margin: 0 10px 0 20px;
             }
             &:nth-child(15) {
               margin: 0 20px 0 10px;
+            }
+
+            &:hover > .icon {
+              color: $light-green;
+              transform: translateY(-10px);
+
+              transition: all 0.3s ease;
+
+            }
+
+            &:hover >  .place-desc {
+              // display: block;
+              opacity: 1;
+              transform: translateY(10px);
+
+              transition: all 0.5s ease;
+
+            }
+
+            &:hover {
+              transform:translateY(-10px);
+              box-shadow: 3px 3px 10px rgb(238, 237, 237), 0 0 2px rgb(240, 240, 240);
+              transition: all 0.3s ease;
             }
 
             .icon {
@@ -357,9 +382,10 @@ main {
             }
 
             .place-desc {
-              display: none;
-              width: 150px;
-              margin: 20px 0;
+              // display: none;
+              opacity: 0;
+
+              transform: translateY(30px);
               font-size: 12px;
               color: rgb(206, 205, 205);
               text-align: center;
