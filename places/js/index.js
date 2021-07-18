@@ -68,7 +68,6 @@ function animationHandler() {
     } else {
       expandPic[i].style.opacity = "1";
       expandPic[i].style.transform = 'scale(1)';
-      expandPic[i].style.transformDelay = '0.5s';
       expandPic[i].style.transition = `all 1s ease`
     }
   }
