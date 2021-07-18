@@ -41,6 +41,7 @@
           font-size: 18px;
           background: #fff;
           margin: 0;
+          transition: all 0.3s ease;
 
           &:nth-child(2n+2) {
             margin: 0 20px;
@@ -164,7 +165,7 @@
       }
 
       .drag-button-prev {
-        left: 0;
+        left: -5px;
         top: 120px;
 
       }

@@ -52,31 +52,30 @@ function getPrevSwiper() {
   const currentBtn = document.querySelector('.selected');
   const baseDistance = -320;
   let val;
+  swiperNum = swiperNum - 1;
 
   switch (swiperNum) {
     case 0: {
       break;
     }
     case 1: {
-      swiperNum = swiperNum - 1;
       val = 0;
-
       currentBtn.classList.remove('selected');
       swiperGroup1.classList.add('selected');
       break;
     }
     case 2: {
-      swiperNum = swiperNum - 1;
+
       val = swiperNum * baseDistance;
       break;
     }
     case 3:{
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 3;
       break;
     }
     case 4: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 5;
 
       currentBtn.classList.remove('selected');
@@ -84,18 +83,18 @@ function getPrevSwiper() {
       break;
     }
     case 5: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 7;
 
       break;
     }
     case 6: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 12;
       break;
     }
     case 7: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 12;
 
       currentBtn.classList.remove('selected');
@@ -103,19 +102,19 @@ function getPrevSwiper() {
       break;
     }
     case 8: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 15;
 
       break;
     }
     case 9: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 15;
 
       break;
     }
     case 10: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 18;
 
       currentBtn.classList.remove('selected');
@@ -123,16 +122,16 @@ function getPrevSwiper() {
       break;
     }
     case 11: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 22;
       break;
     } case 12: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 22;
       break;
     }
     case 13: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 22;
       break;
     }
@@ -150,64 +149,52 @@ function getNextSwiper() {
   const currentBtn = document.querySelector('.selected');
   const baseDistance = -320;
   let val;
+  swiperNum = swiperNum + 1;
 
   switch (swiperNum) {
     case 0: {
-      swiperNum = swiperNum + 1;
       val = swiperNum * baseDistance;
       break;
     }
     case 1: {
-      swiperNum = swiperNum + 1;
       val = swiperNum * baseDistance;
       break;
     }
     case 2: {
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 3;
-
 
       currentBtn.classList.remove('selected');
       swiperGroup2.classList.add('selected');
       break;
     }
     case 3:{
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 5;
-
 
       break;
     }
     case 4: {
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 7;
 
       break;
     }
     case 5: {
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 12;
-
 
       currentBtn.classList.remove('selected');
       swiperGroup3.classList.add('selected');
       break;
     }
     case 6: {
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 12;
-
 
       break;
     }
     case 7: {
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 15;
 
       break;
     }
     case 8: {
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 15;
 
 
@@ -216,21 +203,17 @@ function getNextSwiper() {
       break;
     }
     case 9: {
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 18;
 
       break;
     }
     case 10: {
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 22;
 
       break;
     }
     case 11: {
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 22;
-
 
       currentBtn.classList.remove('selected');
       swiperGroup5.classList.add('selected');
@@ -238,8 +221,6 @@ function getNextSwiper() {
     }
     case 12: {
       val = (swiperNum * baseDistance) + 22;
-
-
       break;
     }
 

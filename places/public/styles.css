@@ -537,7 +537,8 @@ main .phrase {
           align-items: center;
           font-size: 18px;
           background: #fff;
-          margin: 0; }
+          margin: 0;
+          transition: all 0.3s ease; }
           .recommendation .slider-container .drag-container .drag-wrapper .drag-slide:nth-child(2n+2) {
             margin: 0 20px; }
           .recommendation .slider-container .drag-container .drag-wrapper .drag-slide .desc {
@@ -601,7 +602,7 @@ main .phrase {
         .recommendation .slider-container .drag-container .drag-button i {
           transform: translateY(-20px); }
       .recommendation .slider-container .drag-container .drag-button-prev {
-        left: 0;
+        left: -5px;
         top: 120px; }
       .recommendation .slider-container .drag-container .drag-button-next {
         right: 0;

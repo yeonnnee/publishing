@@ -3,12 +3,16 @@ let isDown = false;
 let startX;
 let scrollLeft;
 
+let clickNum = 0;
+
 dragSlider.scrollLeft = 0;
 
 function dragSlide(e) {
+  const obj = dragSlider.getBoundingClientRect();
+  const offsetLeft = obj.left;
   isDown = true;
   dragSlider.classList.add('active');
-  startX = e.pageX - dragSlider.offsetLeft;
+  startX = e.pageX - offsetLeft;
   scrollLeft = dragSlider.scrollLeft;
 }
 
@@ -58,7 +62,6 @@ function getPrevDragSlider() {
 
 
 
-let clickNum = 0;
 function getNextSlide() {
   dragSlider.style.overflow = 'visible';
 

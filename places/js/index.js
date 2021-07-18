@@ -110,11 +110,14 @@ function animationHandler() {
 }
 
 
+// drag 슬라이더 함수
+
 let isDown = false;
 let startX;
 let scrollLeft;
 
 dragSlider.scrollLeft = 0;
+let clickNum = 0;
 
 function dragSlide(e) {
   isDown = true;
@@ -129,6 +132,8 @@ function cancelDrag() {
 }
 
 function mouseDrag(e) {
+  const currentBtn = document.querySelector('.clicked');
+
   dragSlider.style.cursor = 'grabbing';
   if (!isDown) { return; }
   e.preventDefault();
@@ -136,17 +141,52 @@ function mouseDrag(e) {
   const walk = x - startX;
   const val = scrollLeft - walk;
   dragSlider.scrollLeft = val;
+  dragSlider.style.scrollBehavior = 'auto';
+
+  if (dragSlider.scrollLeft > 0 && dragSlider.scrollLeft < 1000) {
+    currentBtn.classList.remove('clicked');
+    dragGroup1.classList.add('clicked');
+  } else if (dragSlider.scrollLeft >= 1000 && dragSlider.scrollLeft < 2007) {
+    currentBtn.classList.remove('clicked');
+    dragGroup2.classList.add('clicked');
+  } else if (dragSlider.scrollLeft >= 2007 && dragSlider.scrollLeft < 2263) {
+    currentBtn.classList.remove('clicked');
+    dragGroup3.classList.add('clicked');
+  } else if (dragSlider.scrollLeft >=  2263) {
+    currentBtn.classList.remove('clicked');
+    dragGroup4.classList.add('clicked');
+  } else {
+    return;
+  }
 };
 
 
 
 function controlsSlider(num) {
-    const smooth = setInterval(function () {
-      dragSlider.scrollLeft += num;
-    }, 10);
-    setTimeout(function () {
-        clearInterval(smooth);
-    }, 210);
+  const currentBtn = document.querySelector('.clicked');
+  const base = 336;
+  dragSlider.scrollLeft = base * num;
+  dragSlider.style.scrollBehavior = 'smooth';
+
+  if (dragSlider.scrollLeft === 0) {
+
+    currentBtn.classList.remove('clicked');
+    dragGroup1.classList.add('clicked');
+  } else if (dragSlider.scrollLeft === base * 3) {
+
+    currentBtn.classList.remove('clicked');
+    dragGroup2.classList.add('clicked');
+  } else if (dragSlider.scrollLeft === base * 6) {
+
+    currentBtn.classList.remove('clicked');
+    dragGroup3.classList.add('clicked');
+  } else if (num === 7) {
+
+    currentBtn.classList.remove('clicked');
+    dragGroup4.classList.add('clicked');
+  } else {
+    return;
+  }
 }
 
 
@@ -155,78 +195,53 @@ function getNextDragSlider() {
 
   if (clickNum < 7) {
     clickNum = clickNum + 1
-    controlsSlider(16);
+    controlsSlider(clickNum);
   } else {
     return;
   }
 };
 
 function getPrevDragSlider() {
-
-  clickNum = clickNum - 1
-  controlsSlider(-16);
-};
-
-
-
-let clickNum = 0;
-function getNextSlide() {
-  dragSlider.style.overflow = 'visible';
-
-  if (clickNum < 7) {
-    clickNum = clickNum + 1
-    val = -334 * clickNum;
-  } else {
-    return;
-  }
-  dragSlider.style.transform = `translateX(${num}px)`;
-  dragSlider.style.transition = `all 0.3s ease`;
-}
-
-function getPrevSlide() {
-  dragSlider.style.overflow = 'visible';
-
   if (clickNum > 0) {
     clickNum = clickNum - 1
-    val = -334 * clickNum;
+    controlsSlider(clickNum);
   } else {
     return;
   }
-  dragSlider.style.transform = `translateX(${num}px)`;
-  dragSlider.style.transition = `all 0.3s ease`;
-}
+
+};
+
 
 function handleDragSlider(e) {
   const currentBtn = document.querySelector('.clicked');
   const target = e.target.classList.toString();
+  const base = 336;
+  dragSlider.style.scrollBehavior = 'smooth';
 
-  dragSlider.style.overflow = 'visible';
-
-  let val;
   if(target.indexOf(`drag-group1`) > -1) {
     clickNum = 0;
-    val = 0
+    dragSlider.scrollLeft = 0;
 
     currentBtn.classList.remove('clicked');
     dragGroup1.classList.add('clicked');
 
   } else if(target.indexOf(`drag-group2`) > -1){
     clickNum = 3;
-    val = -334 * 3;
+    dragSlider.scrollLeft =  base * clickNum;
 
     currentBtn.classList.remove('clicked');
     dragGroup2.classList.add('clicked');
 
   } else if (target.indexOf(`drag-group3`) > -1) {
     clickNum = 6;
-    val = -334 * 6;
+    dragSlider.scrollLeft =  base * clickNum;
 
     currentBtn.classList.remove('clicked');
     dragGroup3.classList.add('clicked');
 
   } else if(target.indexOf(`drag-group4`) > -1){
-    clickNum = 9;
-    val = -335 * 7;
+    clickNum = 7;
+    dragSlider.scrollLeft =  base * clickNum;
 
     currentBtn.classList.remove('clicked');
     dragGroup4.classList.add('clicked');
@@ -234,10 +249,10 @@ function handleDragSlider(e) {
   } else {
     return;
   }
-
-  dragSlider.style.transform = `translateX(${val}px)`;
-  dragSlider.style.transition = `all 0.3s ease`;
 }
+
+
+// swiper 슬라이드 함수 
 
 
 let swiperNum = 0;
@@ -294,31 +309,30 @@ function getPrevSwiper() {
   const currentBtn = document.querySelector('.selected');
   const baseDistance = -320;
   let val;
+  swiperNum = swiperNum - 1;
 
   switch (swiperNum) {
     case 0: {
       break;
     }
     case 1: {
-      swiperNum = swiperNum - 1;
       val = 0;
-
       currentBtn.classList.remove('selected');
       swiperGroup1.classList.add('selected');
       break;
     }
     case 2: {
-      swiperNum = swiperNum - 1;
+
       val = swiperNum * baseDistance;
       break;
     }
     case 3:{
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 3;
       break;
     }
     case 4: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 5;
 
       currentBtn.classList.remove('selected');
@@ -326,18 +340,18 @@ function getPrevSwiper() {
       break;
     }
     case 5: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 7;
 
       break;
     }
     case 6: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 12;
       break;
     }
     case 7: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 12;
 
       currentBtn.classList.remove('selected');
@@ -345,19 +359,19 @@ function getPrevSwiper() {
       break;
     }
     case 8: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 15;
 
       break;
     }
     case 9: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 15;
 
       break;
     }
     case 10: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 18;
 
       currentBtn.classList.remove('selected');
@@ -365,16 +379,16 @@ function getPrevSwiper() {
       break;
     }
     case 11: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 22;
       break;
     } case 12: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 22;
       break;
     }
     case 13: {
-      swiperNum = swiperNum - 1;
+
       val = (swiperNum * baseDistance) + 22;
       break;
     }
@@ -392,64 +406,52 @@ function getNextSwiper() {
   const currentBtn = document.querySelector('.selected');
   const baseDistance = -320;
   let val;
+  swiperNum = swiperNum + 1;
 
   switch (swiperNum) {
     case 0: {
-      swiperNum = swiperNum + 1;
       val = swiperNum * baseDistance;
       break;
     }
     case 1: {
-      swiperNum = swiperNum + 1;
       val = swiperNum * baseDistance;
       break;
     }
     case 2: {
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 3;
-
 
       currentBtn.classList.remove('selected');
       swiperGroup2.classList.add('selected');
       break;
     }
     case 3:{
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 5;
-
 
       break;
     }
     case 4: {
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 7;
 
       break;
     }
     case 5: {
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 12;
-
 
       currentBtn.classList.remove('selected');
       swiperGroup3.classList.add('selected');
       break;
     }
     case 6: {
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 12;
-
 
       break;
     }
     case 7: {
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 15;
 
       break;
     }
     case 8: {
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 15;
 
 
@@ -458,21 +460,17 @@ function getNextSwiper() {
       break;
     }
     case 9: {
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 18;
 
       break;
     }
     case 10: {
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 22;
 
       break;
     }
     case 11: {
-      swiperNum = swiperNum + 1;
       val = (swiperNum * baseDistance) + 22;
-
 
       currentBtn.classList.remove('selected');
       swiperGroup5.classList.add('selected');
@@ -480,8 +478,6 @@ function getNextSwiper() {
     }
     case 12: {
       val = (swiperNum * baseDistance) + 22;
-
-
       break;
     }
 
@@ -492,6 +488,7 @@ function getNextSwiper() {
   swiperSlider.style.transition = `all 0.2s linear`;
 }
 
+// list option 열고 닫고 
 
 let showDestinationList = false;
 let showOriginList = false;
