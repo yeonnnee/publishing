@@ -40,7 +40,32 @@ function scrollHandler() {
   } else {
     return;
   }
+
+  animationHandler();
 }
+
+function isElementUnderBottom(elem, triggerDiff) {
+  const { top } = elem.getBoundingClientRect();
+  const { innerHeight } = window;
+  return top > innerHeight + (triggerDiff || 0);
+}
+
+function animationHandler() {
+  const elems = document.querySelectorAll('.fade-in');
+  elems.forEach(elem => {
+    if (isElementUnderBottom(elem, -20)) {
+      elem.style.opacity = "0";
+      elem.style.transform = 'translateY(30px)';
+
+    } else {
+      elem.style.opacity = "1";
+      elem.style.transform = 'translateY(0px)';
+      elem.style.transition = `all 1s ease`
+    }
+  })
+}
+
+
 
 
 let isDown = false;

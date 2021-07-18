@@ -121,7 +121,15 @@ footer {
     footer .source a {
       color: #09c752; }
 
-@keyframes ShowUp {
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@-webkit-keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(30px); }
@@ -146,7 +154,8 @@ main .intro {
       padding: 105px 0;
       margin: 0 30px 0 0;
       color: #fff;
-      font-weight: 300; }
+      font-weight: 300;
+      animation: fadeIn 1s ease forwards; }
       main .intro .intro-overlay .intro-content h1 {
         font-size: 3.2rem;
         line-height: 1.1;
@@ -155,7 +164,8 @@ main .intro {
         margin: 10px 0 0;
         font-size: 18px;
         color: #cecdcd;
-        line-height: 1.7; }
+        line-height: 1.7;
+        animation: fadeIn 0.7s ease forwards; }
         main .intro .intro-overlay .intro-content p a {
           color: #09c752;
           opacity: 1; }
@@ -167,7 +177,8 @@ main .intro {
         padding: 15px 50px;
         border-radius: 3px;
         font-size: 12px;
-        letter-spacing: 1.5px; }
+        letter-spacing: 1.5px;
+        animation: fadeIn 0.9s ease forwards; }
     main .intro .intro-overlay .travel-form {
       width: 25.7%;
       height: 320px;
@@ -175,10 +186,12 @@ main .intro {
       margin: 0 0 40px;
       background-color: #fff;
       display: flex;
+      opacity: 0;
       justify-content: space-around;
       align-items: center;
       flex-wrap: wrap;
-      color: #979696; }
+      color: #979696;
+      animation: 1s ease 0.2s normal forwards 1 fadeIn; }
       main .intro .intro-overlay .travel-form label {
         font-size: 12px;
         margin: 0 0 10px;
@@ -244,8 +257,12 @@ main .intro {
               white-space: nowrap;
               cursor: pointer; }
               main .intro .intro-overlay .travel-form .location .line-drp-popup .line-list li:hover {
-                background: #61ccfd;
+                background: #1ddd67;
                 color: #fff; }
+              main .intro .intro-overlay .travel-form .location .line-drp-popup .line-list li:first-child {
+                background-color: #e2e1e1; }
+                main .intro .intro-overlay .travel-form .location .line-drp-popup .line-list li:first-child:hover {
+                  color: #444a59; }
               main .intro .intro-overlay .travel-form .location .line-drp-popup .line-list li:last-child {
                 border: none; }
       main .intro .intro-overlay .travel-form .travel-date {
@@ -619,7 +636,9 @@ main .phrase {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  opacity: 0;
+  animation: fadeIn 1s ease 0.3s forwards; }
   main .phrase p {
     font-size: 1.15rem;
     font-weight: 300;
@@ -769,7 +788,7 @@ main .news {
         background-size: cover; }
 
 main .show-up {
-  animation: ShowUp 0.2s linear; }
+  animation: fadeIn 0.2s linear; }
 
 body {
   width: 100%;

@@ -1,9 +1,20 @@
-@keyframes ShowUp {
-  from  {
-    opacity: 0;
+
+@keyframes fadeIn{
+from{ 
+    opacity:0;
     transform:translateY(30px);
-  } to {
-    opacity: 1;
+   }to { 
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeIn{
+  from{ 
+    opacity:0;
+    transform:translateY(30px);
+   }to { 
+    opacity:1;
     transform:translateY(0);
   }
 }
@@ -29,6 +40,7 @@ main {
         margin: 0 30px 0 0;
         color: $white;
         font-weight: 300;
+        animation: fadeIn 1s ease forwards;
 
         h1 {
           font-size: 3.2rem;
@@ -42,6 +54,8 @@ main {
           font-size: 18px;
           color: rgb(206, 205, 205);
           line-height: 1.7;
+          animation: fadeIn 0.7s ease forwards;
+
 
           a {
             color:$light-green;
@@ -59,6 +73,7 @@ main {
           border-radius: 3px;
           font-size: 12px;
           letter-spacing: 1.5px;
+          animation: fadeIn 0.9s ease forwards;
         }
       }
 
@@ -69,12 +84,14 @@ main {
         margin: 0 0 40px;
         background-color: $white;
         display: flex;
+        opacity: 0;
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
         color: #979696;
+        animation: 1s ease 0.2s normal forwards 1 fadeIn;
 
-
+  
         label{
           font-size: 12px;
           margin: 0 0 10px;
@@ -156,9 +173,15 @@ main {
                 cursor: pointer;
   
                 &:hover {
-                  background: #61ccfd;
+                  background: $list-green;
                   color: #fff;
     
+                }
+                &:first-child {
+                  background-color: #e2e1e1;
+                  &:hover {
+                    color: #444a59;
+                  }
                 }
                 &:last-child {
                   border: none;
@@ -243,7 +266,7 @@ main {
           color: $white;
           border:none;
           border-radius: 4px;
-          
+
           &:hover {
             background-color: $green;
             transition: all 0.2s linear;
@@ -384,6 +407,7 @@ main {
           font-size: 12px;
           letter-spacing: 2.5px;
           cursor: pointer;
+
 
           &:hover{
             background-color: $green;
@@ -749,7 +773,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    opacity: 0;
+    animation: fadeIn 1s ease 0.3s forwards;
 
     p{
       font-size: 1.15rem;
@@ -971,6 +996,6 @@ main {
   }
 
   .show-up {
-    animation:ShowUp 0.2s linear;
+    animation:fadeIn 0.2s linear;
   }
 }
