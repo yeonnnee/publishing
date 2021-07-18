@@ -433,8 +433,7 @@ main .suggest {
     main .suggest .container .swiper-container {
       width: 1024px;
       padding: 20px 0;
-      overflow: hidden;
-      background-color: hotpink; }
+      overflow: hidden; }
       main .suggest .container .swiper-container .swiper-wrapper {
         width: 4800px;
         display: flex;
