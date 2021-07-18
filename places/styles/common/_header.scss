@@ -8,13 +8,6 @@
   }
 }
 
-@keyframes SlideUp{
-  from {
-    height: 70px;
-  } to {
-    height: 0;
-  }
-}
 
 header {
   width: 100%;
@@ -26,6 +19,7 @@ header {
   justify-content: center;
   flex-wrap: nowrap;
   z-index: 999;
+  transition: all 0.3s linear;
 
   nav {
     width: 53%;
@@ -70,8 +64,4 @@ header {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.856);
   animation: SlideDown 0.3s linear;
-}
-
-.hide-headr {
-  animation: SlideUp 0.3s linear;
 }

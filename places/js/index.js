@@ -33,14 +33,12 @@ function scrollHandler() {
   if (scrollPosition > controlHeaderPoint) {
     header.classList.add('dark-header');
   } else if(scrollPosition < controlHeaderPoint && scrollPosition !== 0){
-    header.classList.add('hide-header');
     header.classList.remove('dark-header');
-  } else if (scrollPosition === 0) {
-    header.classList.remove('hide-header');
-  } else {
+  }  else {
     return;
   }
 
+  // 스크롤시 fade in 
   animationHandler();
 }
 
