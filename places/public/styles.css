@@ -245,7 +245,6 @@ main .intro {
               padding: 0 12px;
               border-bottom: 1px solid #eeeeee;
               overflow: hidden;
-              text-overflow: ellipsis;
               white-space: nowrap;
               cursor: pointer; }
               main .intro .intro-overlay .travel-form .location .line-drp-popup .line-list li:hover {
