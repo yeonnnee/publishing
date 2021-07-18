@@ -630,6 +630,41 @@ main .recommendation {
         main .recommendation .slider-container .drag-container .drag-radio-btn .clicked {
           background-color: #09c752; }
 
+main .testimonial {
+  text-align: center;
+  padding: 100px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  main .testimonial p {
+    font-size: 1.15rem;
+    font-weight: 300;
+    line-height: 1.7;
+    font-style: italic;
+    width: 53.5%; }
+  main .testimonial .writer {
+    margin: 30px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    main .testimonial .writer__avatar {
+      width: 65px;
+      height: 65px;
+      border-radius: 40px;
+      background: url(../img/person_1.jpg) no-repeat center center;
+      background-size: cover; }
+    main .testimonial .writer__name {
+      margin: 10px 0 8px;
+      font-size: 12px;
+      letter-spacing: 1.7px;
+      font-weight: bold; }
+    main .testimonial .writer__position {
+      font-size: 13px;
+      color: #bdbcbc;
+      cursor: pointer; }
+
 main .phrase {
   text-align: center;
   padding: 100px 0 0;

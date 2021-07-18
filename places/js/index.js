@@ -59,6 +59,7 @@ function animationHandler() {
   const RightToLeft = document.querySelectorAll('.right-to-left');
   const expandPic = document.querySelectorAll('.expand');
 
+
   for (let i = 0; i < expandPic.length; i++) {
     if (isElementUnderBottom(expandPic[i], -20)) {
       expandPic[i].style.opacity = "0";
@@ -79,7 +80,7 @@ function animationHandler() {
 
     } else {
       LeftToRight[i].style.opacity = "1";
-      LeftToRight[i].style.transform = 'translateY(0px)';
+      LeftToRight[i].style.transform = 'translateX(0px)';
       LeftToRight[i].style.transition = `all 1s ease`
     }
   }
@@ -91,7 +92,7 @@ function animationHandler() {
 
     } else {
       RightToLeft[i].style.opacity = "1";
-      RightToLeft[i].style.transform = 'translateY(0px)';
+      RightToLeft[i].style.transform = 'translateX(0px)';
       RightToLeft[i].style.transition = `all 1s ease`
     }
   }
@@ -107,6 +108,7 @@ function animationHandler() {
       elems[i].style.transition = `all 1s ease`
     }
   }
+
 }
 
 function reloadPage() {

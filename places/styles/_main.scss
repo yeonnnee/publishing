@@ -768,6 +768,52 @@ main {
     }
     
   }
+  .testimonial {
+    text-align: center;
+    padding: 100px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p{
+      font-size: 1.15rem;
+      font-weight: 300;
+      line-height: 1.7;
+      font-style: italic;
+      width: 53.5%;
+    }
+
+    .writer {
+      margin: 30px 0 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &__avatar {
+        width: 65px;
+        height: 65px;
+        border-radius: 40px;
+        background: url(../img/person_1.jpg) no-repeat center center;
+        background-size: cover;
+      }
+
+      &__name {
+        margin: 10px 0 8px;
+
+        font-size: 12px;
+        letter-spacing: 1.7px;
+        font-weight: bold;
+      }
+
+      &__position {
+        font-size: 13px;
+        color: #bdbcbc;
+        cursor: pointer;
+      }
+    }
+  }
   .phrase {
     text-align: center;
     padding: 100px 0 0;

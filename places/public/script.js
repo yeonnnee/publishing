@@ -81,7 +81,7 @@ function animationHandler() {
       LeftToRight[_i].style.transform = 'translateX(-60px)';
     } else {
       LeftToRight[_i].style.opacity = "1";
-      LeftToRight[_i].style.transform = 'translateY(0px)';
+      LeftToRight[_i].style.transform = 'translateX(0px)';
       LeftToRight[_i].style.transition = 'all 1s ease';
     }
   }
@@ -92,7 +92,7 @@ function animationHandler() {
       RightToLeft[_i2].style.transform = 'translateX(60px)';
     } else {
       RightToLeft[_i2].style.opacity = "1";
-      RightToLeft[_i2].style.transform = 'translateY(0px)';
+      RightToLeft[_i2].style.transform = 'translateX(0px)';
       RightToLeft[_i2].style.transition = 'all 1s ease';
     }
   }
