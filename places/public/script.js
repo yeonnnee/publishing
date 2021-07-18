@@ -109,11 +109,6 @@ function animationHandler() {
   }
 }
 
-function reloadPage() {
-  console.log(currentPosition);
-  window.scrollTo(currentPosition);
-}
-
 var isDown = false;
 var startX = void 0;
 var scrollLeft = void 0;
@@ -241,7 +236,7 @@ function handleSwiper(e) {
   var swiperSlider = document.querySelector('.swiper-wrapper');
   var currentBtn = document.querySelector('.selected');
   var target = e.target.classList.toString();
-
+  var baseDistance = -320;
   var val = void 0;
   if (target.indexOf('swiper-group1') > -1) {
     swiperNum = 0;
@@ -251,25 +246,25 @@ function handleSwiper(e) {
     swiperGroup1.classList.add('selected');
   } else if (target.indexOf('swiper-group2') > -1) {
     swiperNum = 3;
-    val = 3 * -325 + 3;
+    val = swiperNum * baseDistance + 5;
 
     currentBtn.classList.remove('selected');
     swiperGroup2.classList.add('selected');
   } else if (target.indexOf('swiper-group3') > -1) {
     swiperNum = 6;
-    val = 6 * -325 + 24;
+    val = swiperNum * baseDistance + 12;
 
     currentBtn.classList.remove('selected');
     swiperGroup3.classList.add('selected');
   } else if (target.indexOf('swiper-group4') > -1) {
     swiperNum = 9;
-    val = 9 * -322 + 15;
+    val = swiperNum * baseDistance + 18;
 
     currentBtn.classList.remove('selected');
     swiperGroup4.classList.add('selected');
   } else if (target.indexOf('swiper-group5') > -1) {
     swiperNum = 12;
-    val = 12 * -322 + 20;
+    val = swiperNum * baseDistance + 22;
 
     currentBtn.classList.remove('selected');
     swiperGroup5.classList.add('selected');
@@ -282,7 +277,7 @@ function handleSwiper(e) {
 function getPrevSwiper() {
   var swiperSlider = document.querySelector('.swiper-wrapper');
   var currentBtn = document.querySelector('.selected');
-
+  var baseDistance = -320;
   var val = void 0;
 
   switch (swiperNum) {
@@ -293,7 +288,7 @@ function getPrevSwiper() {
     case 1:
       {
         swiperNum = swiperNum - 1;
-        val = -20;
+        val = 0;
 
         currentBtn.classList.remove('selected');
         swiperGroup1.classList.add('selected');
@@ -302,19 +297,19 @@ function getPrevSwiper() {
     case 2:
       {
         swiperNum = swiperNum - 1;
-        val = swiperNum * -330;
+        val = swiperNum * baseDistance;
         break;
       }
     case 3:
       {
         swiperNum = swiperNum - 1;
-        val = swiperNum * -325 - 3;
+        val = swiperNum * baseDistance + 3;
         break;
       }
     case 4:
       {
         swiperNum = swiperNum - 1;
-        val = swiperNum * -325 + 3;
+        val = swiperNum * baseDistance + 5;
 
         currentBtn.classList.remove('selected');
         swiperGroup2.classList.add('selected');
@@ -323,20 +318,20 @@ function getPrevSwiper() {
     case 5:
       {
         swiperNum = swiperNum - 1;
-        val = swiperNum * -325 + 9;
+        val = swiperNum * baseDistance + 7;
 
         break;
       }
     case 6:
       {
         swiperNum = swiperNum - 1;
-        val = swiperNum * -325 + 15;
+        val = swiperNum * baseDistance + 12;
         break;
       }
     case 7:
       {
         swiperNum = swiperNum - 1;
-        val = swiperNum * -325 + 24;
+        val = swiperNum * baseDistance + 12;
 
         currentBtn.classList.remove('selected');
         swiperGroup3.classList.add('selected');
@@ -345,21 +340,21 @@ function getPrevSwiper() {
     case 8:
       {
         swiperNum = swiperNum - 1;
-        val = swiperNum * -325 + 28;
+        val = swiperNum * baseDistance + 15;
 
         break;
       }
     case 9:
       {
         swiperNum = swiperNum - 1;
-        val = swiperNum * -325 + 34;
+        val = swiperNum * baseDistance + 15;
 
         break;
       }
     case 10:
       {
         swiperNum = swiperNum - 1;
-        val = swiperNum * -322 + 15;
+        val = swiperNum * baseDistance + 18;
 
         currentBtn.classList.remove('selected');
         swiperGroup4.classList.add('selected');
@@ -368,19 +363,18 @@ function getPrevSwiper() {
     case 11:
       {
         swiperNum = swiperNum - 1;
-        val = swiperNum * -322 + 15;
-
+        val = swiperNum * baseDistance + 22;
         break;
       }case 12:
       {
         swiperNum = swiperNum - 1;
-        val = swiperNum * -322 + 20;
+        val = swiperNum * baseDistance + 22;
         break;
       }
     case 13:
       {
         swiperNum = swiperNum - 1;
-        val = swiperNum * -322 + 20;
+        val = swiperNum * baseDistance + 22;
         break;
       }
     default:
@@ -394,26 +388,26 @@ function getPrevSwiper() {
 function getNextSwiper() {
   var swiperSlider = document.querySelector('.swiper-wrapper');
   var currentBtn = document.querySelector('.selected');
-
+  var baseDistance = -320;
   var val = void 0;
 
   switch (swiperNum) {
     case 0:
       {
         swiperNum = swiperNum + 1;
-        val = swiperNum * -340;
+        val = swiperNum * baseDistance;
         break;
       }
     case 1:
       {
         swiperNum = swiperNum + 1;
-        val = swiperNum * -330;
+        val = swiperNum * baseDistance;
         break;
       }
     case 2:
       {
         swiperNum = swiperNum + 1;
-        val = swiperNum * -325 - 3;
+        val = swiperNum * baseDistance + 3;
 
         currentBtn.classList.remove('selected');
         swiperGroup2.classList.add('selected');
@@ -422,20 +416,21 @@ function getNextSwiper() {
     case 3:
       {
         swiperNum = swiperNum + 1;
-        val = swiperNum * -325 + 3;
+        val = swiperNum * baseDistance + 5;
 
         break;
       }
     case 4:
       {
         swiperNum = swiperNum + 1;
-        val = swiperNum * -325 + 9;
+        val = swiperNum * baseDistance + 7;
+
         break;
       }
     case 5:
       {
         swiperNum = swiperNum + 1;
-        val = swiperNum * -325 + 15;
+        val = swiperNum * baseDistance + 12;
 
         currentBtn.classList.remove('selected');
         swiperGroup3.classList.add('selected');
@@ -444,20 +439,21 @@ function getNextSwiper() {
     case 6:
       {
         swiperNum = swiperNum + 1;
-        val = swiperNum * -325 + 24;
+        val = swiperNum * baseDistance + 12;
 
         break;
       }
     case 7:
       {
         swiperNum = swiperNum + 1;
-        val = swiperNum * -325 + 28;
+        val = swiperNum * baseDistance + 15;
+
         break;
       }
     case 8:
       {
         swiperNum = swiperNum + 1;
-        val = swiperNum * -325 + 34;
+        val = swiperNum * baseDistance + 15;
 
         currentBtn.classList.remove('selected');
         swiperGroup4.classList.add('selected');
@@ -466,19 +462,21 @@ function getNextSwiper() {
     case 9:
       {
         swiperNum = swiperNum + 1;
-        val = swiperNum * -322 + 15;
+        val = swiperNum * baseDistance + 18;
+
         break;
       }
     case 10:
       {
         swiperNum = swiperNum + 1;
-        val = swiperNum * -322 + 15;
+        val = swiperNum * baseDistance + 22;
+
         break;
       }
     case 11:
       {
         swiperNum = swiperNum + 1;
-        val = swiperNum * -322 + 20;
+        val = swiperNum * baseDistance + 22;
 
         currentBtn.classList.remove('selected');
         swiperGroup5.classList.add('selected');
@@ -486,7 +484,7 @@ function getNextSwiper() {
       }
     case 12:
       {
-        val = swiperNum * -322 + 20;
+        val = swiperNum * baseDistance + 22;
 
         break;
       }

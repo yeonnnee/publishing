@@ -421,45 +421,36 @@ main .services {
 
 main .suggest {
   text-align: center;
-  padding: 0 0 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; }
+  padding: 0 0 150px; }
+  main .suggest hr {
+    margin: 20px auto 40px; }
   main .suggest .container {
-    margin: 60px 0 50px; }
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center; }
     main .suggest .container .swiper-container {
       width: 1024px;
-      height: 100%;
-      padding: 20px 0 20px 45px;
-      display: flex;
-      position: relative;
-      overflow: hidden; }
+      padding: 20px 0;
+      overflow: hidden;
+      background-color: hotpink; }
       main .suggest .container .swiper-container .swiper-wrapper {
         width: 4800px;
-        height: 250px;
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-wrap: nowrap;
-        transform: translateX(-20px); }
+        padding: 0 0 0 35px; }
         main .suggest .container .swiper-container .swiper-wrapper .swiper-slide {
-          height: 150px;
           width: 300px;
-          padding: 100px 0;
+          padding: 50px 0;
           margin: 0 10px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          font-size: 18px;
+          flex-wrap: nowrap;
           background: #fff;
           border: 1px solid #f1f1f1;
           cursor: pointer; }
-          main .suggest .container .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) {
-            margin: 0 10px 0 20px; }
-          main .suggest .container .swiper-container .swiper-wrapper .swiper-slide:nth-child(15) {
-            margin: 0 20px 0 10px; }
           main .suggest .container .swiper-container .swiper-wrapper .swiper-slide:hover > .icon {
             color: #09c752;
             transform: translateY(-10px);
@@ -488,16 +479,18 @@ main .suggest {
         width: 30px;
         padding: 100px 10px;
         font-size: 35px;
-        color: #b3b1b1;
+        color: #a7a7a7;
         cursor: pointer; }
       main .suggest .container .swiper-container .swiper-button-prev {
-        left: -10px; }
+        left: 22.5%;
+        top: 10px; }
       main .suggest .container .swiper-container .swiper-button-next {
-        right: 0; }
+        right: 23%;
+        top: 10px; }
       main .suggest .container .swiper-container .swiper-radio-btn {
         position: absolute;
-        bottom: 0;
-        right: 46%;
+        bottom: -30px;
+        right: 47.8%;
         display: flex;
         cursor: pointer; }
         main .suggest .container .swiper-container .swiper-radio-btn .swiper-controller {
