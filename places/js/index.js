@@ -202,8 +202,8 @@ function getNextDragSlider() {
 };
 
 function getPrevDragSlider() {
-  if (clickNum > 0) {
-    clickNum = clickNum - 1
+  if (dragSlider.scrollLeft > 0) {
+    clickNum === 0 ? clickNum : clickNum - 1;
     controlsSlider(clickNum);
   } else {
     return;
