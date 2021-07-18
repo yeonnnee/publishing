@@ -45,6 +45,8 @@ function scrollHandler() {
   animationHandler();
 }
 
+var currentPosition = void 0;
+
 function isElementUnderBottom(elem, triggerDiff) {
   var _elem$getBoundingClie = elem.getBoundingClientRect(),
       top = _elem$getBoundingClie.top;
@@ -52,22 +54,65 @@ function isElementUnderBottom(elem, triggerDiff) {
   var _window = window,
       innerHeight = _window.innerHeight;
 
+  currentPosition = top;
   return top > innerHeight + (triggerDiff || 0);
 }
 
 function animationHandler() {
-  console.log('now');
   var elems = document.querySelectorAll('.fade-in');
-  elems.forEach(function (elem) {
-    if (isElementUnderBottom(elem, -20)) {
-      elem.style.opacity = "0";
-      elem.style.transform = 'translateY(30px)';
+  var LeftToRight = document.querySelectorAll('.left-to-right');
+  var RightToLeft = document.querySelectorAll('.right-to-left');
+  var expandPic = document.querySelectorAll('.expand');
+
+  for (var i = 0; i < expandPic.length; i++) {
+    if (isElementUnderBottom(expandPic[i], -20)) {
+      expandPic[i].style.opacity = "0";
+      expandPic[i].style.transform = 'scale(0.96, 0.96)';
     } else {
-      elem.style.opacity = "1";
-      elem.style.transform = 'translateY(0px)';
-      elem.style.transition = 'all 1s ease';
+      expandPic[i].style.opacity = "1";
+      expandPic[i].style.transform = 'scale(1)';
+      expandPic[i].style.transformDelay = '0.5s';
+      expandPic[i].style.transition = 'all 1s ease';
     }
-  });
+  }
+
+  for (var _i = 0; _i < LeftToRight.length; _i++) {
+    if (isElementUnderBottom(LeftToRight[_i], -20)) {
+      LeftToRight[_i].style.opacity = "0";
+      LeftToRight[_i].style.transform = 'translateX(-60px)';
+    } else {
+      LeftToRight[_i].style.opacity = "1";
+      LeftToRight[_i].style.transform = 'translateY(0px)';
+      LeftToRight[_i].style.transition = 'all 1s ease';
+    }
+  }
+
+  for (var _i2 = 0; _i2 < RightToLeft.length; _i2++) {
+    if (isElementUnderBottom(RightToLeft[_i2], -20)) {
+      RightToLeft[_i2].style.opacity = "0";
+      RightToLeft[_i2].style.transform = 'translateX(60px)';
+    } else {
+      RightToLeft[_i2].style.opacity = "1";
+      RightToLeft[_i2].style.transform = 'translateY(0px)';
+      RightToLeft[_i2].style.transition = 'all 1s ease';
+    }
+  }
+
+  for (var _i3 = 0; _i3 < elems.length; _i3++) {
+    if (isElementUnderBottom(elems[_i3], -20)) {
+      elems[_i3].style.opacity = "0";
+      elems[_i3].style.transform = 'translateY(30px)';
+    } else {
+      elems[_i3].style.opacity = "1";
+      elems[_i3].style.transform = 'translateY(0px)';
+      elems[_i3].style.transition = 'all 1s ease';
+    }
+  }
+}
+
+function reloadPage() {
+  console.log(currentPosition);
+  window.scrollTo(currentPosition);
 }
 
 var isDown = false;
@@ -499,27 +544,27 @@ function openOriginList() {
 
 window.addEventListener('scroll', scrollHandler);
 
-dragGroup1 && dragGroup1.addEventListener('click', handleDragSlider);
-dragGroup2 && dragGroup2.addEventListener('click', handleDragSlider);
-dragGroup3 && dragGroup3.addEventListener('click', handleDragSlider);
-dragGroup4 && dragGroup4.addEventListener('click', handleDragSlider);
+dragGroup1.addEventListener('click', handleDragSlider);
+dragGroup2.addEventListener('click', handleDragSlider);
+dragGroup3.addEventListener('click', handleDragSlider);
+dragGroup4.addEventListener('click', handleDragSlider);
 
-swiperGroup1 && swiperGroup1.addEventListener('click', handleSwiper);
-swiperGroup2 && swiperGroup2.addEventListener('click', handleSwiper);
-swiperGroup3 && swiperGroup3.addEventListener('click', handleSwiper);
-swiperGroup4 && swiperGroup4.addEventListener('click', handleSwiper);
-swiperGroup5 && swiperGroup5.addEventListener('click', handleSwiper);
+swiperGroup1.addEventListener('click', handleSwiper);
+swiperGroup2.addEventListener('click', handleSwiper);
+swiperGroup3.addEventListener('click', handleSwiper);
+swiperGroup4.addEventListener('click', handleSwiper);
+swiperGroup5.addEventListener('click', handleSwiper);
 
-swiperPreBtn && swiperPreBtn.addEventListener('click', getPrevSwiper);
-swiperNextBtn && swiperNextBtn.addEventListener('click', getNextSwiper);
+swiperPreBtn.addEventListener('click', getPrevSwiper);
+swiperNextBtn.addEventListener('click', getNextSwiper);
 
-dragPreBtn && dragPreBtn.addEventListener('click', getPrevDragSlider);
-dragNextBtn && dragNextBtn.addEventListener('click', getNextDragSlider);
+dragPreBtn.addEventListener('click', getPrevDragSlider);
+dragNextBtn.addEventListener('click', getNextDragSlider);
 
-dragSlider && dragSlider.addEventListener('mouseup', cancelDrag);
-dragSlider && dragSlider.addEventListener('mouseleave', cancelDrag);
-dragSlider && dragSlider.addEventListener('mousedown', dragSlide);
-dragSlider && dragSlider.addEventListener('mousemove', mouseDrag);
+dragSlider.addEventListener('mouseup', cancelDrag);
+dragSlider.addEventListener('mouseleave', cancelDrag);
+dragSlider.addEventListener('mousedown', dragSlide);
+dragSlider.addEventListener('mousemove', mouseDrag);
 
 origin.addEventListener('click', openOriginList);
 destination.addEventListener('click', openDestinationList);

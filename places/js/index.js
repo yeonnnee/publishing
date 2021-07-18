@@ -44,27 +44,76 @@ function scrollHandler() {
   animationHandler();
 }
 
+let currentPosition;
+
 function isElementUnderBottom(elem, triggerDiff) {
   const { top } = elem.getBoundingClientRect();
   const { innerHeight } = window;
+  currentPosition = top;
   return top > innerHeight + (triggerDiff || 0);
 }
 
 function animationHandler() {
   const elems = document.querySelectorAll('.fade-in');
-  elems.forEach(elem => {
-    if (isElementUnderBottom(elem, -20)) {
-      elem.style.opacity = "0";
-      elem.style.transform = 'translateY(30px)';
+  const LeftToRight = document.querySelectorAll('.left-to-right');
+  const RightToLeft = document.querySelectorAll('.right-to-left');
+  const expandPic = document.querySelectorAll('.expand');
+
+  for (let i = 0; i < expandPic.length; i++) {
+    if (isElementUnderBottom(expandPic[i], -20)) {
+      expandPic[i].style.opacity = "0";
+      expandPic[i].style.transform = 'scale(0.96, 0.96)';
+      
 
     } else {
-      elem.style.opacity = "1";
-      elem.style.transform = 'translateY(0px)';
-      elem.style.transition = `all 1s ease`
+      expandPic[i].style.opacity = "1";
+      expandPic[i].style.transform = 'scale(1)';
+      expandPic[i].style.transformDelay = '0.5s';
+      expandPic[i].style.transition = `all 1s ease`
     }
-  })
+  }
+
+  for (let i = 0; i < LeftToRight.length; i++) {
+    if (isElementUnderBottom(LeftToRight[i], -20)) {
+      LeftToRight[i].style.opacity = "0";
+      LeftToRight[i].style.transform = 'translateX(-60px)';
+
+    } else {
+      LeftToRight[i].style.opacity = "1";
+      LeftToRight[i].style.transform = 'translateY(0px)';
+      LeftToRight[i].style.transition = `all 1s ease`
+    }
+  }
+
+  for (let i = 0; i < RightToLeft.length; i++) {
+    if (isElementUnderBottom(RightToLeft[i], -20)) {
+      RightToLeft[i].style.opacity = "0";
+      RightToLeft[i].style.transform = 'translateX(60px)';
+
+    } else {
+      RightToLeft[i].style.opacity = "1";
+      RightToLeft[i].style.transform = 'translateY(0px)';
+      RightToLeft[i].style.transition = `all 1s ease`
+    }
+  }
+
+  for (let i = 0; i < elems.length; i++) {
+    if (isElementUnderBottom(elems[i], -20)) {
+      elems[i].style.opacity = "0";
+      elems[i].style.transform = 'translateY(30px)';
+
+    } else {
+      elems[i].style.opacity = "1";
+      elems[i].style.transform = 'translateY(0px)';
+      elems[i].style.transition = `all 1s ease`
+    }
+  }
 }
 
+function reloadPage() {
+  console.log(currentPosition)
+  window.scrollTo(currentPosition);
+}
 
 
 
@@ -489,28 +538,28 @@ function openOriginList() {
 
 window.addEventListener('scroll', scrollHandler);
 
-dragGroup1 && dragGroup1.addEventListener('click', handleDragSlider);
-dragGroup2 && dragGroup2.addEventListener('click', handleDragSlider);
-dragGroup3 && dragGroup3.addEventListener('click', handleDragSlider);
-dragGroup4 && dragGroup4.addEventListener('click', handleDragSlider);
+dragGroup1.addEventListener('click', handleDragSlider);
+dragGroup2.addEventListener('click', handleDragSlider);
+dragGroup3.addEventListener('click', handleDragSlider);
+dragGroup4.addEventListener('click', handleDragSlider);
 
-swiperGroup1 && swiperGroup1.addEventListener('click', handleSwiper);
-swiperGroup2 && swiperGroup2.addEventListener('click', handleSwiper);
-swiperGroup3 && swiperGroup3.addEventListener('click', handleSwiper);
-swiperGroup4 && swiperGroup4.addEventListener('click', handleSwiper);
-swiperGroup5 && swiperGroup5.addEventListener('click', handleSwiper);
+swiperGroup1.addEventListener('click', handleSwiper);
+swiperGroup2.addEventListener('click', handleSwiper);
+swiperGroup3.addEventListener('click', handleSwiper);
+swiperGroup4.addEventListener('click', handleSwiper);
+swiperGroup5.addEventListener('click', handleSwiper);
 
-swiperPreBtn && swiperPreBtn.addEventListener('click', getPrevSwiper);
-swiperNextBtn && swiperNextBtn.addEventListener('click', getNextSwiper);
+swiperPreBtn.addEventListener('click', getPrevSwiper);
+swiperNextBtn.addEventListener('click', getNextSwiper);
 
-dragPreBtn && dragPreBtn.addEventListener('click', getPrevDragSlider);
-dragNextBtn && dragNextBtn.addEventListener('click', getNextDragSlider);
+dragPreBtn.addEventListener('click', getPrevDragSlider);
+dragNextBtn.addEventListener('click', getNextDragSlider);
 
 
-dragSlider&&dragSlider.addEventListener('mouseup', cancelDrag);
-dragSlider&&dragSlider.addEventListener('mouseleave', cancelDrag);
-dragSlider&&dragSlider.addEventListener('mousedown', dragSlide);
-dragSlider && dragSlider.addEventListener('mousemove', mouseDrag);
+dragSlider.addEventListener('mouseup', cancelDrag);
+dragSlider.addEventListener('mouseleave', cancelDrag);
+dragSlider.addEventListener('mousedown', dragSlide);
+dragSlider.addEventListener('mousemove', mouseDrag);
 
 origin.addEventListener('click', openOriginList);
 destination.addEventListener('click', openDestinationList);
