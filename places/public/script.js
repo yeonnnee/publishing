@@ -39,6 +39,7 @@ function scrollHandler() {
     return;
   }
 
+  // 스크롤시 fade in 
   animationHandler();
 }
 
