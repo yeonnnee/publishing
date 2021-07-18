@@ -429,7 +429,6 @@ main {
 
     .container{
       width: 100%;
-      // margin: 60px 0 50px;
       display: flex;
       position: relative;
       justify-content: center;
@@ -440,7 +439,7 @@ main {
         width: 1024px;
         padding: 20px 0;
         overflow: hidden;
-        background-color: hotpink;
+
         .swiper-wrapper {
           width: 4800px;
           display: flex;
