@@ -1,0 +1,29 @@
+.search-page {
+  .search {
+    padding: 100px 20px;
+    text-align: center;
+  }
+
+  .result {
+    .title {
+      text-align: center;
+      display: flex;
+      li {
+        padding: 20px;
+        flex: 1;
+
+      }
+    }
+  }
+
+  .search-result {
+    li {
+      display: flex;
+      text-align: center;
+      div {
+        padding: 20px;
+        flex:1;
+      }
+    }
+  }
+}
