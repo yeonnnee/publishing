@@ -33,8 +33,13 @@ h1,h2,h3,h4,p {
   font: inherit;
 }
 
-button {
+button, input {
   outline:none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 

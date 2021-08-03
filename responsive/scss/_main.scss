@@ -1,29 +1,500 @@
 .search-page {
-  .search {
-    padding: 100px 20px;
-    text-align: center;
+  height: 100%;
+  background-color: #F3F6F9;
+
+  @include respond-to (lgs) {
+   padding: 20px;
+  }
+
+  .option {
+    width: 260px;
+    height: 100%;
+    position: absolute;
+
+    @include respond-to (lgs) {
+      position: static;
+      width: 100%;
+      margin-top: 40px;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+ 
+    button {
+      width: 100%;
+      padding: 5px 5px 5px 20px;
+      background-color: black;
+      color: #fff;
+      text-align: left;
+      border: none;
+
+      @include respond-to (lgs) {
+        padding: 10px;
+        background-color: #fff;
+        color: black;
+        border:1px solid #fff;
+        border-bottom: 1px solid #e4e3e3;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+    }
+
+    .search-vessel {
+      padding: 15px 20px;
+    
+      label {
+        font-size: 13px;
+        font-weight: bold;
+       
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        margin: 2px 0 0;
+        border-radius: 5px;
+        font-size: 12px;
+        box-shadow: 0px 5px 10px rgb(212, 211, 211), 0 0 1px rgb(212, 211, 211);
+
+        @include respond-to (lgs) {
+          margin: 4px 0 0;
+          border:1px solid #c4c3c3;
+          border-radius: 0;
+          box-shadow: none;
+        }
+      }
+
+      @include respond-to (lgs) {
+        width: 50%;
+        display: inline-block;
+      }
+
+      @include respond-to (sm) {
+        width: 100%;
+      }
+    }
+    .select-city {
+      width: 110px;
+      float: right;
+      margin: 8px 20px 0 0;
+
+      span {
+        display: none;
+
+        @include respond-to (lgs) {
+          display: block;
+          font-size: 13px;
+          font-weight: bold;
+        }
+      }
+
+      select {
+        width: 100%;
+        padding: 5px;
+        border:none;
+        border-radius: 3px;
+        box-shadow: 0px 5px 10px rgb(212, 211, 211), 0 0 1px rgb(212, 211, 211);
+        font-size: 12px;
+        opacity: 0.8;
+
+        @include respond-to (lgs) {
+          padding: 10px;
+          margin: 4px 0 0;
+          border:1px solid #c4c3c3;
+          border-radius: 0;
+          box-shadow: none;
+        }
+      }
+
+      @include respond-to (lgs) {
+        width: 50%;
+        padding: 15px 20px 20px;
+        margin: 0;
+        display: inline-block;
+      }
+
+      @include respond-to (sm) {
+        width: 100%;
+      }
+    }
+    .select-all-cbx{
+      padding: 10px 20px 8px 25px;
+      font-size: 12px;
+      display: inline-block;
+      transform: translateY(5px);
+
+      label {
+        padding: 8px 0 0;
+      }
+
+      @include respond-to (lgs) {
+        width: 100%;
+        border-top: 1px solid #e4e3e3;
+      }
+    }
+
+    ul {
+      padding: 5px 20px 10px;
+      font-size: 12px;
+      border-bottom: 1px solid #e4e3e3;
+
+      @include respond-to (lgs) {
+        padding: 5px 0 0;
+      }
+
+      li {
+        margin: 0 0 10px;
+        border-radius: 5px;
+        box-shadow: 0px 5px 10px rgb(212, 211, 211), 0 0 1px rgb(212, 211, 211);
+
+        @include respond-to (lgs) {
+
+          box-shadow:none;
+        }
+
+        .category{
+          padding: 2px 5px;
+          font-weight: bold;
+          border-bottom: 1px solid #e4e3e3;
+
+          @include respond-to (lgs) {
+            padding: 4px 5px;
+            background-color: #F3F6F9;
+            border: none;
+          }
+
+          label {
+            @include respond-to (lgs) {
+              margin: 0 0 0 10px;
+            }
+          }
+        }
+        .category__option {
+          padding: 5px;
+          background-color: #fff;
+         
+          @include respond-to (lgs) {
+            padding: 7px 5px 0;
+          }
+        }
+      }
+    }
+
+    .last-option {
+      padding: 10px 20px;
+      font-size: 12px;
+      opacity: 0.6;
+
+      @include respond-to (lgs) {
+        padding: 20px;
+      }
+    }
   }
 
   .result {
-    .title {
-      text-align: center;
+    margin: 0 0 50px 260px;
+    padding: 20px 0 0;
+    background-color: #fff;
+
+    @include respond-to (lgs) {
+      width: 100%;
+      margin: 0;
+      background-color: #F3F6F9;
+    }
+
+    .page-title {
+  
+      span {
+        margin: 0 20px;
+        display: block;
+        font-size: 13px;
+        opacity: 0.5;
+
+        @include respond-to (lgs) {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 40px;
+          width: 100%;
+          opacity: 1;
+          font-size: 15px;
+          padding: 10px;
+          margin: 0;
+          background-color: #fff;
+        }
+      }
+      .title {
+        display: flex;
+
+        h1 {
+          font-size: 23px;
+          font-weight: bold;
+          margin: 0 5px 0 20px;
+        }
+
+        span {
+          margin: 12px 0 0 0;
+        }
+
+        @include respond-to (lgs) {
+          display: none;
+        }
+      }
+    }
+
+    .search-section {
+      display: inline-block;
+      width: 100%;
+      padding: 100px 20px;
+  
+      @include respond-to (lgs) {
+        padding: 0 0 40px;
+      }
+
+      h2 {
+        font-size: 15px;
+        font-weight: bold;
+
+        @include respond-to (lgs) {
+          font-size: 13px;
+        }
+      }
+      .search-box {
+        display: flex;
+        width: 100%;
+        padding: 20px;
+        margin: 5px 0 0;
+        border: 1px solid rgb(231, 231, 231);
+        border-radius: 10px;
+
+        @include respond-to (lgs) {
+          background-color: #fff;
+        }
+        @include respond-to (pad) {
+          display: inline-block;
+          text-align: center;
+        }
+
+        h2 {
+          font-size: 15px;
+          font-weight:100;
+          margin: 7px 10px 0 0 ;
+
+          @include respond-to (lgs) {
+            font-size: 13px;
+          }
+          @include respond-to (pad) {
+            display: inline-block;
+            transform: translateY(10px);
+          }
+        }
+
+        select {
+          width: 100px;
+          padding: 7px 5px;
+          border: 1px solid rgb(231, 231, 231);
+          opacity: 0.5;
+
+          @include respond-to (pad) {
+            width: 80%;
+            margin: 10px 0 0;
+            float: right;
+          }
+        }
+
+        input {
+          width: 50%;
+          padding: 8px 10px;
+          margin: 0 0 0 9px;
+          border: 1px solid rgb(231, 231, 231);
+          font-size: 12px;
+          opacity: 0.9;
+
+          @include respond-to (pad) {
+            width: 100%;
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+    .list-title {
       display: flex;
+      margin: 0 20px;
+      text-align: center;
+      font-size: 12px;
+      border-top: 2px solid black;
+      border-bottom: 1px solid black;
+
+      @include respond-to (lgs) {
+        margin: 0;
+      }
+
+      @include respond-to (sm) {
+        display: none;
+      }
+    
       li {
-        padding: 20px;
-        flex: 1;
+        padding: 0 0 8px;
+        margin: 10px 0 0;
+        flex: 1 ;
+        border-right: 1px solid black;
 
+        &:nth-child(3) {
+          padding: 0 20px 8px;
+        }
+
+        &:nth-child(7) {
+          
+          @include respond-to (wide) {
+            border-right: none;
+          }
+        }
+
+        &:last-child{
+          border-right: none;
+
+          @include respond-to (wide) {
+            display: none;
+          }
+        }
       }
     }
-  }
+    .search-result {
+      margin: 0 20px;
+      font-size: 11px;
+      opacity: 0.7;
 
-  .search-result {
-    li {
-      display: flex;
+      @include respond-to (lgs) {
+        margin: 0;
+        font-size: 12px;
+      }
+
+      li {
+        display: flex;
+        border-bottom: 1px solid #adadad;
+        text-align: center;
+
+        @include respond-to (sm) {
+          display: inline-block;
+          width: 100%;
+          margin: 0 0 20px;
+          border:none;
+          border-radius: 8px;
+          box-shadow: 2px 5px 15px rgb(201, 199, 199), 0 0 1px rgb(212, 211, 211);
+          text-align: inherit;
+        }
+
+
+        .result-list-content {
+          padding: 13px 0;
+          flex: 1;
+
+          span {
+            display: none;
+
+            @include respond-to (sm) {
+              display: block;
+              margin: 0 0 5px;
+              opacity: 0.5;
+            }
+          }
+
+          @include respond-to (sm) {
+            display: inline-block;
+            border-bottom: 1px solid rgb(231, 231, 231);
+            padding: 13px 10px;
+            height: 60px;
+
+            &:nth-child(2n+2) {
+              float: right;
+              width: 50%;
+            }
+  
+            &:nth-child(2n+1) {
+              float: left;
+              width: 50%;
+              border-right: 1px solid rgb(231, 231, 231);
+            }
+          }
+        }
+
+        .vessel-name {
+          padding: 13px 20px;
+
+          @include respond-to (sm) {
+            padding: 13px 10px;
+          }
+        }
+
+        .carrier {
+          @include respond-to (wide) {
+            display: none;
+          }
+
+          @include respond-to (sm) {
+            display: inline-block;
+            width: 40%;
+          }
+        }
+
+        .hidden-list {
+          display: none;
+
+          @include respond-to (sm) {
+            display: inline-block;
+            width: 100%;
+            height: 50px;
+            background-color: #ededee;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+            .hidden-list-content{
+              display: inline-block;
+              width: 30%;
+              height: 100%;
+              padding: 5px 10px 0;
+
+              span {
+                display: block;
+                margin: 0 0 5px;
+                opacity: 0.5;
+              }
+
+              &:nth-child(2) {
+                border-left: 1px solid rgb(212, 212, 212);
+                border-right: 1px solid rgb(212, 212, 212);
+              }
+            }
+          }
+
+        }
+
+        &:nth-child(2n+2) {
+          background-color: #F9f9f9;
+
+          @include respond-to (lgs) {
+            background-color: rgb(247, 245, 245);
+          }
+
+          @include respond-to (sm) {
+            background-color: #fff;
+          }
+        }
+
+        @include respond-to (lgs) {
+          background-color: #fff;
+        }
+      }
+    }
+
+    .more {
+      padding: 100px 0;
       text-align: center;
-      div {
-        padding: 20px;
-        flex:1;
+
+      button {
+        width: 150px;
+        height: 50px;
       }
     }
   }
+
+  
 }
