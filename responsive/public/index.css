@@ -4,11 +4,6 @@ body {
   font-family: work sans,Arial,sans-serif;
   font-weight: 400; }
 
-h2 {
-  font-size: 3.2rem;
-  line-height: 1.1;
-  font-weight: 300; }
-
 * {
   box-sizing: border-box; }
 
@@ -32,11 +27,6 @@ button, input {
   border: none; }
 
 button {
-  cursor: pointer; }
-
-a {
-  text-decoration: none;
-  color: inherit;
   cursor: pointer; }
 
 .search-page {
@@ -222,7 +212,7 @@ a {
     .search-page .result .search-section {
       display: inline-block;
       width: 100%;
-      padding: 100px 20px; }
+      padding: 100px 20px 20px; }
       @media only screen and (max-width: 1124px) {
         .search-page .result .search-section {
           padding: 0 0 40px; } }
@@ -267,6 +257,9 @@ a {
               width: 80%;
               margin: 10px 0 0;
               float: right; } }
+          @media only screen and (max-width: 399px) {
+            .search-page .result .search-section .search-box select {
+              width: 70%; } }
         .search-page .result .search-section .search-box input {
           width: 50%;
           padding: 8px 10px;
@@ -278,6 +271,36 @@ a {
             .search-page .result .search-section .search-box input {
               width: 100%;
               margin: 10px 0; } }
+    .search-page .result .util-btn {
+      width: 100%;
+      padding: 8px 20px;
+      font-size: 12px; }
+      @media only screen and (max-width: 1124px) {
+        .search-page .result .util-btn {
+          padding: 8px 0; } }
+      .search-page .result .util-btn button {
+        width: 83px;
+        height: 28px;
+        font-size: 12px;
+        border-radius: 3px;
+        color: white; }
+      .search-page .result .util-btn .update {
+        margin: 0 5px 0 3px; }
+      .search-page .result .util-btn .update-info {
+        display: inline-block; }
+        @media only screen and (max-width: 399px) {
+          .search-page .result .util-btn .update-info {
+            font-size: 11px;
+            transform: translateY(5px); } }
+        .search-page .result .util-btn .update-info .update-time {
+          opacity: 0.5; }
+          @media only screen and (max-width: 399px) {
+            .search-page .result .util-btn .update-info .update-time {
+              display: block; } }
+      .search-page .result .util-btn .excel {
+        background-color: rgba(2, 90, 2, 0.918); }
+      .search-page .result .util-btn .update {
+        background-color: #03A9F4; }
     .search-page .result .list-title {
       display: flex;
       margin: 0 20px;
@@ -329,14 +352,16 @@ a {
             text-align: inherit; } }
         .search-page .result .search-result li .result-list-content {
           padding: 13px 0;
-          flex: 1; }
+          flex: 1;
+          font-size: 12px; }
           .search-page .result .search-result li .result-list-content span {
             display: none; }
             @media only screen and (max-width: 855px) {
               .search-page .result .search-result li .result-list-content span {
                 display: block;
                 margin: 0 0 5px;
-                opacity: 0.5; } }
+                opacity: 0.5;
+                color: black; } }
           @media only screen and (max-width: 855px) {
             .search-page .result .search-result li .result-list-content {
               display: inline-block;
@@ -350,6 +375,12 @@ a {
                 float: left;
                 width: 50%;
                 border-right: 1px solid #e7e7e7; } }
+        .search-page .result .search-result li .status, .search-page .result .search-result li .departure {
+          color: #e78b21; }
+        .search-page .result .search-result li .arrival {
+          color: #2766db; }
+        .search-page .result .search-result li .cut-off {
+          color: #e23a3a; }
         .search-page .result .search-result li .vessel-name {
           padding: 13px 20px; }
           @media only screen and (max-width: 855px) {

@@ -243,7 +243,7 @@
     .search-section {
       display: inline-block;
       width: 100%;
-      padding: 100px 20px;
+      padding: 100px 20px 20px;
   
       @include respond-to (lgs) {
         padding: 0 0 40px;
@@ -298,6 +298,9 @@
             margin: 10px 0 0;
             float: right;
           }
+          @include respond-to (mobilesm) {
+            width: 70%;
+          }
         }
 
         input {
@@ -315,6 +318,50 @@
         }
       }
     }
+
+    .util-btn {
+      width: 100%;
+      padding: 8px 20px;
+      font-size: 12px;
+
+      @include respond-to (lgs) {
+        padding: 8px 0;
+      }
+
+      button {
+        width: 83px;
+        height: 28px;
+        font-size: 12px;
+        border-radius: 3px;
+        color:white;
+      }
+      .update {
+        margin: 0 5px 0 3px;
+      }
+      .update-info {
+        display: inline-block;
+        
+        @include respond-to (mobilesm) {
+          font-size: 11px;
+          transform: translateY(5px);
+        }
+        
+        .update-time{
+          opacity: 0.5;
+
+          @include respond-to (mobilesm) {
+            display: block;
+          }
+        }
+      }
+      .excel {
+        background-color: rgba(2, 90, 2, 0.918);
+      }
+      .update {
+        background-color: #03A9F4;
+      }
+    }
+
     .list-title {
       display: flex;
       margin: 0 20px;
@@ -386,6 +433,7 @@
         .result-list-content {
           padding: 13px 0;
           flex: 1;
+          font-size: 12px;
 
           span {
             display: none;
@@ -394,6 +442,7 @@
               display: block;
               margin: 0 0 5px;
               opacity: 0.5;
+              color:black;
             }
           }
 
@@ -414,6 +463,16 @@
               border-right: 1px solid rgb(231, 231, 231);
             }
           }
+        }
+
+        .status,.departure {
+          color:rgb(231, 139, 33);
+        }
+        .arrival {
+          color:rgb(39, 102, 219);
+        }
+        .cut-off{
+          color:rgb(226, 58, 58);
         }
 
         .vessel-name {
@@ -494,7 +553,5 @@
         height: 50px;
       }
     }
-  }
-
-  
+  } 
 }
