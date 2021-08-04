@@ -26,6 +26,11 @@
       color: #fff;
       text-align: left;
       border: none;
+      line-height: 1.5;
+
+      i {
+        margin: 0 2px 0 0;
+      }
 
       @include respond-to (lgs) {
         padding: 10px;
@@ -201,7 +206,7 @@
     }
 
     .page-title {
-  
+
       span {
         margin: 0 20px;
         display: block;
@@ -240,10 +245,52 @@
       }
     }
 
+    .banner{
+      display: flex;
+      margin: 10px 20px;
+      padding: 20px 0;
+      border-top:1px solid rgb(231, 231, 231);
+
+      @include respond-to (lgs) {
+        display: none;
+      }
+
+      li {
+        flex:1;
+        position: relative;
+        border: 1px solid rgb(231, 231, 231);
+        margin: 0 8px 0 0;
+        text-align: center;
+        height: 140px;
+        cursor: pointer;
+
+        &:last-child {
+          margin: 0;
+        }
+
+        &:hover {
+          box-shadow:  10px 0 10px -10px rgb(192, 192, 192),  -10px 0 10px -10px rgb(192, 192, 192);
+          transition: all 0.3s ease;
+        }
+
+        h2 {
+          margin: 50px 0 0;
+        }
+
+        .tag {
+          width: 100%;
+          height: 16px;
+          position: absolute;
+          bottom: 0;
+          background-color: #03A9F4;
+        }
+      }
+    }
+
     .search-section {
       display: inline-block;
       width: 100%;
-      padding: 100px 20px 20px;
+      padding: 10px 20px 20px;
   
       @include respond-to (lgs) {
         padding: 0 0 40px;
@@ -273,33 +320,36 @@
           text-align: center;
         }
 
-        h2 {
-          font-size: 15px;
-          font-weight:100;
-          margin: 7px 10px 0 0 ;
-
-          @include respond-to (lgs) {
-            font-size: 13px;
+        .bl {
+          display: flex;
+          h2 {
+            font-size: 15px;
+            font-weight:100;
+            margin: 7px 10px 0 0;
+  
+            @include respond-to (lgs) {
+              margin: 7px 5px 0 0;
+              font-size: 12px;
+              width: 60px;
+            }
+            @include respond-to (pad) {
+              display: inline-block;
+              transform: translateY(10px);
+              float: left;
+            }
           }
-          @include respond-to (pad) {
-            display: inline-block;
-            transform: translateY(10px);
-          }
-        }
-
-        select {
-          width: 100px;
-          padding: 7px 5px;
-          border: 1px solid rgb(231, 231, 231);
-          opacity: 0.5;
-
-          @include respond-to (pad) {
-            width: 80%;
-            margin: 10px 0 0;
-            float: right;
-          }
-          @include respond-to (mobilesm) {
-            width: 70%;
+  
+          select {
+            width: 100px;
+            padding: 7px 5px;
+            border: 1px solid rgb(231, 231, 231);
+            opacity: 0.5;
+  
+            @include respond-to (pad) {
+              width: 100%;
+              margin: 10px 0 0;
+              float: right;
+            }
           }
         }
 
@@ -314,6 +364,20 @@
           @include respond-to (pad) {
             width: 100%;
             margin: 10px 0;
+          }
+        }
+
+        button {
+          padding: 0 28px;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          background-color: #03A9F4;
+          color: white;
+
+          @include respond-to (pad) {
+            border-radius: 45px;
+            width: 90px;
+            height: 35px;
           }
         }
       }

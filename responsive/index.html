@@ -11,7 +11,11 @@
 
 <body class="search-page">
   <section class="option">
-    <button>페이지 즐겨찾기</button>
+
+    <button>
+      <i class="far fa-star"></i>
+      페이지 즐겨찾기
+    </button>
 
     <div class="search-vessel">
       <label for="">선박 검색</label>
@@ -210,20 +214,48 @@
         <h1>컨테이너 터미널 스케줄</h1>
         <span>국내 모든 컨테이너 터미널의 실시간 입출항 정보를 한 번에 확인하실 수 있습니다.</span>
       </div>
-
     </div>
 
+    <ul class="banner">
+      <li>
+        <h2>MY</h2>
+        <div class="tag"></div>
+      </li>
+      <li>
+        <h2>NAME</h2>
+        <div class="tag"></div>
+
+      </li>
+      <li>
+        <h2>IS</h2>
+        <div class="tag"></div>
+
+      </li>
+      <li>
+        <h2>SEUNG YEON</h2>
+        <div class="tag"></div>
+
+      </li>
+      <li>
+        <h2>CHOUNG</h2>
+        <div class="tag"></div>
+
+      </li>
+    </ul>
 
     <div class="search-section">
       <h2>수입화물 통관조회</h2>
       <div class="search-box">
-        <h2>B/L 년도</h2>
-        <select>
-          <option value="2021">2021</option>
-        </select>
+        <div class="bl">
+          <h2>B/L 년도</h2>
+          <select>
+            <option value="2021">2021</option>
+          </select>
+        </div>
+
 
         <input type="text" placeholder="화물관리번호 혹은 Master B/L, House B/L을 입력해주세요.">
-        <button>Search</button>
+        <button><i class="fas fa-search"></i></button>
 
       </div>
     </div>
@@ -1428,6 +1460,8 @@
       <button>More</button>
     </div>
   </section>
+
+  <script src="https://kit.fontawesome.com/03bf801d52.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

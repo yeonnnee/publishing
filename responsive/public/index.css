@@ -52,7 +52,10 @@ button {
       background-color: black;
       color: #fff;
       text-align: left;
-      border: none; }
+      border: none;
+      line-height: 1.5; }
+      .search-page .option button i {
+        margin: 0 2px 0 0; }
       @media only screen and (max-width: 1124px) {
         .search-page .option button {
           padding: 10px;
@@ -209,10 +212,39 @@ button {
       @media only screen and (max-width: 1124px) {
         .search-page .result .page-title .title {
           display: none; } }
+    .search-page .result .banner {
+      display: flex;
+      margin: 10px 20px;
+      padding: 20px 0;
+      border-top: 1px solid #e7e7e7; }
+      @media only screen and (max-width: 1124px) {
+        .search-page .result .banner {
+          display: none; } }
+      .search-page .result .banner li {
+        flex: 1;
+        position: relative;
+        border: 1px solid #e7e7e7;
+        margin: 0 8px 0 0;
+        text-align: center;
+        height: 140px;
+        cursor: pointer; }
+        .search-page .result .banner li:last-child {
+          margin: 0; }
+        .search-page .result .banner li:hover {
+          box-shadow: 10px 0 10px -10px silver, -10px 0 10px -10px silver;
+          transition: all 0.3s ease; }
+        .search-page .result .banner li h2 {
+          margin: 50px 0 0; }
+        .search-page .result .banner li .tag {
+          width: 100%;
+          height: 16px;
+          position: absolute;
+          bottom: 0;
+          background-color: #03A9F4; }
     .search-page .result .search-section {
       display: inline-block;
       width: 100%;
-      padding: 100px 20px 20px; }
+      padding: 10px 20px 20px; }
       @media only screen and (max-width: 1124px) {
         .search-page .result .search-section {
           padding: 0 0 40px; } }
@@ -236,30 +268,32 @@ button {
           .search-page .result .search-section .search-box {
             display: inline-block;
             text-align: center; } }
-        .search-page .result .search-section .search-box h2 {
-          font-size: 15px;
-          font-weight: 100;
-          margin: 7px 10px 0 0; }
-          @media only screen and (max-width: 1124px) {
-            .search-page .result .search-section .search-box h2 {
-              font-size: 13px; } }
-          @media only screen and (max-width: 768px) {
-            .search-page .result .search-section .search-box h2 {
-              display: inline-block;
-              transform: translateY(10px); } }
-        .search-page .result .search-section .search-box select {
-          width: 100px;
-          padding: 7px 5px;
-          border: 1px solid #e7e7e7;
-          opacity: 0.5; }
-          @media only screen and (max-width: 768px) {
-            .search-page .result .search-section .search-box select {
-              width: 80%;
-              margin: 10px 0 0;
-              float: right; } }
-          @media only screen and (max-width: 399px) {
-            .search-page .result .search-section .search-box select {
-              width: 70%; } }
+        .search-page .result .search-section .search-box .bl {
+          display: flex; }
+          .search-page .result .search-section .search-box .bl h2 {
+            font-size: 15px;
+            font-weight: 100;
+            margin: 7px 10px 0 0; }
+            @media only screen and (max-width: 1124px) {
+              .search-page .result .search-section .search-box .bl h2 {
+                margin: 7px 5px 0 0;
+                font-size: 12px;
+                width: 60px; } }
+            @media only screen and (max-width: 768px) {
+              .search-page .result .search-section .search-box .bl h2 {
+                display: inline-block;
+                transform: translateY(10px);
+                float: left; } }
+          .search-page .result .search-section .search-box .bl select {
+            width: 100px;
+            padding: 7px 5px;
+            border: 1px solid #e7e7e7;
+            opacity: 0.5; }
+            @media only screen and (max-width: 768px) {
+              .search-page .result .search-section .search-box .bl select {
+                width: 100%;
+                margin: 10px 0 0;
+                float: right; } }
         .search-page .result .search-section .search-box input {
           width: 50%;
           padding: 8px 10px;
@@ -271,6 +305,17 @@ button {
             .search-page .result .search-section .search-box input {
               width: 100%;
               margin: 10px 0; } }
+        .search-page .result .search-section .search-box button {
+          padding: 0 28px;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          background-color: #03A9F4;
+          color: white; }
+          @media only screen and (max-width: 768px) {
+            .search-page .result .search-section .search-box button {
+              border-radius: 45px;
+              width: 90px;
+              height: 35px; } }
     .search-page .result .util-btn {
       width: 100%;
       padding: 8px 20px;
