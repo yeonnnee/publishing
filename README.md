@@ -1,3 +1,3 @@
-# CSS is Awesome
+# yeonnnee's Archive
 
-clone pages to practice scss 
+Record what I did personally 
