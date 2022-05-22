@@ -1,0 +1,23 @@
+{
+  "name": "publishing",
+  "version": "1.0.0",
+  "description": "Practice css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node-sass -w styles/styles.scss -o public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeonnnee/publishing.git"
+  },
+  "author": "yeonnnee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yeonnnee/publishing/issues"
+  },
+  "homepage": "https://github.com/yeonnnee/publishing#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

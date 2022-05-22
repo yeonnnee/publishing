@@ -214,15 +214,15 @@
         opacity: 0.5;
 
         @include respond-to (lgs) {
+          height: 40px;
+          width: 100%;
           position: absolute;
           top: 0;
           left: 0;
-          height: 40px;
-          width: 100%;
-          opacity: 1;
-          font-size: 15px;
           padding: 10px;
           margin: 0;
+          opacity: 1;
+          font-size: 15px;
           background-color: #fff;
         }
       }
@@ -230,9 +230,9 @@
         display: flex;
 
         h1 {
+          margin: 0 5px 0 20px;
           font-size: 23px;
           font-weight: bold;
-          margin: 0 5px 0 20px;
         }
 
         span {
@@ -512,9 +512,9 @@
 
           @include respond-to (sm) {
             display: inline-block;
-            border-bottom: 1px solid rgb(231, 231, 231);
             padding: 13px 10px;
             height: 60px;
+            border-bottom: 1px solid rgb(231, 231, 231);
 
             &:nth-child(2n+2) {
               float: right;
