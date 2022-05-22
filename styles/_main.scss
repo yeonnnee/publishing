@@ -2,22 +2,19 @@
   padding: 20px;
   text-align: center;
 
-
-
-
   h1 {
     position: absolute;
     top: 18px;
     left: 20px;
     width: 90px;
-    font-size: 45px;
-
+    font-size: 35px;
   }
+
   .water-drop {
     position: relative;
     width: 49px;
     height: 50px;
-    left: 66px;
+    left: 59px;
     top: -19px;
     margin: 20px 0;
     box-shadow: inset 10px 10px 10px #d9d9d9ad, 8px 9px 10px #d1d0d0, 15px 20px 20px #e3e3e3, inset -10px -10px 15px #fff;
@@ -47,8 +44,6 @@
     }
   }
 
-    
-
   p {
     margin: 20px 0;
   }
@@ -71,14 +66,47 @@
 
     label {
       display: flex;
-      justify-content: space-between;
-      padding: 20px;
-      font-size: 20px;
-      border-bottom: 1px solid #f1f1f1;
+      padding: 10px 20px;
+      font-size: 19px;
+      border-bottom: 1px solid $label-border;
       cursor: pointer;
 
       &:hover {
-        color: #c25265;
+        color: $point-text;
+      }
+      .year {
+        flex: 0.2;
+      }
+      .item-title {
+        flex: 1;
+        position: relative;
+
+        &.project-title{
+          &::after {
+            content: 'Project';
+            position: absolute;
+            margin: 0 0 0 7px;
+            font-size: 12px;
+            color: $point-text;
+            font-weight: bold;
+          }
+        }
+
+        &::after {
+          content: 'UI';
+          position: absolute;
+          margin: 0 0 0 7px;
+          font-size: 12px;
+          color: $blue;
+          font-weight: bold;
+        }
+      }
+
+      .show-icon {
+        display: block;
+      }
+      .hidden-icon {
+        display: none;
       }
     }
   
@@ -91,6 +119,10 @@
 
       .project-content {
         display: none;
+        margin: 0 0 3px;
+        font-weight: bold;
+        font-size: 14px;
+        color: $text-gray;
       }
 
       ul {
@@ -98,53 +130,20 @@
         text-align: center;
 
         li {
-          display: flex;
-          padding: 10px 20px;
-          border-bottom: 1px solid #f1f1f1;
+          flex: 0.5;
+          padding: 10px 0;
+          border-right: 1px solid $table-border;
+          border-bottom: 1px solid $table-border;
+          font-size: 14px;
 
-          span {
-            width: 150px;
-            font-weight: bold;
-            text-align: left;
+          &:nth-child(1) {
+            border-left: 1px solid $table-border;
           }
-
+  
           p {
             flex: 1;
             text-align: center;
             font-weight: normal;
-          }
-        }
-      }
-    }
-    input[type="checkbox"]:checked ~ .accordion-content {
-      padding: 20px;
-      max-height: 500px;
-      border: 1px solid #f1f1f1;
-      box-shadow: 0px -1px 6px 0px #ebd5d3;
-
-      ul {
-        display: block;
-      }
-
-      .project-content {
-        display: block;
-        font-weight: bold;
-        margin: 0 0 8px;
-        font-size: 14px;
-      }
-
-      .project-header, .project-content {
-        display: flex;
-        li {
-          flex: 0.5;
-          padding: 10px 0;
-          border-right: 1px solid #f1f1f1;
-          border-bottom: 1px solid #f1f1f1;
-          font-size: 14px;
-
-
-          &:nth-child(1) {
-            border-left: 1px solid #f1f1f1;
           }
         }
 
@@ -152,30 +151,36 @@
           flex: 1;
         }
 
-        &.table-header {
-          background-color: #f1f1f1;
-
+        &.project-header {
           li {
-            font-size: 14px;
-            font-weight: bold;
+            background-color: $pink-bg;
+
+            p {
+              font-weight: bold;
+            }
           }
         }
       }
+    }
+    input[type="checkbox"]:checked ~ .accordion-content {
+      padding: 20px;
+      max-height: 500px;
+      border: 1px solid $table-border;
+      box-shadow: 0px -1px 6px 0px $pink-shadow;
 
-      .project-header {
-        li {
-          background-color: #f5e3e6;
-          p{
-            font-weight: bold;
-          }
-        }
+      .project-content {
+        display: block;
+      }
+
+      .project-header, .project-content {
+        display: flex;
       }
     }
 
     input[type="checkbox"]:checked ~ label {
       border-bottom: none;
       font-weight: bold;
-      color: #c25265;
+      color: $point-text;
       // box-shadow: 0px -1px 6px 0px #ebd5d3;
     }
   }

@@ -6,12 +6,12 @@
     top: 18px;
     left: 20px;
     width: 90px;
-    font-size: 45px; }
+    font-size: 35px; }
   .title .water-drop {
     position: relative;
     width: 49px;
     height: 50px;
-    left: 66px;
+    left: 59px;
     top: -19px;
     margin: 20px 0;
     box-shadow: inset 10px 10px 10px #d9d9d9ad, 8px 9px 10px #d1d0d0, 15px 20px 20px #e3e3e3, inset -10px -10px 15px #fff;
@@ -49,13 +49,35 @@
     display: none; }
   .contents .accordion label {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    font-size: 20px;
-    border-bottom: 1px solid #f1f1f1;
+    padding: 10px 20px;
+    font-size: 19px;
+    border-bottom: 1px solid #eaeaea;
     cursor: pointer; }
     .contents .accordion label:hover {
       color: #c25265; }
+    .contents .accordion label .year {
+      flex: 0.2; }
+    .contents .accordion label .item-title {
+      flex: 1;
+      position: relative; }
+      .contents .accordion label .item-title.project-title::after {
+        content: 'Project';
+        position: absolute;
+        margin: 0 0 0 7px;
+        font-size: 12px;
+        color: #c25265;
+        font-weight: bold; }
+      .contents .accordion label .item-title::after {
+        content: 'UI';
+        position: absolute;
+        margin: 0 0 0 7px;
+        font-size: 12px;
+        color: #5c8cd3;
+        font-weight: bold; }
+    .contents .accordion label .show-icon {
+      display: block; }
+    .contents .accordion label .hidden-icon {
+      display: none; }
   .contents .accordion .accordion-content {
     max-height: 0;
     padding: 0;
@@ -63,55 +85,41 @@
     transition: max-height 0.2s linear;
     transition: padding 0.2s linear; }
     .contents .accordion .accordion-content .project-content {
-      display: none; }
+      display: none;
+      margin: 0 0 3px;
+      font-weight: bold;
+      font-size: 14px;
+      color: #6a6969; }
     .contents .accordion .accordion-content ul {
       display: none;
       text-align: center; }
       .contents .accordion .accordion-content ul li {
-        display: flex;
-        padding: 10px 20px;
-        border-bottom: 1px solid #f1f1f1; }
-        .contents .accordion .accordion-content ul li span {
-          width: 150px;
-          font-weight: bold;
-          text-align: left; }
-        .contents .accordion .accordion-content ul li p {
-          flex: 1;
-          text-align: center;
-          font-weight: normal; }
-  .contents .accordion input[type="checkbox"]:checked ~ .accordion-content {
-    padding: 20px;
-    max-height: 500px;
-    border: 1px solid #f1f1f1;
-    box-shadow: 0px -1px 6px 0px #ebd5d3; }
-    .contents .accordion input[type="checkbox"]:checked ~ .accordion-content ul {
-      display: block; }
-    .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content {
-      display: block;
-      font-weight: bold;
-      margin: 0 0 8px;
-      font-size: 14px; }
-    .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-header, .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content {
-      display: flex; }
-      .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-header li, .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content li {
         flex: 0.5;
         padding: 10px 0;
         border-right: 1px solid #f1f1f1;
         border-bottom: 1px solid #f1f1f1;
         font-size: 14px; }
-        .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-header li:nth-child(1), .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content li:nth-child(1) {
+        .contents .accordion .accordion-content ul li:nth-child(1) {
           border-left: 1px solid #f1f1f1; }
-      .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-header .date, .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-header .desc, .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content .date, .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content .desc {
+        .contents .accordion .accordion-content ul li p {
+          flex: 1;
+          text-align: center;
+          font-weight: normal; }
+      .contents .accordion .accordion-content ul .date, .contents .accordion .accordion-content ul .desc {
         flex: 1; }
-      .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-header.table-header, .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content.table-header {
-        background-color: #f1f1f1; }
-        .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-header.table-header li, .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content.table-header li {
-          font-size: 14px;
+      .contents .accordion .accordion-content ul.project-header li {
+        background-color: #f5e3e6; }
+        .contents .accordion .accordion-content ul.project-header li p {
           font-weight: bold; }
-    .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-header li {
-      background-color: #f5e3e6; }
-      .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-header li p {
-        font-weight: bold; }
+  .contents .accordion input[type="checkbox"]:checked ~ .accordion-content {
+    padding: 20px;
+    max-height: 500px;
+    border: 1px solid #f1f1f1;
+    box-shadow: 0px -1px 6px 0px #ebd5d3; }
+    .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content {
+      display: block; }
+    .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-header, .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content {
+      display: flex; }
   .contents .accordion input[type="checkbox"]:checked ~ label {
     border-bottom: none;
     font-weight: bold;

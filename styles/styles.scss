@@ -1,3 +1,6 @@
+// constants
+@import './constants/colors';
+
 @import './main';
 
 body {
@@ -39,5 +42,5 @@ button {
 }
 
 a {
-  color: rgb(92, 140, 211);
+  color: $blue;
 }
