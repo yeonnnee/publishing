@@ -50,7 +50,7 @@
   .contents .accordion label {
     display: flex;
     padding: 10px 20px;
-    font-size: 19px;
+    font-size: 18px;
     border-bottom: 1px solid #eaeaea;
     cursor: pointer; }
     .contents .accordion label:hover {
@@ -61,7 +61,7 @@
       flex: 1;
       position: relative; }
       .contents .accordion label .item-title.project-title::after {
-        content: 'Project';
+        content: 'Personal';
         position: absolute;
         margin: 0 0 0 7px;
         font-size: 12px;
@@ -74,14 +74,15 @@
         font-size: 12px;
         color: #5c8cd3;
         font-weight: bold; }
-    .contents .accordion label .show-icon {
-      display: block; }
-    .contents .accordion label .hidden-icon {
-      display: none; }
+    .contents .accordion label i {
+      transition: all 0.2s ease; }
+      .contents .accordion label i.up-side {
+        transform: rotate(180deg); }
+      .contents .accordion label i.down-side {
+        transform: rotate(0); }
   .contents .accordion .accordion-content {
     max-height: 0;
     padding: 0;
-    background: white;
     transition: max-height 0.2s linear;
     transition: padding 0.2s linear; }
     .contents .accordion .accordion-content .project-content {
@@ -98,24 +99,24 @@
         padding: 10px 0;
         border-right: 1px solid #f1f1f1;
         border-bottom: 1px solid #f1f1f1;
-        font-size: 14px; }
+        font-size: 13px; }
         .contents .accordion .accordion-content ul li:nth-child(1) {
           border-left: 1px solid #f1f1f1; }
         .contents .accordion .accordion-content ul li p {
           flex: 1;
           text-align: center;
           font-weight: normal; }
-      .contents .accordion .accordion-content ul .date, .contents .accordion .accordion-content ul .desc {
+      .contents .accordion .accordion-content ul .wide-col {
         flex: 1; }
       .contents .accordion .accordion-content ul.project-header li {
-        background-color: #f5e3e6; }
+        background-color: #f5e3e6;
+        padding: 5px 0; }
         .contents .accordion .accordion-content ul.project-header li p {
           font-weight: bold; }
   .contents .accordion input[type="checkbox"]:checked ~ .accordion-content {
     padding: 20px;
     max-height: 500px;
-    border: 1px solid #f1f1f1;
-    box-shadow: 0px -1px 6px 0px #ebd5d3; }
+    border: 1px solid #b6b5b5; }
     .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content {
       display: block; }
     .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-header, .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content {

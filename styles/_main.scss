@@ -67,7 +67,7 @@
     label {
       display: flex;
       padding: 10px 20px;
-      font-size: 19px;
+      font-size: 18px;
       border-bottom: 1px solid $label-border;
       cursor: pointer;
 
@@ -83,7 +83,7 @@
 
         &.project-title{
           &::after {
-            content: 'Project';
+            content: 'Personal';
             position: absolute;
             margin: 0 0 0 7px;
             font-size: 12px;
@@ -102,18 +102,21 @@
         }
       }
 
-      .show-icon {
-        display: block;
+      i {
+        transition: all 0.2s ease;
+        &.up-side {
+          transform: rotate(180deg);
+        }
+        &.down-side {
+          transform: rotate(0);
+        }
       }
-      .hidden-icon {
-        display: none;
-      }
+
     }
   
     .accordion-content {
       max-height: 0;
       padding: 0;
-      background: white;
       transition: max-height 0.2s linear;
       transition: padding 0.2s linear;
 
@@ -134,7 +137,7 @@
           padding: 10px 0;
           border-right: 1px solid $table-border;
           border-bottom: 1px solid $table-border;
-          font-size: 14px;
+          font-size: 13px;
 
           &:nth-child(1) {
             border-left: 1px solid $table-border;
@@ -147,13 +150,14 @@
           }
         }
 
-        .date, .desc {
+        .wide-col {
           flex: 1;
         }
 
         &.project-header {
           li {
             background-color: $pink-bg;
+            padding: 5px 0;
 
             p {
               font-weight: bold;
@@ -162,11 +166,12 @@
         }
       }
     }
+
     input[type="checkbox"]:checked ~ .accordion-content {
       padding: 20px;
       max-height: 500px;
-      border: 1px solid $table-border;
-      box-shadow: 0px -1px 6px 0px $pink-shadow;
+      border: 1px solid $gray-border;
+      // box-shadow: 0px -1px 6px 0px $pink-shadow;
 
       .project-content {
         display: block;

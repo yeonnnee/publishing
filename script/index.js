@@ -18,33 +18,25 @@ function clickCheckBox(e) {
   toggleIcon(activedItemId);
 }
 
-function showIcon(icon) {
-  icon.classList.add('show-icon');
-  icon.classList.remove('hidden-icon');
+function rotateUpIcon(icon) {
+  icon.classList.add('down-side');
+  icon.classList.remove('up-side');
+
 }
 
-function hideIcon(icon) {
-  icon.classList.add('hidden-icon');
-  icon.classList.remove('show-icon');
+function rotateDownIcon(icon) {
+  icon.classList.add('up-side');
+  icon.classList.remove('down-side');
 }
 
 function toggleIcon(activedItemId) {
-  const downIcons = document.getElementsByClassName('fa-angle-down');
-  const upIcons = document.getElementsByClassName('fa-angle-up');
+  const icons = document.getElementsByClassName('ri-arrow-down-s-line');
 
-  Array.from(upIcons).forEach(icon => {
+  Array.from(icons).forEach(icon => {
     if (Array.from(icon.classList).indexOf(activedItemId) > -1) {
-      showIcon(icon);
+      rotateDownIcon(icon);
     } else {
-      hideIcon(icon);
-    }
-  });
-
-  Array.from(downIcons).forEach(icon => {
-    if (Array.from(icon.classList).indexOf(activedItemId) > -1) {
-      hideIcon(icon);
-    } else {
-      showIcon(icon);
+      rotateUpIcon(icon);
     }
   });
 }
