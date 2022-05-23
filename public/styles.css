@@ -57,24 +57,16 @@
       color: #c25265; }
     .contents .accordion label .year {
       flex: 0.2; }
+    .contents .accordion label .category {
+      flex: 0.2;
+      font-size: 13px;
+      text-align: right;
+      margin: 0 10px 0 0;
+      line-height: 2; }
     .contents .accordion label .item-title {
-      flex: 1;
-      position: relative; }
-      .contents .accordion label .item-title.project-title::after {
-        content: 'Personal';
-        position: absolute;
-        margin: 0 0 0 7px;
-        font-size: 12px;
-        color: #c25265;
-        font-weight: bold; }
-      .contents .accordion label .item-title::after {
-        content: 'UI';
-        position: absolute;
-        margin: 0 0 0 7px;
-        font-size: 12px;
-        color: #5c8cd3;
-        font-weight: bold; }
+      flex: 1; }
     .contents .accordion label i {
+      line-height: 1.5;
       transition: all 0.2s ease; }
       .contents .accordion label i.up-side {
         transform: rotate(180deg); }

@@ -77,32 +77,41 @@
       .year {
         flex: 0.2;
       }
+
+      .category {
+        flex: 0.2;
+        font-size: 13px;
+        text-align: right;
+        margin: 0 10px 0 0;
+        line-height: 2;
+      }
       .item-title {
         flex: 1;
-        position: relative;
+        // position: relative;
 
-        &.project-title{
-          &::after {
-            content: 'Personal';
-            position: absolute;
-            margin: 0 0 0 7px;
-            font-size: 12px;
-            color: $point-text;
-            font-weight: bold;
-          }
-        }
+        // &.project-title{
+        //   &::after {
+        //     content: 'Personal';
+        //     position: absolute;
+        //     margin: 0 0 0 7px;
+        //     font-size: 12px;
+        //     color: $point-text;
+        //     font-weight: bold;
+        //   }
+        // }
 
-        &::after {
-          content: 'UI';
-          position: absolute;
-          margin: 0 0 0 7px;
-          font-size: 12px;
-          color: $blue;
-          font-weight: bold;
-        }
+        // &::after {
+        //   content: 'UI';
+        //   position: absolute;
+        //   margin: 0 0 0 7px;
+        //   font-size: 12px;
+        //   color: $blue;
+        //   font-weight: bold;
+        // }
       }
 
       i {
+        line-height: 1.5;
         transition: all 0.2s ease;
         &.up-side {
           transform: rotate(180deg);
