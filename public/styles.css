@@ -59,9 +59,9 @@
       flex: 0.2; }
     .contents .accordion label .category {
       flex: 0.2;
+      margin: 0 10px 0 0;
       font-size: 13px;
       text-align: right;
-      margin: 0 10px 0 0;
       line-height: 2; }
     .contents .accordion label .item-title {
       flex: 1; }
@@ -79,7 +79,6 @@
     transition: padding 0.2s linear; }
     .contents .accordion .accordion-content .project-content {
       display: none;
-      margin: 0 0 3px;
       font-weight: bold;
       font-size: 14px;
       color: #6a6969; }
@@ -87,26 +86,28 @@
       display: none;
       text-align: center; }
       .contents .accordion .accordion-content ul li {
-        flex: 0.5;
+        flex: 0.3;
         padding: 10px 0;
-        border-right: 1px solid #f1f1f1;
-        border-bottom: 1px solid #f1f1f1;
+        border-right: 1px solid #b6b5b5;
+        border-bottom: 1px solid #b6b5b5;
         font-size: 13px; }
         .contents .accordion .accordion-content ul li:nth-child(1) {
-          border-left: 1px solid #f1f1f1; }
+          border-left: 1px solid #b6b5b5; }
         .contents .accordion .accordion-content ul li p {
           flex: 1;
           text-align: center;
           font-weight: normal; }
       .contents .accordion .accordion-content ul .wide-col {
         flex: 1; }
+      .contents .accordion .accordion-content ul .date {
+        flex: 0.7; }
       .contents .accordion .accordion-content ul.project-header li {
-        background-color: #f5e3e6;
+        background-color: #d6808e;
         padding: 5px 0; }
         .contents .accordion .accordion-content ul.project-header li p {
           font-weight: bold; }
   .contents .accordion input[type="checkbox"]:checked ~ .accordion-content {
-    padding: 20px;
+    padding: 10px;
     max-height: 500px;
     border: 1px solid #b6b5b5; }
     .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content {
@@ -114,6 +115,7 @@
     .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-header, .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content {
       display: flex; }
   .contents .accordion input[type="checkbox"]:checked ~ label {
+    border: 1px solid #b6b5b5;
     border-bottom: none;
     font-weight: bold;
     color: #c25265; }
