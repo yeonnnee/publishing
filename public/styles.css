@@ -6,7 +6,11 @@
     top: 18px;
     left: 20px;
     width: 90px;
-    font-size: 35px; }
+    font-size: 35px;
+    transition: all 0.2s ease; }
+    @media only screen and (max-width: 520px) {
+      .title h1 {
+        left: 42%; } }
   .title .water-drop {
     position: relative;
     width: 49px;
@@ -16,7 +20,11 @@
     margin: 20px 0;
     box-shadow: inset 10px 10px 10px #d9d9d9ad, 8px 9px 10px #d1d0d0, 15px 20px 20px #e3e3e3, inset -10px -10px 15px #fff;
     border-radius: 50%;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all 0.2s ease; }
+    @media only screen and (max-width: 520px) {
+      .title .water-drop {
+        left: 54%; } }
     .title .water-drop::before {
       content: "";
       position: absolute;
@@ -40,11 +48,19 @@
 
 .contents {
   width: 50%;
-  margin: 50px auto; }
+  margin: 50px auto;
+  transition: all 0.2s ease; }
+  @media only screen and (max-width: 855px) {
+    .contents {
+      width: 100%;
+      padding: 0 10px; } }
   .contents .section-title {
     font-family: 'Cardo', serif;
     font-size: 40px;
     margin: 0 0 50px; }
+    @media only screen and (max-width: 855px) {
+      .contents .section-title {
+        padding: 0 20px; } }
   .contents .accordion input[type="checkbox"] {
     display: none; }
   .contents .accordion label {
@@ -53,6 +69,10 @@
     font-size: 18px;
     border-bottom: 1px solid #eaeaea;
     cursor: pointer; }
+    @media only screen and (max-width: 520px) {
+      .contents .accordion label {
+        padding: 10px;
+        font-size: 15px; } }
     .contents .accordion label:hover {
       color: #c25265; }
     .contents .accordion label .year {
@@ -63,6 +83,10 @@
       font-size: 13px;
       text-align: right;
       line-height: 2; }
+      @media only screen and (max-width: 520px) {
+        .contents .accordion label .category {
+          line-height: 1.75;
+          font-size: 12px; } }
     .contents .accordion label .item-title {
       flex: 1; }
     .contents .accordion label i {
@@ -97,6 +121,8 @@
           flex: 1;
           text-align: center;
           font-weight: normal; }
+        .contents .accordion .accordion-content ul li .hidden-title {
+          display: none; }
       .contents .accordion .accordion-content ul .wide-col {
         flex: 1; }
       .contents .accordion .accordion-content ul .date {
@@ -108,12 +134,42 @@
           font-weight: bold; }
   .contents .accordion input[type="checkbox"]:checked ~ .accordion-content {
     padding: 10px;
-    max-height: 500px;
+    max-height: 100vh;
     border: 1px solid #b6b5b5; }
-    .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content {
-      display: block; }
-    .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-header, .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content {
+    @media only screen and (max-width: 1024px) {
+      .contents .accordion input[type="checkbox"]:checked ~ .accordion-content {
+        display: inline-block;
+        width: 100%; } }
+    @media only screen and (max-width: 520px) {
+      .contents .accordion input[type="checkbox"]:checked ~ .accordion-content {
+        line-height: 1.75;
+        font-size: 12px; } }
+    .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-header {
       display: flex; }
+      @media only screen and (max-width: 1024px) {
+        .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-header {
+          display: none; } }
+    .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content {
+      display: flex; }
+      @media only screen and (max-width: 1024px) {
+        .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content {
+          display: inline-block;
+          width: 100%; }
+          .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content li {
+            display: block;
+            float: left;
+            width: 50%;
+            padding: 0; }
+            .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content li:nth-child(1) {
+              width: 100%;
+              border-top: 1px solid #b6b5b5; }
+            .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content li:nth-child(2n+2) {
+              border-left: 1px solid #b6b5b5; }
+            .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content li .hidden-title {
+              display: block;
+              font-weight: bold; }
+            .contents .accordion input[type="checkbox"]:checked ~ .accordion-content .project-content li p {
+              padding: 5px 0; } }
   .contents .accordion input[type="checkbox"]:checked ~ label {
     border: 1px solid #b6b5b5;
     border-bottom: none;

@@ -1,0 +1,45 @@
+@mixin respond-to ($device) {
+  @if $device == mobilesm {
+    @media only screen and (max-width: 399px) { @content; }
+  }
+
+  @else if $device == mobilemd {
+    @media only screen and (max-width: 400px) { @content; }
+  }
+
+  @else if $device == mobilelg {
+    @media only screen and (max-width: 520px) { @content; }
+  }
+
+  @else if $device == mobile {
+    @media only screen and (max-width: 635px) { @content; }
+  }
+
+  @else if $device == pad {
+    @media only screen and (max-width: 768px) { @content; }
+  }
+
+  @else if $device == sm {
+    @media only screen and (max-width: 855px) { @content; }
+  }
+
+  @else if $device == pc {
+    @media only screen and (max-width: 1024px) { @content; }
+  }
+
+  @else if $device == lgpc {
+    @media only screen and (max-width: 1124px) { @content; }
+  }
+
+  @else if $device == bigpc {
+    @media only screen and (max-width: 1199px) { @content; }
+  }
+
+  @else if $device == widepc {
+    @media only screen and (max-width: 1280px) { @content; }
+  }
+
+  @else if $device == pcmax {
+    @media only screen and (max-width: 1500px) { @content; }
+  }
+}

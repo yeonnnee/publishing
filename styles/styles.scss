@@ -1,6 +1,10 @@
 // constants
 @import './constants/colors';
 
+// mixins
+@import './mixins/media';
+
+// Layout
 @import './main';
 
 body {
